@@ -9,7 +9,7 @@ import { LeftColumn, RightColumn } from './HomeStyledComponents.js';
 
 const Home = (props) => {
     return (
-        <section className="col home-page">
+        <section className="col home-page-container">
                 <LeftColumn>Left</LeftColumn>
                 <RightColumn>Right</RightColumn>
         </section>
