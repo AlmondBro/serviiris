@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#serviiris-web-app {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.padding-side-0 {
+    padding-right:0;
+    padding-left:0;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+
+.bg-iris-yellow {
+    background-color: #FFF308;
+}
+
+.bg-iris-purple {
+    background-color: #5425BA;
+}
