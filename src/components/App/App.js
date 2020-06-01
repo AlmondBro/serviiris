@@ -5,6 +5,7 @@ import { AppContainer } from './AppStyledComponents.js';
 
 //import App components
 import Header from './../Header/Header.js';
+import Footer from './../Footer/Footer.js';
 
 //Import Pages
 import Home from './../Pages/Home/Home.js';
@@ -26,6 +27,7 @@ class App extends Component {
       <AppContainer fluid>
         <Header/>
         <Home />
+        <Footer/>
       </AppContainer>
     ); //end return statement
   }; //end render() method
