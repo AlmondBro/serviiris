@@ -1,14 +1,17 @@
+//Import required React modules
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
+import App from './components/App/App.js';
 import * as serviceWorker from './serviceWorker';
+
+let rootNode = document.getElementById('serviiris-web-app');
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  rootNode
 );
 
 // If you want your app to work offline and load faster, you can change
