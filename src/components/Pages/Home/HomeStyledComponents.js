@@ -5,8 +5,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import IrisLogo from './../../IrisLogo.js';
+
 const LeftColumn = styled("div")`
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     background-color: #FFF308;
     width: 50%;
     height: 100%;
@@ -17,4 +21,6 @@ const RightColumn = styled(LeftColumn)`
     background-color: #5425BA;
 `;
 
-export { LeftColumn, RightColumn };
+const HomeIrisLogo = styled(IrisLogo)``;
+
+export { LeftColumn, RightColumn, HomeIrisLogo };
