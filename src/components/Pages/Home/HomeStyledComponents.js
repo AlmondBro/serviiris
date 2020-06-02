@@ -21,6 +21,10 @@ const RightColumn = styled(LeftColumn)`
     background-color: #5425BA;
 `;
 
-const HomeIrisLogo = styled(IrisLogo)``;
+const HomeIrisLogo = styled(IrisLogo)`
+    width: ${ props => props.width ? props.width : "500px"};
+    height: ${ props => props.height ? props.height : "500px"};
+    color: ${ props => props.color ? props.color : "#7A40DB"};
+`;
 
 export { LeftColumn, RightColumn, HomeIrisLogo };
