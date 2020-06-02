@@ -12,9 +12,9 @@ const Home = (props) => {
         <section className="col home-page-container">
                 <LeftColumn>
                     <HomeIrisLogo 
-                        color   =   "green"
-                        width   =   "300px"
-                        height  =   "300px"  
+                        color   =   "#7A40DB"
+                        width   =   "400px"
+                        height  =   "400px"  
                     />
                 </LeftColumn>
                 <RightColumn>Right</RightColumn>
