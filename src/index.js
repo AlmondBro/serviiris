@@ -1,16 +1,28 @@
 //Import required React modules
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
+
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import App from './components/App/App.js';
 import * as serviceWorker from './serviceWorker';
 
-let rootNode = document.getElementById('serviiris-web-app');
+const webAppName  = "serviiris-web-app";
+const rootNode    = document.getElementById(webAppName);
+
+//Wrap the App in the BrowserRouter to use react-router
+const BrowserRouterApp = (props) => {
+  return (
+    <StrictMode>
+      <Router>
+        <App />
+      </Router>
+    </StrictMode>
+  ); //end return statement
+}; //end BrowserRouterApp
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  BrowserRouterApp,
   rootNode
 );
 
