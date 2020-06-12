@@ -22,7 +22,7 @@ const BrowserRouterApp = (props) => {
 }; //end BrowserRouterApp
 
 ReactDOM.render(
-  BrowserRouterApp,
+  <BrowserRouterApp/>,
   rootNode
 );
 

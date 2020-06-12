@@ -133,13 +133,13 @@ const SVGIcon = styled.svg.attrs({
             </g>
             <g layerName="iris-text">
                 <path   layerName="I" 
-                        layerName="svg-path-style-1" 
+                      /*   layerName="svg-path-style-1"  */
                         d="M66.06,3835.66V1129.39H670.29V3835.66Z" 
                         transform="translate(0.02 0)"
                         fill="currentColor"
                 />
                 <path   layerName="r" 
-                        layerName="svg-path-style-1" 
+                        // layerName="svg-path-style-1" 
                         d="M2134.06,1716.6h72.33v514.87h-208.5q-268.07,0-268.07,297.86h0V3835.66H1138.35V1729.36h583v302.12q34-140.43,140.42-227.65T2134.06,1716.6Z" 
                         transform="translate(0.02 0)"
                         fill="currentColor"
@@ -163,7 +163,7 @@ const SVGIcon = styled.svg.attrs({
                 />
             </g>
                 <path   layerName="s" 
-                        layerName="svg-path-style-1" 
+                        // layerName="svg-path-style-1" 
                         d="M4355.24,3329.3h0V3091q0-55.32-25.53-78.72t-89.36-23.41H3997.81q-531.9,0-531.89-468.06h0V2201.68q0-472.32,540.4-472.32H4368q540.4,0,540.4,472.32h0v187.23H4338.22V2235.72q0-55.3-25.53-78.72t-89.36-23.4h-63.82q-63.84,0-89.36,23.4t-25.53,78.72h0V2491q0,55.32,25.53,78.72t89.36,23.41h242.54q531.89,0,531.89,463.81h0v306.37q0,472.32-540.4,472.32H4014.83q-536.14,0-536.15-472.32h0v-183h578.7V3329.3q0,106.36,110.64,106.37h72.33Q4355.25,3435.67,4355.24,3329.3Z" 
                         transform="translate(0.02 0)"
                         fill="currentColor"
