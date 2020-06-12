@@ -11,7 +11,8 @@ import NavBarToggle from './NavBarToggle.js'
 
 const NavigationBar = (props) => {
     return (
-        <Navbar bg="green" variant="dark" expand="sm" className="navbar">
+        <div className="container-fluid no-padding">
+            <Navbar bg="green" variant="dark" expand="sm" className="navbar">
                 <Navbar.Brand className="collapsedNav-logo">
                     <Link to="/home"
                           title="Home"
@@ -55,6 +56,8 @@ const NavigationBar = (props) => {
                     </Form> */}
                 </Navbar.Collapse>
             </Navbar>
+        </div>
+        
     );
 }; //end Navigation()
 
