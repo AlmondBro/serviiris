@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 //import styled components
-import { NavigationBar } from './HeaderStyledComponents.js';
+import { NavigationBar } from './NavigationBar/NavigationBar.js';
 
 let Header = (props) => {
     return (

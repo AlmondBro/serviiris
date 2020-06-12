@@ -25,8 +25,9 @@ class App extends Component {
   render = () => {
     return (
       <AppContainer fluid>
-        <Header/>
-        <Home />
+          <Header />
+       
+        {/* <Home /> */}
         <Footer/>
       </AppContainer>
     ); //end return statement

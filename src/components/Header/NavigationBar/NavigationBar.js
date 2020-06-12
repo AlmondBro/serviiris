@@ -7,9 +7,9 @@ import { NavLink as Link } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-import NavBarToggle from "./NavbarToggle.js";
+import NavBarToggle from './NavBarToggle.js'
 
-const Navigation = (props) => {
+const NavigationBar = (props) => {
     return (
         <Navbar bg="green" variant="dark" expand="sm" className="navbar">
                 <Navbar.Brand className="collapsedNav-logo">
@@ -30,7 +30,7 @@ const Navigation = (props) => {
                     </a>
                 </Navbar.Brand>
                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-                <NavbarToggle aria-controls="basic-navbar-nav" />
+                <NavBarToggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Link activeClassName="navLink-current" to="/home" className="navLinks nav-link">Home</Link> 
@@ -58,4 +58,4 @@ const Navigation = (props) => {
     );
 }; //end Navigation()
 
-export default Navigation;
+export  { NavigationBar };

@@ -34,12 +34,7 @@ let AppContainerCol = styled(Col)`
 const AppContainer = (props) => {
     return (
         <AppContainerStyled fluid={ props.fluid } className="app-container">
-            <AppContainerRow className="app-container-row">
-                <AppContainerCol className="padding-side-0 no-gutters app-container-col">
-                    { props.children }
-                </AppContainerCol>
-            </AppContainerRow>
-           
+           { props.children }
         </AppContainerStyled>
     ); //end return statement
 }; //end AppContainer
