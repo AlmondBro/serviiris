@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Route, BrowserRouter, Redirect } from 'react-router-dom';
+
 //Import styled-components
 import { AppContainer } from './AppStyledComponents.js';
 
@@ -24,13 +26,10 @@ class App extends Component {
 
   render = () => {
     return (
-      <AppContainer fluid>
-          <Header />
-       
-        {/* <Home /> */}
-        <Footer/>
-      </AppContainer>
-    ); //end return statement
+      <div>
+        <Header/> 
+      </div>
+    );
   }; //end render() method
 } //end App class
 
