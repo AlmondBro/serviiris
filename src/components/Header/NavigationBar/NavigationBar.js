@@ -9,10 +9,13 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import NavBarToggle from './NavBarToggle.js'
 
+//Import styled components
+import { NavBar } from './NavigationBarStyledComponents.js';
+
 const NavigationBar = (props) => {
     return (
         // <div className="container-fluid no-padding">
-            <Navbar bg="green" variant="dark" expand="sm" className="navbar">
+            <NavBar bg="green" variant="dark" expand="sm" className="navigation-bar">
                 <Navbar.Brand className="collapsedNav-logo">
                     <Link to="/home"
                           title="Home"
@@ -23,12 +26,6 @@ const NavigationBar = (props) => {
                              id="harza-logo-mobile"
                         /> */}
                     </Link>
-                    <a href="https://www.cintandina.com/en/index_en.html" target="_blank" rel="noopener noreferrer">
-                            <img className="animated bounceInDown header-image"
-                                    src="/assets/img/cintandina-logo.svg"
-                                    alt="Cintandina" 
-                                    id="cintandina-logo-mobile"/>
-                    </a>
                 </Navbar.Brand>
                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                 <NavBarToggle aria-controls="basic-navbar-nav" />
@@ -55,7 +52,7 @@ const NavigationBar = (props) => {
                         </Button>
                     </Form> */}
                 </Navbar.Collapse>
-            </Navbar>
+            </NavBar>
         // </div>
         
     );
