@@ -26,9 +26,9 @@ class App extends Component {
 
   render = () => {
     return (
-      <div>
+      <AppContainer fluid>
         <Header/> 
-      </div>
+      </AppContainer>
     );
   }; //end render() method
 } //end App class
