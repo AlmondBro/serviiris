@@ -157,25 +157,3 @@ header.header {
      display: block;
  }
 }
-
-.navbar-toggler {
-border: none;
-background: transparent !important;
-}
-
-.navLinks,
-.navbar-dark .navbar-nav .nav-link {
- color: rgb(87, 29, 29);
- font-size: 1em;
- text-transform: uppercase;
- opacity: 1.0;
- /* border-right: solid 1px white; */
- padding-right: 10px;
- padding-bottom: 0px;
-}
-
-/* TODO: Find way to not have to use important label */
-.navbar-dark .navbar-nav .nav-link:hover,
-.navLinks:hover, .navLink-current {
- color: #FFB914 !important;
-}

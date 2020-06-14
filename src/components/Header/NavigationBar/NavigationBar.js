@@ -11,10 +11,12 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import NavBarToggle from './NavBarToggle/NavBarToggle.js';
 
 //Import styled components
-import  {   NavBar, NavContainer, NavLogoContainer, NavLogoContainerLink,
+import  {   NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
             Nav, NavUl, NavLi, NavLink
         } from './NavigationBarStyledComponents.js';
 
+
+import IrisLogo from './../../IrisLogo.js';
 /*
     <Link 
                             to              =   "/home" 
@@ -39,7 +41,12 @@ const NavigationBar = (props) => {
             <NavBar className="navigation-bar">
                 <NavContainer className="nav-container">
                     <NavLogoContainer className="nav-logo-container">
-                        <NavLogoContainerLink href="#!">Logo</NavLogoContainerLink>
+                        <NavLogoContainerLink href="#!">
+                            <NavIrisLogo
+                                height  =   "35px"
+                                width   =   "35px"
+                            />
+                        </NavLogoContainerLink>
                     </NavLogoContainer>
                     <NavBarToggle/>
                     <Nav id="basic-navbar-nav"> 
@@ -63,7 +70,8 @@ const NavigationBar = (props) => {
                                 <NavLink href="#!">About</NavLink>
                             </NavLi>
                             <NavLi>
-                                <NavLink href="#!">Services</NavLink>
+                                {/* TODO: Fix this not lining up in width */}
+                                {/* <NavLink href="#!">Services</NavLink> */}
                                 <ul class="nav-dropdown">
                                     <NavLi>
                                         <NavLink href="#!">Web Design</NavLink>
