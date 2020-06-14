@@ -163,26 +163,9 @@ border: none;
 background: transparent !important;
 }
 
-
-.navbar-toggler .bottom-bar {
- -webkit-transform: rotate(-45deg);
-     -ms-transform: rotate(-45deg);
-         transform: rotate(-45deg);
- -webkit-transform-origin: 10% 90%;
-     -ms-transform-origin: 10% 90%;
-         transform-origin: 10% 90%;
-}
-
-.navbar-toggler.collapsed .bottom-bar {
- -webkit-transform: rotate(0);
-     -ms-transform: rotate(0);
-         transform: rotate(0);
-}
-
-
 .navLinks,
 .navbar-dark .navbar-nav .nav-link {
- color: white;
+ color: rgb(87, 29, 29);
  font-size: 1em;
  text-transform: uppercase;
  opacity: 1.0;
