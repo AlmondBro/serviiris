@@ -16,6 +16,11 @@ let TopMenuBarLine = styled(MenuBarLine)`
 
 let MiddleMenuBarLine = styled(MenuBarLine)`
     opacity: ${props => props.collapsed ? "1" : "0"};
-`; //end TopMenuBarLine
+`; //end MiddleMenuBarLine
 
-export { MenuBarLine, TopMenuBarLine, MiddleMenuBarLine };
+let BottomMenuBarLine = styled(MenuBarLine)`
+    transform: ${props => props.collapsed ? "rotate(0)" : "rotate(-45deg)"};
+    transform-origin: 10% 90%;
+`; //end BottomMenuBarLine
+
+export { MenuBarLine, TopMenuBarLine, MiddleMenuBarLine, BottomMenuBarLine };
