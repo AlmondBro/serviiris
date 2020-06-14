@@ -158,24 +158,11 @@ header.header {
  }
 }
 
-.icon-bar {
-    width: 22px; 
-    height: 2px;
-    background-color: #B6B6B6;
-    display: block;
-    transition: all 0.2s;
-    margin-top: 4px;
-}
-
 .navbar-toggler {
 border: none;
 background: transparent !important;
 }
 
-
-.navbar-toggler .middle-bar {
- opacity: 0;
-}
 
 .navbar-toggler .bottom-bar {
  -webkit-transform: rotate(-45deg);
@@ -184,10 +171,6 @@ background: transparent !important;
  -webkit-transform-origin: 10% 90%;
      -ms-transform-origin: 10% 90%;
          transform-origin: 10% 90%;
-}
-
-.navbar-toggler.collapsed .middle-bar {
- opacity: 1;
 }
 
 .navbar-toggler.collapsed .bottom-bar {

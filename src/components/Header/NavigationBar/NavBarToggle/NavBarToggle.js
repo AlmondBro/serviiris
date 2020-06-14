@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 //Import styled components
-import { MenuBarLine, TopMenuBarLine } from './NavBarToggleStyledComponents.js'
+import { MenuBarLine, TopMenuBarLine, MiddleMenuBarLine } from './NavBarToggleStyledComponents.js'
 class NavBarToggle extends Component {
     constructor(props) {
         super(props);
@@ -51,8 +51,14 @@ class NavBarToggle extends Component {
                     id              =   "navbarToggle"
                     onClick         =   { this.toggleClass2 }
             >
-                <TopMenuBarLine className="menubar-line top-bar" collapsed={this.state.collapsed}></TopMenuBarLine>
-                <MenuBarLine className="menubar-line middle-bar"></MenuBarLine>
+                <TopMenuBarLine 
+                    collapsed   =   {   this.state.collapsed}
+                    className   =   "menubar-line top-bar" 
+                />
+                <MiddleMenuBarLine 
+                    collapsed   =   {   this.state.collapsed}
+                    className   =   "menubar-line middle-bar" 
+                />
                 <MenuBarLine className="menubar-line bottom-bar"></MenuBarLine>				
             </button>
         );
