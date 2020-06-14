@@ -41,7 +41,8 @@ const NavigationBar = (props) => {
                     <NavLogoContainer className="nav-logo-container">
                         <NavLogoContainerLink href="#!">Logo</NavLogoContainerLink>
                     </NavLogoContainer>
-                    <Nav>
+                    <NavBarToggle/>
+                    <Nav id="basic-navbar-nav"> 
                         {/* <div class="nav-mobile">
                             <a id="nav-toggle" href="#!">
                                 <span></span>
@@ -52,9 +53,10 @@ const NavigationBar = (props) => {
                             <NavLi className="nav-li">
                                 <NavLink 
                                     href="#!" 
+                                    activeClassName =   "navLink-current" 
                                     className="nav-li"
                                 >
-                                Home
+                                    Inicio
                             </NavLink>
                             </NavLi>
                             <NavLi>
@@ -103,6 +105,9 @@ const NavigationBar = (props) => {
                             
                     </p>
                 </form> */}
+                {/* <NavLogoContainer className="nav-logo-container">
+                    <NavLogoContainerLink href="#!">Logo</NavLogoContainerLink>
+                </NavLogoContainer> */}
             </NavContainer>
         </NavBar>
     ); //end return
