@@ -38,9 +38,9 @@ const NavigationBar = (props) => {
     return (
             <NavBar className="navigation-bar">
                 <NavContainer className="nav-container">
-                    {/* <NavLogoContainer className="nav-logo-container">
+                    <NavLogoContainer className="nav-logo-container">
                         <NavLogoContainerLink href="#!">Logo</NavLogoContainerLink>
-                    </NavLogoContainer> */}
+                    </NavLogoContainer>
                     <Nav>
                         {/* <div class="nav-mobile">
                             <a id="nav-toggle" href="#!">
@@ -60,20 +60,20 @@ const NavigationBar = (props) => {
                             <NavLi>
                                 <NavLink href="#!">About</NavLink>
                             </NavLi>
-                            {/* <li>
-                                <a href="#!">Services</a>
+                            <NavLi>
+                                <NavLink href="#!">Services</NavLink>
                                 <ul class="nav-dropdown">
-                                    <li>
-                                        <a href="#!">Web Design</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Web Development</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Graphic Design</a>
-                                    </li>
+                                    <NavLi>
+                                        <NavLink href="#!">Web Design</NavLink>
+                                    </NavLi>
+                                    <NavLi>
+                                        <NavLink href="#!">Web Development</NavLink>
+                                    </NavLi>
+                                    <NavLi>
+                                        <NavLink href="#!">Graphic Design</NavLink>
+                                    </NavLi>
                                 </ul>
-                            </li> */}
+                            </NavLi>
                             <NavLi>
                                 <NavLink href="#!">Pricing</NavLink>
                             </NavLi>
