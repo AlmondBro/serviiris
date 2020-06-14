@@ -14,4 +14,8 @@ let TopMenuBarLine = styled(MenuBarLine)`
     transform-origin: 10% 10%;
 `; //end TopMenuBarLine
 
-export { MenuBarLine, TopMenuBarLine };
+let MiddleMenuBarLine = styled(MenuBarLine)`
+    opacity: ${props => props.collapsed ? "1" : "0"};
+`; //end TopMenuBarLine
+
+export { MenuBarLine, TopMenuBarLine, MiddleMenuBarLine };
