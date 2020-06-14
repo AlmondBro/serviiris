@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-import NavBarToggle from './NavBarToggle.js'
+import NavBarToggle from './NavBarToggle/NavBarToggle.js';
 
 //Import styled components
 import  {   NavBar, NavContainer, NavLogoContainer, NavLogoContainerLink,
