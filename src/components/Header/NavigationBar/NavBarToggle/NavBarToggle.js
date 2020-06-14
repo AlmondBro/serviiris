@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 //Import styled components
-import { MenuBarLine, TopMenuBarLine, MiddleMenuBarLine, BottomMenuBarLine } from './NavBarToggleStyledComponents.js';
+import { MenuBarToggleButton, MenuBarLine, TopMenuBarLine, MiddleMenuBarLine, BottomMenuBarLine } from './NavBarToggleStyledComponents.js';
 
 class NavBarToggle extends Component {
     constructor(props) {
@@ -13,21 +13,7 @@ class NavBarToggle extends Component {
     
     navToggle = document.getElementById("navbarToggle");
 
-    toggleClass = (navToggle) => {
-        console.log("toggleClass");
-      //  let navToggle = document.querySelector(".navbar-toggler");
-
-        if (navToggle.classList.contains("collapsed")) {
-            console.log("if");
-            navToggle.classList.add("collapsed");
-        } else {
-            console.log("else");
-            navToggle.classList.remove("collapsed")
-        }
-        
-    }; //end toggleClass()
-
-    toggleClass2 = () => {
+    toggleNavBarButton = () => {
         const currentState = this.state.collapsed;
         this.setState({ collapsed: !currentState});
 
@@ -35,14 +21,9 @@ class NavBarToggle extends Component {
         //     NavBarCollapse.classList.toggle("show");
     }; //end toggleClass2
 
-    /*
-    navToggle.addEventListener("click", function() {
-        let navToggle = document.querySelector(".navbar-toggler");
-        toggleClass(navToggle);
-    }); */
     render = () => {
         return ( 
-            <button 
+            <MenuBarToggleButton 
                     aria-controls   =   "basic-navbar-nav" 
                     type            =   "button" 
                     aria-label      =   "Toggle navigation" 
@@ -50,7 +31,7 @@ class NavBarToggle extends Component {
                                             + ( this.state.collapsed ? "collapsed" : "") 
                                         } 
                     id              =   "navbarToggle"
-                    onClick         =   { this.toggleClass2 }
+                    onClick         =   { this.toggleNavBarButton }
             >
                 <TopMenuBarLine 
                     collapsed   =   {   this.state.collapsed}
@@ -64,14 +45,9 @@ class NavBarToggle extends Component {
                     collapsed   =   {   this.state.collapsed}
                     className   =   "menubar-line bottom-bar" 
                 />			
-            </button>
+            </MenuBarToggleButton>
         );
     }; //end render()
-    
 }; //end NavBarToggle
-
-NavBarToggle.onClick = (event) => {
-    console.log("Test");
-}
 
 export default NavBarToggle;

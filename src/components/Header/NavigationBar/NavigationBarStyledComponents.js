@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import { NavLink as Link } from "react-router-dom";
 
+import IrisLogo from './../../IrisLogo.js';
+
 /* 
     .bg-iris-yellow {
         background-color: #FFF308;
@@ -19,6 +21,13 @@ const NavBar = styled('section')`
   width: 100%;
 `; //end NavBar
 
+
+
+let NavIrisLogo = styled(IrisLogo)`
+    width: ${ props => props.width ? props.width : "500px"};
+    height: ${ props => props.height ? props.height : "500px"};
+    color: ${ props => props.color ? props.color : "#7A40DB"};
+`;
 
 const NavContainer = styled('div')`
     /* Breakpoint of 1000px  */
@@ -137,7 +146,7 @@ let NavLink = styled('a')`
     }
 `; //end NavLink
 
-export {    NavBar, NavContainer, NavLogoContainer, NavLogoContainerLink,
+export {    NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
             Nav, NavUl, NavLi, NavLink };
 
 
