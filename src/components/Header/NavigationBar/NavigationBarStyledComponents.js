@@ -16,15 +16,22 @@ import { NavLink as Link } from "react-router-dom";
 
 const NavBar = styled('section')`
   background-color: #5425BA;
+  width: 100%;
 `; //end NavBar
 
 
 const NavContainer = styled('div')`
     /* Breakpoint of 1000px  */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    height: 100%;
+
 
     /* 
         Offset all the NavigationBar items a 
@@ -62,6 +69,9 @@ const Nav = styled('nav')`
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-start;
+
+    margin-right: auto; 
+    /*  just a margin: auto value centers everything while keeping left and right float-like effects */
 `; //end Nav
 
 const NavUl = styled('ul')`
@@ -109,7 +119,7 @@ const NavLi = styled('li')`
 let NavLink = styled('a')`
     display: block;
     padding: 0 20px;
-    line-height: 40px;
+    line-height: 2;
     background: #262626;
     color: #ffffff;
     text-decoration: none;
