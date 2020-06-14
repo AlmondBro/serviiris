@@ -1,10 +1,7 @@
 import React from 'react';
+
 import styled from 'styled-components';
 
-
-//Import React Bootstrap components
-import Nav from 'react-bootstrap/Nav';
-import Navbar, { Collapse } from 'react-bootstrap/Navbar';
 import { NavLink as Link } from "react-router-dom";
 
 /* 
@@ -17,29 +14,77 @@ import { NavLink as Link } from "react-router-dom";
     }
 */
 
+const NavBar = styled('section')`
+  background-color: #5425BA;
+`; //end NavBar
 
-let NavBar = styled(Navbar)`
-  background: #5425BA;
-  padding: 0;
-  /* 0.5rem 1rem; */
-`; //end NavBar styled-component
 
-const NavBarCollapse = styled(Navbar.Collapse)`
-
-`; //end NavBar.Collapse
-
-const NavStyled = styled(Nav)`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
+const NavContainer = styled('div')`
+    /* Breakpoint of 1000px  */
     width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+`; //end NavContainer
+
+const NavLogoContainer = styled('div')`
+    position: absolute;
+    padding-left: 10px;
+    float: left;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-size: 1.4em;
+`; //end LogoContainer
+
+const NavLogoContainerLink = styled('a')`
+    color: #ffffff;
+    text-decoration: none;
+
+    :visited {
+        color: #ffffff;
+        text-decoration: none;
+    }
+`; //end NavLogoContainerLink
+
+const Nav = styled('nav')`
+    /* float: right; */
+`; //end Nav
+
+const NavUl = styled('ul')`
+    list-style: none;
+    margin: 0;
+    padding: 0;
+`; //end NavUL
+
+
+const NavLi = styled('li')`
+    float: left;
+    position: relative;
+    cursor: pointer;
 `;
 
-let NavLink = styled(Link)`
+let NavLink = styled('li')`
+    display: block;
+    padding: 0 20px;
+    line-height: 40px;
+    background: #262626;
+    color: #ffffff;
+    text-decoration: none;
 
-`;
+    :hover,
+    :visited:hover {
+        background: #2581DC;
+        color: #ffffff;
+    }
 
-export { NavBar, NavStyled, NavBarCollapse, NavLink };
+    :not(:only-child):after,
+    :visited:not(:only-child):after {
+        padding-left: 4px;
+        content: ' ▾';
+    }
+`; //end NavLink
+
+export {    NavBar, NavContainer, NavLogoContainer, NavLogoContainerLink,
+            Nav, NavUl, NavLi, NavLink };
 
 
