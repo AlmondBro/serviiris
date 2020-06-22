@@ -134,7 +134,7 @@ const NavLi = styled('li')`
         top: 34px;
         margin: 0;
         padding: 0;
-        background-color: red;
+        background-color: #471f9d;
         list-style: none;
         /* visibility: hidden; */
     }
@@ -168,6 +168,8 @@ let NavLink = styled('a')`
 
     color: #ffffff;
     text-decoration: none;
+
+    transition: border-color 200ms;
 
     :active,
     :hover,
