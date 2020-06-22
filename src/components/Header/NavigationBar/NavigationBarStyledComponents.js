@@ -155,6 +155,17 @@ const NavLi = styled('li')`
         visibility: visible;
     }
 
+    ul.nav-dropdown li {
+        width: 100%;
+        text-align: center;
+    }
+
+    &  ul.nav-dropdown:last-child a {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+
+    }
+
 
     /* 
         Collapse the links to make them responsive starting
