@@ -129,6 +129,8 @@ const NavLi = styled('li')`
     position: relative;
     cursor: pointer;
 
+    margin: 0 15px;
+
     ul {
         position: absolute;
         top: 34px;
@@ -141,7 +143,7 @@ const NavLi = styled('li')`
         align-items: center;
         width: 100%;
 
-        background-color: #36167d;
+        background-color: #5425BA;
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
 
@@ -183,10 +185,10 @@ const NavLi = styled('li')`
 
 let NavLink = styled('a')`
     display: block;
-    padding: 0 20px;
+    padding: 0 5px;
     line-height: 2;
-    background: #36167D;
-    border-bottom: 2px solid #36167D;
+    background: #5425BA;
+    border-bottom: 2px solid #5425BA;
 
     color: #ffffff;
     text-decoration: none;
