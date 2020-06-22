@@ -64,46 +64,29 @@ const NavigationBar = (props) => {
                                     className="nav-li"
                                 >
                                     Inicio
-                            </NavLink>
+                                </NavLink>
                             </NavLi>
                             <NavLi>
-                                <NavLink href="#!">About</NavLink>
-                            </NavLi>
-                            {/* <NavLi>
-                                
-                            </NavLi> */}
-                            <NavLi>
-                                <NavLink href="#!">Pricing</NavLink>
+                                <NavLink href="#!">Conócenos</NavLink>
                                 {/* TODO: Fix this not lining up in width */}
                                 {/* <NavLink href="#!">Services</NavLink> */}
                                 <ul class="nav-dropdown">
                                     <NavLi>
-                                        <NavLink href="#!">Web Design</NavLink>
+                                        <NavLink href="#!">Visión</NavLink>
                                     </NavLi>
                                     <NavLi>
-                                        <NavLink href="#!">Web Development</NavLink>
-                                    </NavLi>
-                                    <NavLi>
-                                        <NavLink href="#!">Graphic Design</NavLink>
+                                        <NavLink href="#!">Misión</NavLink>
                                     </NavLi>
                                 </ul>
                             </NavLi>
-                            {/* <li>
-                                <a href="#!">Portfolio</a>
-                                <ul class="nav-dropdown">
-                                    <li>
-                                        <a href="#!">Web Design</a>
-                                        </li>
-                                        <li>
-                                        <a href="#!">Web Development</a>
-                                        </li>
-                                        <li>
-                                        <a href="#!">Graphic Design</a>
-                                    </li>
-                                </ul>
-                            </li> */}
                             <NavLi>
-                                <NavLink href="#!">Contact</NavLink>
+                                <NavLink href="#!">Servicios</NavLink>
+                            </NavLi>
+                            <NavLi>
+                                <NavLink href="#!">Contáctanos</NavLink>
+                            </NavLi>
+                            <NavLi>
+                                <NavLink href="#!">Trabaja Con Nosotros</NavLink>
                             </NavLi>
                         </NavUl>
                 </Nav>
