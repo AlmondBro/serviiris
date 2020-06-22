@@ -81,6 +81,11 @@ const NavigationBar = (props) => {
                             </NavLi>
                             <NavLi>
                                 <NavLink href="#!">Servicios</NavLink>
+                                <ul class="nav-dropdown">
+                                    <NavLi>
+                                        <NavLink href="#!">Especialidades</NavLink>
+                                    </NavLi>
+                                </ul>
                             </NavLi>
                             <NavLi>
                                 <NavLink href="#!">Contáctanos</NavLink>
