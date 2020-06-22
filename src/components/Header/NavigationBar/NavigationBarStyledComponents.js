@@ -108,8 +108,8 @@ const NavUl = styled('ul')`
 
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    /* border-top-left-radius: 12px;
+    border-top-right-radius: 12px; */
 
     @media only screen and (max-width: 765px) {
         position: absolute;
