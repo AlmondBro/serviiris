@@ -1,18 +1,13 @@
 import React from 'react';
 
-//Import React Bootstrap
-import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faSearch, faBriefcase, faPaperPlane, faMotorcycle, faBook, faBookDead } from '@fortawesome/free-solid-svg-icons';
 
 import NavBarToggle from './NavBarToggle/NavBarToggle.js';
 
 //Import styled components
 import  {   NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavLink
+            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled
         } from './NavigationBarStyledComponents.js';
 
 
@@ -63,11 +58,15 @@ const NavigationBar = (props) => {
                                     activeClassName =   "navLink-current" 
                                     className="nav-li"
                                 >
+                                    <FontAwesomeIconStyled icon={faHome} />
                                     Inicio
                                 </NavLink>
                             </NavLi>
                             <NavLi>
-                                <NavLink href="#!">Conócenos</NavLink>
+                                <NavLink href="#!">
+                                    <FontAwesomeIconStyled icon={faBook} />
+                                    Conócenos
+                                </NavLink>
                                 {/* TODO: Fix this not lining up in width */}
                                 {/* <NavLink href="#!">Services</NavLink> */}
                                 <ul class="nav-dropdown">
@@ -80,7 +79,10 @@ const NavigationBar = (props) => {
                                 </ul>
                             </NavLi>
                             <NavLi>
-                                <NavLink href="#!">Servicios</NavLink>
+                                <NavLink href="#!">
+                                    <FontAwesomeIconStyled icon={faMotorcycle} />
+                                    Servicios
+                                </NavLink>
                                 <ul class="nav-dropdown">
                                     <NavLi>
                                         <NavLink href="#!">Especialidades</NavLink>
@@ -88,18 +90,28 @@ const NavigationBar = (props) => {
                                 </ul>
                             </NavLi>
                             <NavLi>
-                                <NavLink href="#!">Contáctanos</NavLink>
+                                <NavLink href="#!">
+                                    <FontAwesomeIconStyled icon={faPaperPlane} />
+                                    Contáctanos
+                                </NavLink>
                             </NavLi>
                             <NavLi>
-                                <NavLink href="#!">Trabaja Con Nosotros</NavLink>
+                                
+                                <NavLink href="#!">
+                                    <FontAwesomeIconStyled icon={faBriefcase} />
+                                    Trabaja Con Nosotros
+                                </NavLink>
                             </NavLi>
                         </NavUl>
                 </Nav>
                 {/* <form>
                     <p style={{margin: 0}}>
-                        <label>Hi</label>
+                        <label>
+
+                            <FontAwesomeIcon icon={faSearch} />
+
+                        </label>
                         <input type="text" id="search"/>
-                            
                     </p>
                 </form> */}
                 {/* <NavLogoContainer className="nav-logo-container">
