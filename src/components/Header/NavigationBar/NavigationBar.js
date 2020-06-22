@@ -48,7 +48,7 @@ const NavigationBar = (props) => {
                             />
                         </NavLogoContainerLink>
                     </NavLogoContainer>
-                    <NavBarToggle/>
+                    <NavBarToggle id={props.navBarToggleID}/>
                     <Nav id="basic-navbar-nav"> 
                         {/* <div class="nav-mobile">
                             <a id="nav-toggle" href="#!">
@@ -69,7 +69,11 @@ const NavigationBar = (props) => {
                             <NavLi>
                                 <NavLink href="#!">About</NavLink>
                             </NavLi>
+                            {/* <NavLi>
+                                
+                            </NavLi> */}
                             <NavLi>
+                                <NavLink href="#!">Pricing</NavLink>
                                 {/* TODO: Fix this not lining up in width */}
                                 {/* <NavLink href="#!">Services</NavLink> */}
                                 <ul class="nav-dropdown">
@@ -83,9 +87,6 @@ const NavigationBar = (props) => {
                                         <NavLink href="#!">Graphic Design</NavLink>
                                     </NavLi>
                                 </ul>
-                            </NavLi>
-                            <NavLi>
-                                <NavLink href="#!">Pricing</NavLink>
                             </NavLi>
                             {/* <li>
                                 <a href="#!">Portfolio</a>

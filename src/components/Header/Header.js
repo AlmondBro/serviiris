@@ -6,7 +6,7 @@ import { NavigationBar } from './NavigationBar/NavigationBar.js';
 let Header = (props) => {
     return (
         <Fragment>
-            <NavigationBar/>
+            <NavigationBar navBarToggleID="navbar-toggle"/>
         </Fragment>
     ); //end return statement
 }; //end Header()
