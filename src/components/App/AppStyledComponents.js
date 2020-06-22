@@ -13,8 +13,8 @@ let AppContainerStyled = styled(Container)`
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding-left: -15px;
-    padding-right: -15px;
+    /* padding-left: 0px;
+    padding-right: 0px; */
    }
 `;
 
@@ -36,7 +36,12 @@ let AppContainerCol = styled(Col)`
 const AppContainer = (props) => {
     return (
         <AppContainerStyled fluid={ props.fluid } className="app-container">
-            { props.children }
+            <AppContainerRow>
+                <AppContainerCol className="p-0">
+                    { props.children } 
+                </AppContainerCol>
+            </AppContainerRow>
+            {/* { props.children } */}
         </AppContainerStyled>
     ); //end return statement
 }; //end AppContainer

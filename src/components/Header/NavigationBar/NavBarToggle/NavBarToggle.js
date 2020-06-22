@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component , Fragment } from 'react';
 
 //Import styled components
-import { MenuBarToggleButton, MenuBarLine, TopMenuBarLine, MiddleMenuBarLine, BottomMenuBarLine } from './NavBarToggleStyledComponents.js';
+import { InputCheckboxHack, MenuBarToggleButtonLabel, MenuBarToggleButton, MenuBarLine, TopMenuBarLine, MiddleMenuBarLine, BottomMenuBarLine } from './NavBarToggleStyledComponents.js';
 
 class NavBarToggle extends Component {
     constructor(props) {
@@ -11,7 +11,8 @@ class NavBarToggle extends Component {
         }; //end this.state
     }
     
-    navToggle = document.getElementById("navbarToggle");
+    navBarToggleID = this.props.navBarToggleID;
+    navToggle = document.getElementById(this.navBarToggleID);
 
     toggleNavBarButton = () => {
         const currentState = this.state.collapsed;
@@ -21,32 +22,57 @@ class NavBarToggle extends Component {
         //     NavBarCollapse.classList.toggle("show");
     }; //end toggleClass2
 
+
     render = () => {
         return ( 
-            <MenuBarToggleButton 
-                    aria-controls   =   "basic-navbar-nav" 
-                    type            =   "button" 
-                    aria-label      =   "Toggle navigation" 
-                    className       =   { "navbar-toggler "  
-                                            + ( this.state.collapsed ? "collapsed" : "") 
-                                        } 
-                    id              =   "navbarToggle"
-                    onClick         =   { this.toggleNavBarButton }
-            >
-                <TopMenuBarLine 
-                    collapsed   =   {   this.state.collapsed}
-                    className   =   "menubar-line top-bar" 
+            <Fragment>
+                <InputCheckboxHack 
+                    type    =   "checkbox" 
+                    id      =   "input-checkbox-hack"
+                    name    =   "input-checkbox-hack"
                 />
-                <MiddleMenuBarLine 
-                    collapsed   =   {   this.state.collapsed}
-                    className   =   "menubar-line middle-bar" 
-                />
-                <BottomMenuBarLine 
-                    collapsed   =   {   this.state.collapsed}
-                    className   =   "menubar-line bottom-bar" 
-                />			
-            </MenuBarToggleButton>
-        );
+
+                {/* <MenuBarToggleButtonLabel
+                    htmlFor = "input-checkbox-hack"
+                >
+                    <button 
+                        htmlFor = "input-checkbox-hack"
+
+                    >
+                        Testtt
+                    </button>
+                </MenuBarToggleButtonLabel> */}
+
+                <MenuBarToggleButtonLabel
+                    htmlFor = "input-checkbox-hack"
+                >
+                    <MenuBarToggleButton 
+                        aria-controls   =   "basic-navbar-nav" 
+                        aris-role       =   "button"
+                        aria-label      =   "Toggle navigation" 
+                        type            =   "button" 
+                        className       =   { "navbar-toggler "  
+                                                + ( this.state.collapsed ? "collapsed" : "") 
+                                            } 
+                        id              =   { this.props.navBarToggleID }
+                        onClick         =   { this.toggleNavBarButton }
+                    >
+                        <TopMenuBarLine 
+                            collapsed   =   {   this.state.collapsed}
+                            className   =   "menubar-line top-bar" 
+                        />
+                        <MiddleMenuBarLine 
+                            collapsed   =   {   this.state.collapsed}
+                            className   =   "menubar-line middle-bar" 
+                        />
+                        <BottomMenuBarLine 
+                            collapsed   =   {   this.state.collapsed}
+                            className   =   "menubar-line bottom-bar" 
+                        />			
+                    </MenuBarToggleButton>
+                </MenuBarToggleButtonLabel>
+            </Fragment>
+        ); //end return
     }; //end render()
 }; //end NavBarToggle
 
