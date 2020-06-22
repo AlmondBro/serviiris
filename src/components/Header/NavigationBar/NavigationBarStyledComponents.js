@@ -134,10 +134,22 @@ const NavLi = styled('li')`
         top: 34px;
         margin: 0;
         padding: 0;
-        background-color: #471f9d;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        background-color: #36167d;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+
         list-style: none;
         /* visibility: hidden; */
     }
+
+    
 
     :hover ul{
         visibility: visible;
