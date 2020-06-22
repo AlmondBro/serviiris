@@ -6,6 +6,8 @@ import { NavLink as Link } from "react-router-dom";
 
 import IrisLogo from './../../IrisLogo.js';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 /* 
     .bg-iris-yellow {
         background-color: #FFF308;
@@ -211,7 +213,15 @@ let NavLink = styled('a')`
     }
 `; //end NavLink
 
+const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
+    margin-right: 5px;
+
+    :hover {
+        color: #FFF308;
+    }
+`; //end FontAwesomeIconStyled
+
 export {    NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavLink };
+            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled };
 
 
