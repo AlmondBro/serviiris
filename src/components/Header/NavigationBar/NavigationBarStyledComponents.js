@@ -160,10 +160,9 @@ const NavLi = styled('li')`
         text-align: center;
     }
 
-    &  ul.nav-dropdown:last-child a {
+    &  ul.nav-dropdown li:last-child a {
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
-
     }
 
 
