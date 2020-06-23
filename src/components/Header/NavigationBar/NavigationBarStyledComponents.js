@@ -199,7 +199,7 @@ const NavLi = styled('li')`
         }
 
         & ul.nav-dropdown li::before {
-            content: ' ►';
+            content: '↪';
             display: inline-block;
             color: white;
             padding-right: 4px;
