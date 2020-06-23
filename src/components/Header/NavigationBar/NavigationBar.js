@@ -1,51 +1,19 @@
 import React from 'react';
 
-//Import React Bootstrap
-import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faSearch, faBriefcase, faPaperPlane, faMotorcycle, faBook, faBookDead } from '@fortawesome/free-solid-svg-icons';
 
-import NavBarToggle from './NavBarToggle.js'
+import NavBarToggle from './NavBarToggle/NavBarToggle.js';
 
 //Import styled components
-import { NavBar, NavStyled, NavBarCollapse, NavLink as Link } from './NavigationBarStyledComponents.js';
+import  {   NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
+            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled
+        } from './NavigationBarStyledComponents.js';
 
-const NavigationBar = (props) => {
-    return (
-            <NavBar 
-                    bg          =   "green" 
-                    variant     =   "dark" 
-                    expand      =   "sm" 
-                    className   =   "navigation-bar"
-            >
-                <Navbar.Brand 
-                    className   =   "collapsedNav-logo"
-                    >
-                    <Link 
-                        to      =   "/home"
-                        title   =   "Home"
-                    >
-                        {/* <img src="/assets/img/harza-tapes-logo.svg" 
-                             alt="Harza Tapes" 
-                             title="Home"
-                             id="harza-logo-mobile"
-                        /> */}
-                    </Link>
-                </Navbar.Brand>
-                {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-                {/*  TODO: Work on the logic for the NavBarToggle */}
-                <NavBarToggle   
-                    aria-controls   =   "basic-navbar-nav" 
-                />
-                <NavBarCollapse 
-                    className   =   "NavBarCollapse" 
-                    id          =   "basic-navbar-nav"
-                >
-                    <NavStyled>
-                        <Link 
+
+import IrisLogo from './../../IrisLogo.js';
+/*
+    <Link 
                             to              =   "/home" 
                             activeClassName =   "navLink-current"  
                             className       =   "navLinks nav-link"
@@ -62,15 +30,95 @@ const NavigationBar = (props) => {
                         <Link to="/products" activeClassName="navLink-current"  className="navLinks nav-link">Servicios</Link> 
                         <Link to="/location" activeClassName="navLink-current"  className="navLinks nav-link">Contáctanos</Link> 
                         <Link to="/contact-us" activeClassName="navLink-current" className="navLinks nav-link">Trabaja con Nosotros</Link> 
-                    </NavStyled>
-                    {/* <Form inline>
-                        <Form.Control type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-light">
+*/
+const NavigationBar = (props) => {
+    return (
+            <NavBar className="navigation-bar">
+                <NavContainer className="nav-container">
+                    <NavLogoContainer className="nav-logo-container">
+                        <NavLogoContainerLink href="#!">
+                            <NavIrisLogo
+                                height  =   "35px"
+                                width   =   "35px"
+                            />
+                        </NavLogoContainerLink>
+                    </NavLogoContainer>
+                    <NavBarToggle id={props.navBarToggleID}/>
+                    <Nav id="basic-navbar-nav"> 
+                        {/* <div class="nav-mobile">
+                            <a id="nav-toggle" href="#!">
+                                <span></span>
+                            </a>
+                        </div> */}
+                        
+                        <NavUl className="nav-ul">
+                            <NavLi className="nav-li">
+                                <NavLink 
+                                    href="#!" 
+                                    activeClassName =   "navLink-current" 
+                                    className="nav-li"
+                                >
+                                    <FontAwesomeIconStyled icon={faHome} />
+                                    Inicio
+                                </NavLink>
+                            </NavLi>
+                            <NavLi>
+                                <NavLink href="#!">
+                                    <FontAwesomeIconStyled icon={faBook} />
+                                    Conócenos
+                                </NavLink>
+                                {/* TODO: Fix this not lining up in width */}
+                                {/* <NavLink href="#!">Services</NavLink> */}
+                                <ul class="nav-dropdown">
+                                    <NavLi>
+                                        <NavLink href="#!">Visión</NavLink>
+                                    </NavLi>
+                                    <NavLi>
+                                        <NavLink href="#!">Misión</NavLink>
+                                    </NavLi>
+                                </ul>
+                            </NavLi>
+                            <NavLi>
+                                <NavLink href="#!">
+                                    <FontAwesomeIconStyled icon={faMotorcycle} />
+                                    Servicios
+                                </NavLink>
+                                <ul class="nav-dropdown">
+                                    <NavLi>
+                                        <NavLink href="#!">Especialidades</NavLink>
+                                    </NavLi>
+                                </ul>
+                            </NavLi>
+                            <NavLi>
+                                <NavLink href="#!">
+                                    <FontAwesomeIconStyled icon={faPaperPlane} />
+                                    Contáctanos
+                                </NavLink>
+                            </NavLi>
+                            <NavLi>
+                                
+                                <NavLink href="#!">
+                                    <FontAwesomeIconStyled icon={faBriefcase} />
+                                    Trabaja Con Nosotros
+                                </NavLink>
+                            </NavLi>
+                        </NavUl>
+                </Nav>
+                {/* <form>
+                    <p style={{margin: 0}}>
+                        <label>
+
                             <FontAwesomeIcon icon={faSearch} />
-                        </Button>
-                    </Form> */}
-                </NavBarCollapse>
-            </NavBar>     
+
+                        </label>
+                        <input type="text" id="search"/>
+                    </p>
+                </form> */}
+                {/* <NavLogoContainer className="nav-logo-container">
+                    <NavLogoContainerLink href="#!">Logo</NavLogoContainerLink>
+                </NavLogoContainer> */}
+            </NavContainer>
+        </NavBar>
     ); //end return
 }; //end Navigation()
 
