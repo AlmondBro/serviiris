@@ -147,7 +147,7 @@ const NavLi = styled('li')`
         align-items: center;
         width: 100%;
         max-height: 0px;
-        /* opacity: 0; */
+        opacity: 0;
         overflow: hidden;
 
         background-color: #5425BA;
@@ -157,13 +157,14 @@ const NavLi = styled('li')`
         list-style: none;
         visibility: hidden;
 
-        transition: max-height 500ms ease-out;
+        transition: visibility 500ms ease-out, max-height 500ms ease-out, opacity 600ms ease-out;
+
 
     }
 
     :hover ul{
         visibility: visible;
-        /* opacity: 1.0; */
+        opacity: 1.0;
         max-height: 500px;
     }
 
