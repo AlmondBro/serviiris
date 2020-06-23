@@ -122,7 +122,7 @@ const NavUl = styled('ul')`
         opacity: 0;
         overflow: hidden;
 
-        background-color: #471f9d;
+        background-color: #5425BA;
     }
 `; //end NavUL
 
@@ -178,6 +178,7 @@ const NavLi = styled('li')`
     @media only screen and (max-width: 765px) {
         display: block;
         margin: 0;
+        padding: 0 10px;
 
         ul.nav-dropdown {
             position: relative;
