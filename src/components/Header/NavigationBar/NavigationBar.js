@@ -1,13 +1,13 @@
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faSearch, faBriefcase, faPaperPlane, faMotorcycle, faBook, faBookDead } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faSearch, faBriefcase, faPaperPlane, faMotorcycle, faBook, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 import NavBarToggle from './NavBarToggle/NavBarToggle.js';
 
 //Import styled components
 import  {   NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled
+            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton
         } from './NavigationBarStyledComponents.js';
 
 
@@ -102,7 +102,16 @@ const NavigationBar = (props) => {
                                     Trabaja Con Nosotros
                                 </NavLink>
                             </NavLi>
+
+                            <NavLi>
+                                <UserIconButton>
+                                    <FontAwesomeIconStyled icon={faUserCircle} />
+                                    <label>Login</label>
+                                </UserIconButton>
+                            </NavLi>
                         </NavUl>
+                       
+
                 </Nav>
                 {/* <form>
                     <p style={{margin: 0}}>
