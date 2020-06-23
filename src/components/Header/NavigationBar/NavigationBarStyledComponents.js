@@ -41,7 +41,7 @@ const NavContainer = styled('div')`
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 5px;
+    padding: 0px;
 
 
     @media only screen and (max-width: 765px) {
@@ -51,6 +51,7 @@ const NavContainer = styled('div')`
             TODO: Make this value be dynamic
         */
         padding-left: 1.2%;
+        padding: 5px;
     } /* end media query */
 `; //end NavContainer
 
