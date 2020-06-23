@@ -118,6 +118,7 @@ const NavUl = styled('ul')`
         top: 48px;
 
         max-height: 0;
+        width: 200px;
         opacity: 0;
         overflow: hidden;
 
@@ -176,11 +177,36 @@ const NavLi = styled('li')`
     */
     @media only screen and (max-width: 765px) {
         display: block;
+        margin: 0;
 
-        ul {
+        ul.nav-dropdown {
             position: relative;
-            padding-left: 5%;
+            padding-left: 20%;
             width: 100%;
+            z-index: 2;
+            top: 0;
+        }
+
+
+        ul.nav-dropdown li {
+            display: inherit;
+            text-align: left;
+        }
+
+        &  ul.nav-dropdown li:last-child a {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        & ul.nav-dropdown li::before {
+            content: ' ►';
+            display: inline-block;
+            color: white;
+            padding-right: 4px;
+        }
+
+        & ul.nav-dropdown li:hover::before {
+            color: #FFF308;
         }
     } /* End media query */
 `;
