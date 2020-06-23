@@ -110,9 +110,7 @@ const NavigationBar = (props) => {
                                 </UserIconButton>
                             </NavLi>
                         </NavUl>
-                       
-
-                </Nav>
+                        <FontAwesomeIcon icon={faSearch} />
                 {/* <form>
                     <p style={{margin: 0}}>
                         <label>
@@ -123,6 +121,7 @@ const NavigationBar = (props) => {
                         <input type="text" id="search"/>
                     </p>
                 </form> */}
+                </Nav>
                 {/* <NavLogoContainer className="nav-logo-container">
                     <NavLogoContainerLink href="#!">Logo</NavLogoContainerLink>
                 </NavLogoContainer> */}
