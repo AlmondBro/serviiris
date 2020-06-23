@@ -35,7 +35,7 @@ const NavContainer = styled('div')`
     /* Breakpoint of 1000px  */
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     width: 100%;
@@ -90,7 +90,9 @@ const Nav = styled('nav')`
     flex-direction: row;
     justify-content: flex-start;
 
-    margin-right: auto; 
+    /* margin-right: 0; */
+    width: 100%;
+    /* auto;  */
 
     @media only screen and (max-width: 765px) {
         position: absolute;
@@ -103,9 +105,16 @@ const Nav = styled('nav')`
 
 const NavUl = styled('ul')`
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
 
     transition: max-height 500ms ease-out, opacity 500ms ease-out;
 
@@ -113,6 +122,10 @@ const NavUl = styled('ul')`
     border-bottom-right-radius: 12px;
     /* border-top-left-radius: 12px;
     border-top-right-radius: 12px; */
+
+    & li:last-child {
+        margin-left: auto;
+    }
 
     @media only screen and (max-width: 765px) {
         position: absolute;
@@ -133,7 +146,7 @@ const NavLi = styled('li')`
     position: relative;
     cursor: pointer;
 
-    margin: 0 15px;
+    margin: 0 10px;
 
     ul {
         position: absolute;
@@ -259,7 +272,24 @@ const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
     }
 `; //end FontAwesomeIconStyled
 
+const UserIconButton = styled('button')`
+    background-color: white;
+    padding: 2px 4px;
+    border-radius: 5px;
+    border: 0;
+    
+    color: #5425BA;
+
+    cursor: pointer;
+
+    label {
+        cursor: pointer;
+        padding: 0;
+        margin: 0;  
+    }
+`;
+
 export {    NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled };
+            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton };
 
 

@@ -6,11 +6,14 @@ const InputCheckboxHack = styled('input')`
     left: -999999px;
     top: -99999px;
 
-    :checked ~ nav#basic-navbar-nav > ul.nav-ul {
-        display: block;
-        max-height: 500px;
-        opacity: 100%;
+    @media only screen and (max-width: 765px) {
+        :checked ~ nav#basic-navbar-nav > ul.nav-ul {
+            display: block;
+            max-height: 500px;
+            opacity: 100%;
+        }
     }
+ 
 `;
 const MenuBarToggleButtonLabel = styled('label')`
     cursor: pointer;
