@@ -41,7 +41,7 @@ const NavContainer = styled('div')`
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 5px;
 
 
     @media only screen and (max-width: 765px) {
@@ -115,7 +115,7 @@ const NavUl = styled('ul')`
 
     @media only screen and (max-width: 765px) {
         position: absolute;
-        top: 48px;
+        top: 53px;
 
         max-height: 0;
         width: 200px;
