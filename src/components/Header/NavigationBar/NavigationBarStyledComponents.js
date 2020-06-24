@@ -273,23 +273,56 @@ const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
 `; //end FontAwesomeIconStyled
 
 const UserIconButton = styled('button')`
-    background-color: white;
-    padding: 2px 4px;
-    border-radius: 5px;
-    border: 0;
-    
-    color: #5425BA;
-
     cursor: pointer;
 
+    /* color: #5425BA;
+    background-color: white; */
+    color: white;
+        background-color: #5425BA;
+
+    padding: 2px 4px;
+    
+    border-radius: 5px;
+    border: 0;
+
+    
     label {
         cursor: pointer;
         padding: 0;
         margin: 0;  
     }
+
+    :hover, :visited, :active {
+        color: #5425BA;
+        background-color: white;
+
+        /* color: white;
+        background-color: #5425BA; */
+    }
+
+    transition: color 500ms, background-color 500ms;
 `;
 
+const SearchForm = styled('form')`
+    input#search {
+        position: absolute;
+        top: 45px;
+        right: 1%;
+        border: 0;
+
+        padding: 5px;
+        padding-left: 10px;
+
+        background-color: white;
+
+        border-radius: 12px;
+        border: 1px solid #5425ba;
+
+        
+    }
+`; //end Search Form
+
 export {    NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton };
+            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm };
 
 
