@@ -112,7 +112,9 @@ const NavigationBar = (props) => {
                                                 icon={faSearch} 
                                             />
                                         </label>
-                                        <input type="text" id="search-input"/>
+                                        <div id="search-input-field-container">
+                                            <input type="text" id="search-input"/>
+                                        </div>
                                     </p>
                                 </SearchForm>
                             </NavLi>

@@ -326,9 +326,24 @@ const SearchForm = styled('form')`
         padding: 0;
     }
 
+    div#search-input-field-container {
+        margin: 0;
+        padding: 0;
+    }
+    
+    div#search-input-field-container:before {
+        content: "";
+        position: absolute;
+        top: 104%;
+        right: 50%;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #5425ba transparent;
+    }
+    
     input#search-input {
         position: absolute;
-        top: 45px;
+        top: 145%;
         right: 1%;
         border: 0;
 
@@ -345,7 +360,16 @@ const SearchForm = styled('form')`
     }
 `; //end Search Form
 
+const InputCheckboxHack = styled('input')`
+    visibility: hidden;
+    position: absolute;
+    left: -999999px;
+    top: -99999px;
+`;
+
 export {    NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm };
+            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm,
+            InputCheckboxHack
+        };
 
 
