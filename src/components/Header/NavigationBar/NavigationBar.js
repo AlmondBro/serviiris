@@ -102,22 +102,32 @@ const NavigationBar = (props) => {
                                     Trabaja Con Nosotros
                                 </NavLink>
                             </NavLi>
+                            
+                            <NavLi>
+                                <SearchForm>
+                                    <p id="search-input-container">
+                                        <label id="search-input-label">
+                                            <FontAwesomeIconStyled 
+                                                id="search-input-icon" 
+                                                icon={faSearch} 
+                                            />
+                                        </label>
+                                        <input type="text" id="search-input"/>
+                                    </p>
+                                </SearchForm>
+                            </NavLi>
 
                             <NavLi>
                                 <UserIconButton>
-                                    <FontAwesomeIconStyled icon={faUserCircle} />
+                                    <FontAwesomeIconStyled 
+                                        id      =   "nav-login-icon"
+                                        icon    =   {faUserCircle} 
+                                    />
                                     <label>Login</label>
                                 </UserIconButton>
                             </NavLi>
                         </NavUl>
-                        <SearchForm>
-                            <p style={{margin: 0}}>
-                                <label>
-                                    <FontAwesomeIcon icon={faSearch} />
-                                </label>
-                                <input type="text" id="search"/>
-                            </p>
-                        </SearchForm>
+                      
                 
                 </Nav>
                 {/* <NavLogoContainer className="nav-logo-container">

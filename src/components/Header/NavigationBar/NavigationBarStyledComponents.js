@@ -123,7 +123,7 @@ const NavUl = styled('ul')`
     /* border-top-left-radius: 12px;
     border-top-right-radius: 12px; */
 
-    & li:last-child {
+    & li:nth-last-child(2) {
         margin-left: auto;
     }
 
@@ -265,6 +265,8 @@ let NavLink = styled('a')`
 `; //end NavLink
 
 const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
+    color: white;
+
     margin-right: 5px;
 
     :hover {
@@ -300,11 +302,31 @@ const UserIconButton = styled('button')`
         background-color: #5425BA; */
     }
 
+    :hover > #nav-login-icon, 
+    :visited > #nav-login-icon, 
+    :active > #nav-login-icon {
+        color: #5425BA;
+    }
+
     transition: color 500ms, background-color 500ms;
 `;
 
 const SearchForm = styled('form')`
-    input#search {
+    margin: 0;
+    padding: 0;
+
+    p#search-input-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    label#search-input-label {
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+    }
+
+    input#search-input {
         position: absolute;
         top: 45px;
         right: 1%;
@@ -318,6 +340,7 @@ const SearchForm = styled('form')`
         border-radius: 12px;
         border: 1px solid #5425ba;
 
+        width: 300px;
         
     }
 `; //end Search Form
