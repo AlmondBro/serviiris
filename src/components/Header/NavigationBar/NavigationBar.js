@@ -7,7 +7,7 @@ import NavBarToggle from './NavBarToggle/NavBarToggle.js';
 
 //Import styled components
 import  {   NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton
+            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm
         } from './NavigationBarStyledComponents.js';
 
 
@@ -110,17 +110,15 @@ const NavigationBar = (props) => {
                                 </UserIconButton>
                             </NavLi>
                         </NavUl>
-                        <FontAwesomeIcon icon={faSearch} />
-                {/* <form>
-                    <p style={{margin: 0}}>
-                        <label>
-
-                            <FontAwesomeIcon icon={faSearch} />
-
-                        </label>
-                        <input type="text" id="search"/>
-                    </p>
-                </form> */}
+                        <SearchForm>
+                            <p style={{margin: 0}}>
+                                <label>
+                                    <FontAwesomeIcon icon={faSearch} />
+                                </label>
+                                <input type="text" id="search"/>
+                            </p>
+                        </SearchForm>
+                
                 </Nav>
                 {/* <NavLogoContainer className="nav-logo-container">
                     <NavLogoContainerLink href="#!">Logo</NavLogoContainerLink>
