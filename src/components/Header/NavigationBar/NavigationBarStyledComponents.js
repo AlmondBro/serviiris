@@ -327,8 +327,11 @@ const SearchForm = styled('form')`
     }
 
     div#search-input-field-container {
+        visibility: hidden;
+        height: 0;
         margin: 0;
         padding: 0;
+        transition: visibility 500ms;
     }
     
     div#search-input-field-container:before {
@@ -342,6 +345,7 @@ const SearchForm = styled('form')`
     }
     
     input#search-input {
+        visibility: hidden;
         position: absolute;
         top: 145%;
         right: 1%;
@@ -355,9 +359,18 @@ const SearchForm = styled('form')`
         border-radius: 12px;
         border: 1px solid #5425ba;
 
-        width: 300px;
-        
+        width: 0px;
+        max-height: 0px;
+
+        transition: visibility 500ms, max-height 400ms, width 500ms;
     }
+
+    & #search-input-checkbox-hack:checked ~ input#search-input {
+        visibility: visible;
+        max-height: 500px; 
+        width: 300px;
+    }
+
 `; //end Search Form
 
 const InputCheckboxHack = styled('input')`
