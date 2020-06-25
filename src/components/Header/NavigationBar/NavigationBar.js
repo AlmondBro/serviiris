@@ -7,7 +7,8 @@ import NavBarToggle from './NavBarToggle/NavBarToggle.js';
 
 //Import styled components
 import  {   NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm
+            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm,
+            InputCheckboxHack
         } from './NavigationBarStyledComponents.js';
 
 
@@ -106,13 +107,19 @@ const NavigationBar = (props) => {
                             <NavLi>
                                 <SearchForm>
                                     <p id="search-input-container">
-                                        <label id="search-input-label">
+                                    
+                                        <label id="search-input-label" for="search-input-checkbox-hack">
                                             <FontAwesomeIconStyled 
                                                 id="search-input-icon" 
                                                 icon={faSearch} 
                                             />
                                         </label>
                                         <div id="search-input-field-container">
+                                            <InputCheckboxHack 
+                                                type    =   "checkbox" 
+                                                id      =   "search-input-checkbox-hack" 
+                                                name    =   "search-input-checkbox-hack"
+                                            />
                                             <input type="text" id="search-input"/>
                                         </div>
                                     </p>
