@@ -7,6 +7,8 @@ import { IrisLogoWings } from './../IrisLogo.js';
 
 
 const FooterStyled = styled('footer')`
+    overflow-y: hidden;
+
     font-size: 0.8em;
     background-color: #2F2E2E;
 
@@ -50,6 +52,8 @@ const FooterColumnAddress = styled('address')`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin: 8px 0px;
+
 
     color: white; 
 
