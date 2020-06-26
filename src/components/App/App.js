@@ -31,7 +31,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header/>
-        <AppContainer fluid>
+        <AppContainer className="container-fluid">
           
           <Switch>
             <Route  exact 
