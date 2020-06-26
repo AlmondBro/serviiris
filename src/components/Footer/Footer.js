@@ -1,10 +1,7 @@
 import React from 'react';
 
 //Import styled components
-import { FooterStyled } from './FooterStyledComponents.js';
-
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { FooterStyled, FooterIrisWings } from './FooterStyledComponents.js';
 
 const Footer = (props) => {
     return (
@@ -12,7 +9,10 @@ const Footer = (props) => {
             <div className="col" id="footer-col-1">
                 <div className="row" id="footer-col1-row">
                     <div className="col" id="footer-col1-row-col1">
-
+                        <FooterIrisWings
+                            width   =   "178px"
+                            height  =   "178px"
+                        />
                     </div>
 
                     <address className="col" id="footer-address"> 
