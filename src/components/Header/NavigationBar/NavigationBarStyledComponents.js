@@ -356,6 +356,7 @@ const SearchForm = styled('form')`
     input#search-input {
         visibility: hidden;
         position: absolute;
+        z-index: 1;
         top: 145%;
         right: 1%;
         border: 0;
