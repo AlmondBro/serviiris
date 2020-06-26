@@ -1,44 +1,85 @@
 import React from 'react';
 
 //Import styled components
-import { FooterStyled, FooterIrisWings } from './FooterStyledComponents.js';
+import { FooterStyled, FooterIrisWings, FontAwesomeIconStyled, FooterColumn, FooterColumnAddress, FooterLink } from './FooterStyledComponents.js';
+
+//Import FontAwesome icon library
+import { faEnvelope, faMapMarked, faCameraRetro, faPhoneSquare  } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = (props) => {
     return (
         <FooterStyled className="row footer-container">
-            <div className="col" id="footer-col-1">
+            <FooterColumn className="col" id="footer-col-1" borderRight>
                 <div className="row" id="footer-col1-row">
-                    <div className="col" id="footer-col1-row-col1">
+                    <div 
+                        className="col-md-3" 
+                        id="footer-col1-row-col1" 
+                        borderRight
+                    >
                         <FooterIrisWings
                             width   =   "178px"
                             height  =   "178px"
                         />
                     </div>
 
-                    <address className="col" id="footer-address"> 
-                        <a  href =   "#"
+                    <FooterColumnAddress 
+                        className="col-md-9" 
+                        id="footer-address"  
+                    >  
+                        <FooterLink  
+                            href =   "#"
                             id  =   "footer-direction"
                         >
-                            Carerra 24c #4-54 Cali, Valle del Cauca, Colombia
-                        </a>
-                        <a  href =   "mailto:iristeamco@gmail.com"
+                                <FontAwesomeIconStyled icon={faMapMarked}/>
+                                <span id="small-padding">Carerra 24c #4-54 </span>
+                                <span>Cali, Valle del Cauca Colombia</span>
+                        </FooterLink>
+                        {/* <FooterLink  
+                            href =   "mailto:iristeamco@gmail.com"
                             id  =   "footer-email"
                         >
-                            iristeamco@gmail.com
-                        </a>
-                        <a  href    =   "https://wa.link/aloo0e"
+                            <FontAwesomeIconStyled icon={faMapMarked}/>
+                            <span>iristeamco@gmail.com</span>
+                        </FooterLink> */}
+                        <FooterLink  
+                            href =   "#"
+                            id  =   "footer-direction"
+                        >
+                                <FontAwesomeIconStyled icon={faEnvelope}/>
+                             
+                                iristeamco@gmail.com
+                        </FooterLink>
+                        <FooterLink  
+                            href    =   "https://wa.link/aloo0e"
                             id      =   "footer-phone">
 
-                        </a>
-                    </address>
+                        </FooterLink>
+                    </FooterColumnAddress>
                 </div>
-            </div>
-            <div className="col" id="footer-col-2">
-                Col 2
-            </div>
-            <div className="col" id="footer-col-3">
-                Col 3
-            </div>
+            </FooterColumn>
+            <FooterColumn className="col" id="footer-col-2" borderRight>
+                <FooterLink href="/conocenos">
+                    Conócenos
+                </FooterLink>
+                <FooterLink href="/servicios">
+                    Servicios
+                </FooterLink>
+                <FooterLink href="/Contactanos">
+                    Contáctanos
+                </FooterLink>
+            </FooterColumn>
+            <FooterColumn className="col" id="footer-col-3">
+                <FooterLink href="#"> 
+                    <FontAwesomeIconStyled icon={faWhatsapp}/>   
+                </FooterLink>
+                <FooterLink href="#"> 
+                    <FontAwesomeIconStyled icon={faFacebook}/>   
+                </FooterLink>
+                <FooterLink href="#"> 
+                    <FontAwesomeIconStyled icon={faInstagram}/>
+                </FooterLink>
+            </FooterColumn>
         </FooterStyled>
     ); //end return statement
 
