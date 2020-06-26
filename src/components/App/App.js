@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom';
 
@@ -28,30 +28,31 @@ class App extends Component {
     const publicURL = ""; //process.env.PUBLIC_URL;
     const defaultURL = "home";
 
-    return ([
-      <Header/>, 
-      <AppContainer fluid>
+    return (
+      <Fragment>
+        <Header/>
+        <AppContainer fluid>
+          
+          <Switch>
+            <Route  exact 
+                    path    = {`${publicURL}/`}
+                    render  = { () => ( <Redirect to={`${publicURL}/${defaultURL}`} /> ) }
+                                
+            />
+            <Route   
+                    path={`${publicURL}/home`}
+                                  render={ () => {
+                                          return (
+                                            <Home/>
+                                          );
+                                      }
+                                  } 
+            />
+          </Switch>
+          <Footer/>                          
         
-        <Switch>
-          <Route  exact 
-                  path    = {`${publicURL}/`}
-                  render  = { () => ( <Redirect to={`${publicURL}/${defaultURL}`} /> ) }
-                              
-          />
-           <Route   
-                  path={`${publicURL}/home`}
-                                render={ () => {
-                                        return (
-                                          <Home/>
-                                        );
-                                    }
-                                } 
-          />
-        </Switch>
-        <Footer/>                          
-      
-      </AppContainer>
-    ]
+        </AppContainer>
+      </Fragment>
     );
   }; //end render() method
 } //end App class
