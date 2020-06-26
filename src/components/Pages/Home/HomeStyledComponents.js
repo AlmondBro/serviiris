@@ -125,6 +125,10 @@ const EmailSubscribeInput = styled('input')`
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 
+    @media only screen and (max-width: 1186px) {
+        width: 65%;
+    }
+
     @media only screen and (min-width: 312px) and (max-width: 593px) {
         width: 60%;
     }
