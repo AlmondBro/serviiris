@@ -1,5 +1,6 @@
 import React from 'react';
 
+//Import FontAwesome icon libraries
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSearch, faBriefcase, faPaperPlane, faMotorcycle, faBook, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
