@@ -34,7 +34,9 @@ const LeftColumn = styled("div")`
 const RightColumn = styled(LeftColumn)`
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+
+    margin: auto;
     background-color: #5425BA;
 `;
 
@@ -61,11 +63,33 @@ const IrisHomeDescription = styled('p')`
     color: white;
     font-weight: bolder;
 
-    /* width: 55%; */
+    margin-top: 30px;
+`;
+
+const ContactInfoContainer = styled('address')`
+    color: white;
+
+    margin-top: 30px;
+`;
+
+const ContactInfoEmail = styled('a')`
+    display: block;
+    color: white;
+    text-decoration: none;
+
+    :hover {
+        color: white;
+        text-decoration: underline;
+    }
+`; //end ContactInfoEmail
+
+const ContactInfoPhone = styled(ContactInfoEmail)`
 `;
 
 const PromotionesContainerAddress = styled('address')`
     width: 60%;
+
+    margin-top: 25px;
 `;
 
 const PromotionsTitle = styled('h4')`
@@ -97,4 +121,4 @@ const EmailSubscribeButton = styled('button')`
     border-bottom-right-radius: 12px;
 `;
 
-export { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeIrisLogo, WelcomeText, IrisHomeDescription, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeInput, EmailSubscribeButton };
+export { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeIrisLogo, WelcomeText, IrisHomeDescription, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeInput, EmailSubscribeButton };
