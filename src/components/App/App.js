@@ -49,9 +49,8 @@ class App extends Component {
                                   } 
             />
           </Switch>
-          <Footer/>                          
-        
         </AppContainer>
+        <Footer/>                          
       </Fragment>
     );
   }; //end render() method
