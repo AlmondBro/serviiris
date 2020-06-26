@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-let AppContainerStyled = styled(Container)`
+let AppContainerStyled = styled('main')`
    /* Use ampserands for this to acquire precedence over the bootstrap components */
    &&& {
     display: flex;
@@ -37,7 +37,7 @@ const AppContainer = (props) => {
     return (
         <AppContainerStyled 
             fluid       =   { props.fluid } 
-            className   =   "app-container"
+            className   =   "app-container col"
         >
             <AppContainerRow>
                 <AppContainerCol 
