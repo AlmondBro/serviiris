@@ -123,6 +123,7 @@ const NavUl = styled('ul')`
     /* border-top-left-radius: 12px;
     border-top-right-radius: 12px; */
 
+
     & li:nth-last-child(2) {
         margin-left: auto;
     }
@@ -137,6 +138,12 @@ const NavUl = styled('ul')`
         overflow: hidden;
 
         background-color: #5425BA;
+
+        & li:last-child {
+            margin: 12px 0px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
     }
 `; //end NavUL
 
@@ -322,6 +329,8 @@ const SearchForm = styled('form')`
 
     label#search-input-label {
         cursor: pointer;
+        /* top: 2px;
+        position: relative; */
         margin: 0;
         padding: 0;
     }
@@ -370,6 +379,31 @@ const SearchForm = styled('form')`
         max-height: 500px; 
         width: 300px;
     }
+
+    @media only screen and (max-width: 765px) {
+        label#search-input-label {
+            cursor: pointer;
+            top: 2px;
+            left: 3px;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        input#search-input {
+            transition: visibility 500ms, max-height 500ms, width 500ms;
+            top: 0px;
+            /* right: 9px; */
+            left: 37px;
+            max-height: 30px;
+        }
+        & #search-input-checkbox-hack:checked ~ input#search-input {
+            max-height: 30px;
+            width: 155px;
+            top: 0px;
+            left: 37px;
+        }
+    } /* end media query */
 
 `; //end Search Form
 
