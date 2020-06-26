@@ -11,9 +11,6 @@ import  {   NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContaine
             Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm,
             InputCheckboxHack
         } from './NavigationBarStyledComponents.js';
-
-
-import IrisLogo from './../../IrisLogo.js';
 /*
     <Link 
                             to              =   "/home" 
