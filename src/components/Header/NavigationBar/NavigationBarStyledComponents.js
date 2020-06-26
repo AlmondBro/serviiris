@@ -151,6 +151,7 @@ const NavUl = styled('ul')`
     }
 
     @media only screen and (max-width: 765px) {
+        display: block;
         position: absolute;
         top: 53px;
 
