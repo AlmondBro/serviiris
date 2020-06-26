@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSearch, faBriefcase, faPaperPlane, faMotorcycle, faBook, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 //Import page styled components
-import { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeIrisLogo, WelcomeText, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, IrisHomeDescription, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeInput, EmailSubscribeButton } from './HomeStyledComponents.js';
+import { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeIrisLogo, WelcomeText, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, IrisHomeDescription, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton } from './HomeStyledComponents.js';
 
 const Home = (props) => {
     return (
@@ -47,7 +47,8 @@ const Home = (props) => {
                         <PromotionsTitle id="promotions-title">
                             Promociones, novedades y más..
                         </PromotionsTitle>
-                        <p>
+
+                        <EmailSubscribeContainer id="email-subscribe-container">
                             <EmailSubscribeInput 
                                 type        =   "text" 
                                 placeholder =   "Ingresa tu e-mail"
@@ -55,7 +56,7 @@ const Home = (props) => {
                             <label>
                                 <EmailSubscribeButton>Enviar</EmailSubscribeButton>
                             </label>
-                        </p>
+                        </EmailSubscribeContainer>
                     </PromotionesContainerAddress>
    
                 </RightColumn>
