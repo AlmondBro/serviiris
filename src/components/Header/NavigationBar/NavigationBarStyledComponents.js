@@ -28,7 +28,7 @@ const NavBar = styled('section')`
 
     font-size: 1em;
 
-    @media only screen and (min-width: 765px) and (max-width: 822px) {
+    @media only screen and (min-width: 765px) and (max-width: 874px) {
         font-size: 0.87em;
     }
 `; //end NavBar
