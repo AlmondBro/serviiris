@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { NavLink as Link } from "react-router-dom";
 
-import IrisLogo from './../../IrisLogo.js';
+import { IrisLogo} from './../../IrisLogo.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
