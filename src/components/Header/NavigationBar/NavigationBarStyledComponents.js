@@ -55,6 +55,9 @@ const NavContainer = styled('div')`
 
 
     @media only screen and (max-width: 765px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         /* 
             Offset all the NavigationBar items a 
             bit to the left so it is not just right up to the edge 
@@ -105,6 +108,10 @@ const Nav = styled('nav')`
     /* auto;  */
 
     @media only screen and (max-width: 765px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
         position: absolute;
         top: -13px;
         margin-right: 0; 
