@@ -1,6 +1,12 @@
 import React from 'react';
 
-import { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeIrisLogo, WelcomeText, IrisHomeDescription, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeInput, EmailSubscribeButton } from './HomeStyledComponents.js';
+
+//Import FontAwesome icon libraries
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faSearch, faBriefcase, faPaperPlane, faMotorcycle, faBook, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+
+//Import page styled components
+import { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeIrisLogo, WelcomeText, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, IrisHomeDescription, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeInput, EmailSubscribeButton } from './HomeStyledComponents.js';
 
 const Home = (props) => {
     return (
@@ -21,14 +27,20 @@ const Home = (props) => {
                                 servicio oportuno, amable y de calidad. 
                             </IrisHomeDescription>
 
-                            <address>
-                                <a href="mailto:iristeamco@gmail.com">
+                            <ContactInfoContainer id="contact-info-container">
+                                <ContactInfoEmail
+                                    href    =   "mailto:iristeamco@gmail.com"
+                                    id      =   "contact-info-email"
+                                >
                                     iristeamco@gmail.com
-                                </a>
-                                <a href="https://wa.link/aloo0e">
+                                </ContactInfoEmail>
+                                <ContactInfoPhone 
+                                    href    =   "https://wa.link/aloo0e"
+                                    id      =   "contact-info-phone"
+                                >
                                     +57 (311) 718-4447
-                                </a>
-                            </address>
+                                </ContactInfoPhone>
+                            </ContactInfoContainer>
                     </RightColumnContainer>
 
                     <PromotionesContainerAddress id="promotions-container-address">
