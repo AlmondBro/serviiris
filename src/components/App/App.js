@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Route, BrowserRouter, Redirect } from 'react-router-dom';
+import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom';
 
 //Import styled-components
 import { AppContainer } from './AppStyledComponents.js';
@@ -25,9 +25,30 @@ class App extends Component {
   }; //end componentDidMount 
 
   render = () => {
+    const publicURL = ""; //process.env.PUBLIC_URL;
+    const defaultURL = "home";
+
     return (
       <AppContainer fluid>
         <Header/> 
+        <Switch>
+          <Route  exact 
+                  path    = {`${publicURL}/`}
+                  render  = { () => ( <Redirect to={`${publicURL}/${defaultURL}`} /> ) }
+                              
+          />
+           <Route   
+                  path={`${publicURL}/home`}
+                                render={ () => {
+                                        return (
+                                          <Home/>
+                                        );
+                                    }
+                                } 
+          />
+        </Switch>
+
+      
       </AppContainer>
     );
   }; //end render() method
