@@ -96,6 +96,21 @@ const PromotionsTitle = styled('h4')`
     font-size: 0.8em;
     color: white;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 311px) {
+        text-align: center;
+    }
+`;
+const EmailSubscribeContainer = styled('p')`
+    @media only screen and (max-width: 311px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        width: 100%;
+        border-radius: 12px;
+    }
 `;
 
 const EmailSubscribeInput = styled('input')`
@@ -109,6 +124,15 @@ const EmailSubscribeInput = styled('input')`
     border: 0;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+
+    @media only screen and (min-width: 312px) and (max-width: 593px) {
+        width: 60%;
+    }
+
+    @media only screen and (max-width: 311px) {
+        width: 100%;
+        border-radius: 12px;
+    }
 `;
 
 const EmailSubscribeButton = styled('button')`
@@ -119,6 +143,16 @@ const EmailSubscribeButton = styled('button')`
     padding: 12px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+
+    @media only screen and (max-width: 311px) {
+        width: 40%;
+        
+        margin: 0 auto;
+        margin-top: 10px;
+        text-align: center;
+
+        border-radius: 12px;
+    }
 `;
 
-export { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeIrisLogo, WelcomeText, IrisHomeDescription, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeInput, EmailSubscribeButton };
+export { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeIrisLogo, WelcomeText, IrisHomeDescription, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton };
