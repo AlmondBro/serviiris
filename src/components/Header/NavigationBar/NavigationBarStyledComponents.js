@@ -35,7 +35,7 @@ const NavContainer = styled('div')`
     /* Breakpoint of 1000px  */
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     width: 100%;
@@ -90,7 +90,9 @@ const Nav = styled('nav')`
     flex-direction: row;
     justify-content: flex-start;
 
-    margin-right: auto; 
+    /* margin-right: 0; */
+    width: 100%;
+    /* auto;  */
 
     @media only screen and (max-width: 765px) {
         position: absolute;
@@ -103,9 +105,16 @@ const Nav = styled('nav')`
 
 const NavUl = styled('ul')`
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
 
     transition: max-height 500ms ease-out, opacity 500ms ease-out;
 
@@ -113,6 +122,11 @@ const NavUl = styled('ul')`
     border-bottom-right-radius: 12px;
     /* border-top-left-radius: 12px;
     border-top-right-radius: 12px; */
+
+
+    & li:nth-last-child(2) {
+        margin-left: auto;
+    }
 
     @media only screen and (max-width: 765px) {
         position: absolute;
@@ -124,6 +138,12 @@ const NavUl = styled('ul')`
         overflow: hidden;
 
         background-color: #5425BA;
+
+        & li:last-child {
+            margin: 12px 0px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
     }
 `; //end NavUL
 
@@ -133,7 +153,7 @@ const NavLi = styled('li')`
     position: relative;
     cursor: pointer;
 
-    margin: 0 15px;
+    margin: 0 10px;
 
     ul {
         position: absolute;
@@ -252,6 +272,8 @@ let NavLink = styled('a')`
 `; //end NavLink
 
 const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
+    color: white;
+
     margin-right: 5px;
 
     :hover {
@@ -259,7 +281,142 @@ const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
     }
 `; //end FontAwesomeIconStyled
 
+const UserIconButton = styled('button')`
+    cursor: pointer;
+
+    /* color: #5425BA;
+    background-color: white; */
+    color: white;
+        background-color: #5425BA;
+
+    padding: 2px 4px;
+    
+    border-radius: 5px;
+    border: 0;
+
+    
+    label {
+        cursor: pointer;
+        padding: 0;
+        margin: 0;  
+    }
+
+    :hover, :visited, :active {
+        color: #5425BA;
+        background-color: white;
+
+        /* color: white;
+        background-color: #5425BA; */
+    }
+
+    :hover > #nav-login-icon, 
+    :visited > #nav-login-icon, 
+    :active > #nav-login-icon {
+        color: #5425BA;
+    }
+
+    transition: color 500ms, background-color 500ms;
+`;
+
+const SearchForm = styled('form')`
+    margin: 0;
+    padding: 0;
+
+    p#search-input-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    label#search-input-label {
+        cursor: pointer;
+        /* top: 2px;
+        position: relative; */
+        margin: 0;
+        padding: 0;
+    }
+
+    div#search-input-field-container {
+        visibility: hidden;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        transition: visibility 500ms;
+    }
+    
+    div#search-input-field-container:before {
+        content: "";
+        position: absolute;
+        top: 104%;
+        right: 50%;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #5425ba transparent;
+    }
+    
+    input#search-input {
+        visibility: hidden;
+        position: absolute;
+        top: 145%;
+        right: 1%;
+        border: 0;
+
+        padding: 5px;
+        padding-left: 10px;
+
+        background-color: white;
+
+        border-radius: 12px;
+        border: 1px solid #5425ba;
+
+        width: 0px;
+        max-height: 0px;
+
+        transition: visibility 500ms, max-height 400ms, width 500ms;
+    }
+
+    & #search-input-checkbox-hack:checked ~ input#search-input {
+        visibility: visible;
+        max-height: 500px; 
+        width: 300px;
+    }
+
+    @media only screen and (max-width: 765px) {
+        label#search-input-label {
+            cursor: pointer;
+            top: 2px;
+            left: 3px;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        input#search-input {
+            transition: visibility 500ms, max-height 500ms, width 500ms;
+            top: 0px;
+            /* right: 9px; */
+            left: 37px;
+            max-height: 30px;
+        }
+        & #search-input-checkbox-hack:checked ~ input#search-input {
+            max-height: 30px;
+            width: 155px;
+            top: 0px;
+            left: 37px;
+        }
+    } /* end media query */
+
+`; //end Search Form
+
+const InputCheckboxHack = styled('input')`
+    visibility: hidden;
+    position: absolute;
+    left: -999999px;
+    top: -99999px;
+`;
+
 export {    NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled };
+            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm,
+            InputCheckboxHack
+        };
 
 
