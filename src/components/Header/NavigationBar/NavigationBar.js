@@ -133,7 +133,7 @@ const NavigationBar = (props) => {
                                         id      =   "nav-login-icon"
                                         icon    =   {faUserCircle} 
                                     />
-                                    <label>Login</label>
+                                    <label>Iniciar Sesión</label>
                                 </UserIconButton>
                             </NavLi>
                         </NavUl>
