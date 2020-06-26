@@ -28,9 +28,10 @@ class App extends Component {
     const publicURL = ""; //process.env.PUBLIC_URL;
     const defaultURL = "home";
 
-    return (
+    return ([
+      <Header/>, 
       <AppContainer fluid>
-        <Header/> 
+        
         <Switch>
           <Route  exact 
                   path    = {`${publicURL}/`}
@@ -50,6 +51,7 @@ class App extends Component {
 
       
       </AppContainer>
+    ]
     );
   }; //end render() method
 } //end App class

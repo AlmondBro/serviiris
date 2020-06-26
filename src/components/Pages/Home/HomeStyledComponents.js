@@ -7,17 +7,21 @@ import Col from 'react-bootstrap/Col';
 
 import IrisLogo from './../../IrisLogo.js';
 
+const HomePageContainer = styled('section')`
+    /* margin: 0; */
+    height: 100%;
+`;
+
 const LeftColumn = styled("div")`
     display: inline-flex;
     justify-content: center;
     align-items: center;
     background-color: #FFF308;
-    width: 50%;
+    /* width: 50%; */
     height: 100%;
 `;
 
 const RightColumn = styled(LeftColumn)`
-    width: 50%;
     background-color: #5425BA;
 `;
 
@@ -27,4 +31,4 @@ const HomeIrisLogo = styled(IrisLogo)`
     color: ${ props => props.color ? props.color : "#7A40DB"};
 `;
 
-export { LeftColumn, RightColumn, HomeIrisLogo };
+export { HomePageContainer, LeftColumn, RightColumn, HomeIrisLogo };
