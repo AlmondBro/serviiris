@@ -18,29 +18,29 @@ let AppContainerStyled = styled('main')`
    }
 `;
 
-let AppContainerRow = styled(Row)`
+let AppContainerRow = styled('div')`
    /* Use ampserands for this to acquire precedence over the bootstrap components */
-   &&& {
     flex: 1;
-   }
 `;
 
-let AppContainerCol = styled(Col)`
-    /* Use ampserands for this to acquire precedence over the bootstrap components */
-    &&& {    
+let AppContainerCol = styled('div')`
+    /* Use ampserands for this to acquire precedence over the bootstrap components */  
         display: flex;
         flex-direction: column;
-    }
+        height: 100%;
 `;
 
 const AppContainer = (props) => {
     return (
         <AppContainerStyled 
             fluid       =   { props.fluid } 
-            className   =   "app-container col"
         >
-            <AppContainerRow>
+            <AppContainerRow 
+                id  = "app-container-row"
+                // className="row"
+            > 
                 <AppContainerCol 
+                    id  = "app-container-col"
                     // className="p-0"
                 >
                     { props.children } 
