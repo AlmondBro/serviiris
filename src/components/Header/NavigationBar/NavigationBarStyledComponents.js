@@ -19,8 +19,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 */
 
 const NavBar = styled('section')`
-  background-color: #5425BA;
-  width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: #5425BA;
+    width: 100%;
 `; //end NavBar
 
 
