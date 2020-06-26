@@ -52,7 +52,7 @@ const FooterColumnAddress = styled('address')`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin: 8px 0px;
+    margin: 10px 0px;
 
 
     color: white; 
@@ -64,6 +64,10 @@ const FooterColumnAddress = styled('address')`
 
     a {
         display: block;
+    }
+
+    a:last-child {
+        margin-bottom: 10px;
     }
 `;
 

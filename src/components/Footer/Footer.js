@@ -35,19 +35,11 @@ const Footer = (props) => {
                                 <span id="small-padding">Carerra 24c #4-54 </span>
                                 <span>Cali, Valle del Cauca Colombia</span>
                         </FooterLink>
-                        {/* <FooterLink  
-                            href =   "mailto:iristeamco@gmail.com"
-                            id  =   "footer-email"
-                        >
-                            <FontAwesomeIconStyled icon={faMapMarked}/>
-                            <span>iristeamco@gmail.com</span>
-                        </FooterLink> */}
                         <FooterLink  
                             href =   "#"
                             id  =   "footer-direction"
                         >
                                 <FontAwesomeIconStyled icon={faEnvelope}/>
-                             
                                 iristeamco@gmail.com
                         </FooterLink>
                         <FooterLink  
