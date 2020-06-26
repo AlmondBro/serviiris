@@ -19,8 +19,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 */
 
 const NavBar = styled('section')`
-  background-color: #5425BA;
-  width: 100%;
+    position: relative;
+    z-index: 1;
+
+    background-color: #5425BA;
+
+    width: 100%;
+
+    font-size: 1em;
+
+    @media only screen and (min-width: 765px) and (max-width: 822px) {
+        font-size: 0.87em;
+    }
 `; //end NavBar
 
 
@@ -356,6 +366,7 @@ const SearchForm = styled('form')`
     input#search-input {
         visibility: hidden;
         position: absolute;
+        z-index: 1;
         top: 145%;
         right: 1%;
         border: 0;
