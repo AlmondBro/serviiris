@@ -9,13 +9,11 @@ import Col from 'react-bootstrap/Col';
 
 let AppContainerStyled = styled('main')`
    /* Use ampserands for this to acquire precedence over the bootstrap components */
-   &&& {
     display: flex;
     flex-direction: column;
     flex: 1;
     /* padding-left: 0px;
     padding-right: 0px; */
-   }
 `;
 
 let AppContainerRow = styled('div')`
@@ -25,24 +23,25 @@ let AppContainerRow = styled('div')`
 
 let AppContainerCol = styled('div')`
     /* Use ampserands for this to acquire precedence over the bootstrap components */  
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 `;
 
 const AppContainer = (props) => {
     return (
         <AppContainerStyled 
-            fluid       =   { props.fluid } 
+            fluid   =   { props.fluid } 
             id      = "app-container-styled"
+            className = "container-fluid"
         >
             <AppContainerRow 
                 id  = "app-container-row"
-                // className="row"
+                className="row"
             > 
                 <AppContainerCol 
                     id  = "app-container-col"
-                    // className="col"
+                    className="col"
                 >
                     { props.children } 
                 </AppContainerCol>

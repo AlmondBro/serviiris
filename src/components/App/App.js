@@ -50,7 +50,8 @@ class App extends Component {
             />
           </Switch>
         </AppContainer>
-        <Footer/>                          
+        <Footer/>    
+        {/* <div>Testtt</div>                       */}
       </Fragment>
     );
   }; //end render() method

@@ -42,7 +42,7 @@ const FooterColumn = styled('div')`
 
     color: white;
 
-    height: 100%;
+    height: auto;
 
     border-right: ${props => props.borderRight ? "2px solid grey" : null};
 `;
