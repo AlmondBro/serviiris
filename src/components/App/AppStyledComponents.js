@@ -34,6 +34,7 @@ const AppContainer = (props) => {
     return (
         <AppContainerStyled 
             fluid       =   { props.fluid } 
+            id      = "app-container-styled"
         >
             <AppContainerRow 
                 id  = "app-container-row"
@@ -41,7 +42,7 @@ const AppContainer = (props) => {
             > 
                 <AppContainerCol 
                     id  = "app-container-col"
-                    // className="p-0"
+                    // className="col"
                 >
                     { props.children } 
                 </AppContainerCol>
