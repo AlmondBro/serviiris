@@ -11,7 +11,7 @@ const Footer = (props) => {
     return (
         <FooterStyled className="container-fluid" id="footer-container" >
             <div className="row">
-                <FooterColumn className="col" id="footer-col-1" borderRight>
+                <FooterColumn className="col-md-4" id="footer-col-1" borderRight>
                     <div className="row" id="footer-col1-row">
                         <div 
                             className="col-md-3" 
@@ -51,7 +51,7 @@ const Footer = (props) => {
                         </FooterColumnAddress>
                     </div>
                 </FooterColumn>
-                <FooterColumn className="col" id="footer-col-2" borderRight>
+                <FooterColumn className="col-md-4" id="footer-col-2" borderRight>
                     <FooterLink href="/conocenos">
                         Conócenos
                     </FooterLink>
@@ -62,16 +62,23 @@ const Footer = (props) => {
                         Contáctanos
                     </FooterLink>
                 </FooterColumn>
-                <FooterColumn className="col" id="footer-col-3">
-                    <FooterLink href="#"> 
-                        <FontAwesomeIconStyled icon={faWhatsapp}/>   
-                    </FooterLink>
-                    <FooterLink href="#"> 
-                        <FontAwesomeIconStyled icon={faFacebook}/>   
-                    </FooterLink>
-                    <FooterLink href="#"> 
-                        <FontAwesomeIconStyled icon={faInstagram}/>
-                    </FooterLink>
+                <FooterColumn 
+                    className   =   "col-md-3" 
+                    id          =   "footer-col-3" 
+                    fontSize    =   "2.5em"
+                    flexRow     
+                > 
+                    {/* <div className="row"> */}
+                        <FooterLink href="#"> 
+                            <FontAwesomeIconStyled icon={faWhatsapp} color="green"/>   
+                        </FooterLink>
+                        <FooterLink href="#"> 
+                            <FontAwesomeIconStyled icon={faFacebook} color="blue"/>   
+                        </FooterLink>
+                        <FooterLink href="#"> 
+                            <FontAwesomeIconStyled icon={faInstagram} color="purple"/>
+                        </FooterLink>
+                    {/* </div> */}
                 </FooterColumn>
             </div>
            

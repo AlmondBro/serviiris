@@ -35,17 +35,17 @@ const AppContainer = (props) => {
             id      = "app-container-styled"
             className = "container-fluid"
         >
-            <AppContainerRow 
+            {/* <AppContainerRow 
                 id  = "app-container-row"
-                className="row"
+                // className="row"
             > 
                 <AppContainerCol 
                     id  = "app-container-col"
-                    className="col"
-                >
+                    // className="col"
+                > */}
                     { props.children } 
-                </AppContainerCol>
-            </AppContainerRow>
+                {/* </AppContainerCol>
+            </AppContainerRow> */}
             {/* { props.children } */}
         </AppContainerStyled>
     ); //end return statement
