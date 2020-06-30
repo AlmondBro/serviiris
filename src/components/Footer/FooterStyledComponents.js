@@ -18,6 +18,7 @@ let FooterIrisWings = styled(IrisLogoWings)`
     position: absolute; 
     top: 25%;
     right: 0%;
+    /* -63%; */
 
     width: ${ props => props.width ? props.width : "500px"};
     height: ${ props => props.height ? props.height : "500px"};
@@ -25,7 +26,7 @@ let FooterIrisWings = styled(IrisLogoWings)`
 `;
 
 const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
-    color: white;
+    color: ${props => props.color ? props.color : "white"};
 
     margin-right: 5px;
 
@@ -36,9 +37,11 @@ const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
 
 const FooterColumn = styled('div')`
     display: flex;
-    flex-direction: column;
+    flex-direction: ${props => props.flexRow ? "row" : "column"};
     justify-content: space-evenly;
     align-items: center;
+
+    font-size: ${props => props.fontSize ? props.fontSize : "inherit"};
 
     color: white;
 
