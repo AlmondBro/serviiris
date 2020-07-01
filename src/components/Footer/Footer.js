@@ -101,7 +101,6 @@ const Footer = (props) => {
                     {/* </div> */}
                 </FooterColumn>
             </div>
-           
         </FooterStyled>
     ); //end return statement
 
