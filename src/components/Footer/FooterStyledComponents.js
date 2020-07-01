@@ -7,11 +7,12 @@ import { IrisLogoWings } from './../IrisLogo.js';
 
 
 const FooterStyled = styled('footer')`
+    position: relative;
+    z-index: 1;
     overflow-y: hidden;
 
     font-size: 0.8em;
     background-color: #2F2E2E;
-
 `;
 
 let FooterIrisWings = styled(IrisLogoWings)`
