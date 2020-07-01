@@ -14,9 +14,9 @@ html, body {
 }
 
 #serviiris-web-app {
-    display: flex;
+    /* display: flex;
     flex-flow: column;
-    height: 100%;
+    height: 100%; */
 }
 
 .padding-side-0 {
