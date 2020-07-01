@@ -19,7 +19,7 @@ import { IrisLogo } from './../../IrisLogo.js';
 
 const HomePageContainer = styled('section')`
     /* margin: 0; */
-    height: 100%;
+    height: 87.2vh;
 `;
 
 const LeftColumn = styled("div")`
@@ -35,7 +35,7 @@ const RightColumn = styled(LeftColumn)`
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    height: 100%;
     margin: auto;
     background-color: #5425BA;
 `;
