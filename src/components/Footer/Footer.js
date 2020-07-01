@@ -63,20 +63,40 @@ const Footer = (props) => {
                     </FooterLink>
                 </FooterColumn>
                 <FooterColumn 
-                    className   =   "col-md-3" 
+                    className   =   "col-md-4" 
                     id          =   "footer-col-3" 
                     fontSize    =   "2.5em"
-                    flexRow     
+                    flexRow    
+                    socialMediaColumn
                 > 
                     {/* <div className="row"> */}
                         <FooterLink href="#"> 
-                            <FontAwesomeIconStyled icon={faWhatsapp} color="green"/>   
+                            <FontAwesomeIconStyled 
+                                icon            =   { faWhatsapp } 
+                                color           =   "white"
+                                backgroundColor =   "transparent"
+                                padding         =   "0px"
+                                borderRadius    =   "25px"
+
+                            />   
                         </FooterLink>
                         <FooterLink href="#"> 
-                            <FontAwesomeIconStyled icon={faFacebook} color="blue"/>   
+                            <FontAwesomeIconStyled 
+                                icon            =   { faFacebook } 
+                                color           =   "white"
+                                backgroundColor =   "transparent"
+                                padding         =   "0px"
+                                borderRadius    =   "25px"
+                            />   
                         </FooterLink>
                         <FooterLink href="#"> 
-                            <FontAwesomeIconStyled icon={faInstagram} color="purple"/>
+                            <FontAwesomeIconStyled 
+                                icon    = { faInstagram }  
+                                color           =   "white"
+                                backgroundColor =   "transparent"
+                                padding         =   "0px"
+                                borderRadius    =   "25px"
+                            />
                         </FooterLink>
                     {/* </div> */}
                 </FooterColumn>
