@@ -27,12 +27,17 @@ let FooterIrisWings = styled(IrisLogoWings)`
 
 const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
     color: ${props => props.color ? props.color : "white"};
+    background-color: ${props => props.backgroundColor ? props.backgroundColor : "none"};
 
     margin-right: 5px;
+    padding: ${props => props.padding ? props.padding : 0};
 
+    border-radius: ${props => props.borderRadius ? props.borderRadius : "0px"};
+    
     :hover {
         color: #FFF308;
     }
+
 `;
 
 const FooterColumn = styled('div')`
