@@ -12,9 +12,10 @@ let AppContainerStyled = styled('main')`
     /* display: flex;
     flex-direction: column;
     flex: 1; */
+    
     display: block;
-    /* padding-left: 0px;
-    padding-right: 0px; */
+
+    background-color: #FFF308;
 `;
 
 let AppContainerRow = styled('div')`
