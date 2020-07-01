@@ -57,9 +57,15 @@ const FooterColumn = styled('div')`
     @media only screen and (max-width: 768px) {
         position: ${props => props.socialMediaColumn ? "fixed" : "relative"};
 
-        margin-top: ${props => props.socialMediaColumn ? "150px" : "0px"}; 
+        /* margin-top: ${props => props.socialMediaColumn ? "150px" : "0px"};  */
 
-        border-top: ${props => props.socialMediaColumn ? "1px solid gray" : "0px"};
+        border-top: ${props => props.socialMediaColumn ? "0px solid gray" : "0px solid transparent"};
+
+        top: ${props => props.socialMediaColumn ? "91%" : "0%"};
+        background-color:  ${props => props.socialMediaColumn ? "#2f2e2e" : "none"};
+
+        z-index:  ${props => props.socialMediaColumn ? "999999999999" : "0"};
+
     }
 `;
 
