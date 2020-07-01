@@ -13,12 +13,6 @@ html, body {
     background-repeat: no-repeat;
 }
 
-#serviiris-web-app {
-    /* display: flex;
-    flex-flow: column;
-    height: 100%; */
-}
-
 .padding-side-0 {
     padding-right:0;
     padding-left:0;
