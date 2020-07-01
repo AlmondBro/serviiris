@@ -9,9 +9,10 @@ import Col from 'react-bootstrap/Col';
 
 let AppContainerStyled = styled('main')`
    /* Use ampserands for this to acquire precedence over the bootstrap components */
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 1; */
+    display: block;
     /* padding-left: 0px;
     padding-right: 0px; */
 `;

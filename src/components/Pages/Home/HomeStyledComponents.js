@@ -23,12 +23,12 @@ const HomePageContainer = styled('section')`
 `;
 
 const LeftColumn = styled("div")`
-    display: inline-flex;
+    min-height: 81vh;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #FFF308;
     /* width: 50%; */
-    height: 100%;
 `;
 
 const RightColumn = styled(LeftColumn)`
