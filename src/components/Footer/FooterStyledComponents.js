@@ -33,7 +33,7 @@ const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
     padding: ${props => props.padding ? props.padding : 0};
 
     border-radius: ${props => props.borderRadius ? props.borderRadius : "0px"};
-    
+
     :hover {
         color: #FFF308;
     }
@@ -53,6 +53,14 @@ const FooterColumn = styled('div')`
     height: auto;
 
     border-right: ${props => props.borderRight ? "2px solid grey" : null};
+
+    @media only screen and (max-width: 768px) {
+        position: ${props => props.socialMediaColumn ? "fixed" : "relative"};
+
+        margin-top: ${props => props.socialMediaColumn ? "150px" : "0px"}; 
+
+        border-top: ${props => props.socialMediaColumn ? "1px solid gray" : "0px"};
+    }
 `;
 
 const FooterColumnAddress = styled('address')`
