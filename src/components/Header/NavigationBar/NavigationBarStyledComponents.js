@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { NavLink as Link } from "react-router-dom";
 
-import IrisLogo from './../../IrisLogo.js';
+import { IrisLogo} from './../../IrisLogo.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -28,8 +28,13 @@ const NavBar = styled('section')`
 
     font-size: 1em;
 
+    /* Have the NavBar be sticky in responsive widths  */
+    @media only screen and (max-width: 768px) {
+        position: fixed; 
+    }
+
     @media only screen and (min-width: 765px) and (max-width: 874px) {
-        font-size: 0.87em;
+        font-size: 0.82em;
     }
 `; //end NavBar
 
@@ -146,6 +151,7 @@ const NavUl = styled('ul')`
     }
 
     @media only screen and (max-width: 765px) {
+        display: block;
         position: absolute;
         top: 53px;
 
@@ -159,7 +165,11 @@ const NavUl = styled('ul')`
         & li:last-child {
             margin: 12px 0px;
             margin-bottom: 8px;
-            text-align: center;
+            text-align: left;
+        }
+
+        & li:last-child >  button > svg#nav-login-icon {
+            margin-right: 10px;
         }
     }
 `; //end NavUL
@@ -422,6 +432,14 @@ const SearchForm = styled('form')`
             left: 37px;
         }
     } /* end media query */
+
+    @media only screen and (max-width: 765px) {
+        label#search-input-label:after {
+            content: "Buscar...";
+            color:  white;
+            padding-left: 5px;
+        }
+    }
 
 `; //end Search Form
 
