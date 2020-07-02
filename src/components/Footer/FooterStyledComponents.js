@@ -89,6 +89,13 @@ const FooterColumn = styled('div')`
         margin-top: 5px;
     }
 
+    & #footer-col1-row-col1 {
+        position: absolute;
+        top: 110%;
+        right: 37.5%;
+        opacity: 0.5;
+    }
+
     @media only screen and (max-width: 768px) {
         position: ${props => props.socialMediaColumn ? "fixed" : "relative"};
 
