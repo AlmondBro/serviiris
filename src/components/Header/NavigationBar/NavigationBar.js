@@ -11,9 +11,6 @@ import  {   NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContaine
             Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm,
             InputCheckboxHack
         } from './NavigationBarStyledComponents.js';
-
-
-import IrisLogo from './../../IrisLogo.js';
 /*
     <Link 
                             to              =   "/home" 
@@ -108,7 +105,6 @@ const NavigationBar = (props) => {
                             <NavLi>
                                 <SearchForm>
                                     <p id="search-input-container">
-                                    
                                         <label id="search-input-label" for="search-input-checkbox-hack">
                                             <FontAwesomeIconStyled 
                                                 id="search-input-icon" 
@@ -121,7 +117,7 @@ const NavigationBar = (props) => {
                                                 id      =   "search-input-checkbox-hack" 
                                                 name    =   "search-input-checkbox-hack"
                                             />
-                                            <input type="text" id="search-input"/>
+                                            <input type="text" id="search-input" placeholder="Buscar..."/>
                                         </div>
                                     </p>
                                 </SearchForm>
