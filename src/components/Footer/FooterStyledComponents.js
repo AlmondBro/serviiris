@@ -25,6 +25,11 @@ const FooterStyled = styled('footer')`
     }
 
     @media only screen and (max-width: 768px) {
+
+        & a#footer-link-whatsapp {
+            display: none;
+        }
+
         & > div.row div#footer-col-2 {
             margin-bottom: 48px;
         }

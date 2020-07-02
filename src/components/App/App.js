@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react';
 import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom';
 
 //Import styled-components
-import { AppContainer } from './AppStyledComponents.js';
+import { PageContainer } from './AppStyledComponents.js';
 
 //import App components
 import Header from './../Header/Header.js';
@@ -31,8 +31,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header/>
-        <AppContainer className="container-fluid">
-          
+        <PageContainer className="container-fluid" id="page-container">
           <Switch>
             <Route  exact 
                     path    = {`${publicURL}/`}
@@ -49,7 +48,7 @@ class App extends Component {
                                   } 
             />
           </Switch>
-        </AppContainer>
+        </PageContainer>
         <Footer/>    
         {/* <div>Testtt</div>                       */}
       </Fragment>
