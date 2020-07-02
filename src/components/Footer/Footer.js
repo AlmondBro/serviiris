@@ -11,7 +11,7 @@ const Footer = (props) => {
     return (
         <FooterStyled className="container-fluid" id="footer-container" >
             <div className="row">
-                <FooterColumn className="col-md-4" id="footer-col-1" borderRight>
+                <FooterColumn className="col-md-4 footer-col" id="footer-col-1" borderRight>
                     <div className="row" id="footer-col1-row">
                         <div 
                             className="col-md-3" 
@@ -51,7 +51,7 @@ const Footer = (props) => {
                         </FooterColumnAddress>
                     </div>
                 </FooterColumn>
-                <FooterColumn className="col-md-4" id="footer-col-2" borderRight>
+                <FooterColumn className="col-md-4 footer-col" id="footer-col-2" borderRight>
                     <FooterLink href="/conocenos">
                         Conócenos
                     </FooterLink>
@@ -63,7 +63,7 @@ const Footer = (props) => {
                     </FooterLink>
                 </FooterColumn>
                 <FooterColumn 
-                    className   =   "col-md-4" 
+                    className   =   "col-md-4 footer-col" 
                     id          =   "footer-col-3" 
                     fontSize    =   "2.5em"
                     flexRow    
