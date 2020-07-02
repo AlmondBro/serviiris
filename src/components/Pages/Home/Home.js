@@ -45,7 +45,7 @@ const Home = (props) => {
 
                     <PromotionesContainerAddress id="promotions-container-address">
                         <PromotionsTitle id="promotions-title">
-                            Promociones, novedades y más..
+                            Promociones, novedades y más...
                         </PromotionsTitle>
 
                         <EmailSubscribeContainer id="email-subscribe-container">
