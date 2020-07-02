@@ -87,7 +87,7 @@ const Footer = (props) => {
                             borderRadius    =   "25px"
                         />
                     </FooterLink>
-                    <FooterLink href="#"> 
+                    <FooterLink href="#" id="footer-link-whatsapp"> 
                         <FontAwesomeIconStyled 
                             icon            =   { faWhatsapp } 
                             color           =   "white"
