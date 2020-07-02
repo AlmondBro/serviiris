@@ -165,7 +165,11 @@ const NavUl = styled('ul')`
         & li:last-child {
             margin: 12px 0px;
             margin-bottom: 8px;
-            text-align: center;
+            text-align: left;
+        }
+
+        & li:last-child >  button > svg#nav-login-icon {
+            margin-right: 10px;
         }
     }
 `; //end NavUL
