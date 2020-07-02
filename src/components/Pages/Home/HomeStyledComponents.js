@@ -59,6 +59,10 @@ const WelcomeText = styled('h3')`
     color: #FFF308;
     font-size: 2.5em;
     font-weight: bold;
+
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 const IrisHomeDescription = styled('p')`
@@ -66,12 +70,20 @@ const IrisHomeDescription = styled('p')`
     font-weight: bolder;
 
     margin-top: 30px;
+
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 const ContactInfoContainer = styled('address')`
     color: white;
 
     margin-top: 30px;
+
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 const ContactInfoEmail = styled('a')`
@@ -92,6 +104,10 @@ const PromotionesContainerAddress = styled('address')`
     width: 60%;
 
     margin-top: 25px;
+
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 const PromotionsTitle = styled('h4')`
