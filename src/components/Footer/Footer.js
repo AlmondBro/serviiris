@@ -4,7 +4,7 @@ import React from 'react';
 import { FooterStyled, FooterIrisWings, FontAwesomeIconStyled, FooterColumn, FooterColumnAddress, FooterLink } from './FooterStyledComponents.js';
 
 //Import FontAwesome icon library
-import { faEnvelope, faMapMarked, faCameraRetro, faPhoneSquare  } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faComment, faMapMarked   } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = (props) => {
@@ -69,36 +69,61 @@ const Footer = (props) => {
                     flexRow    
                     socialMediaColumn
                 > 
-                    {/* <div className="row"> */}
-                        <FooterLink href="#"> 
-                            <FontAwesomeIconStyled 
-                                icon            =   { faWhatsapp } 
-                                color           =   "white"
-                                backgroundColor =   "transparent"
-                                padding         =   "0px"
-                                borderRadius    =   "25px"
+                    <FooterLink href="#" className="extra-mobile-icons"> 
+                        <FontAwesomeIconStyled 
+                            icon    = { faPhone }  
+                            color           =   "white"
+                            backgroundColor =   "transparent"
+                            padding         =   "0px"
+                            borderRadius    =   "25px"
+                        />
+                    </FooterLink>
+                    <FooterLink href="#" className="extra-mobile-icons"> 
+                        <FontAwesomeIconStyled 
+                            icon    = { faEnvelope }  
+                            color           =   "white"
+                            backgroundColor =   "transparent"
+                            padding         =   "0px"
+                            borderRadius    =   "25px"
+                        />
+                    </FooterLink>
+                    <FooterLink href="#"> 
+                        <FontAwesomeIconStyled 
+                            icon            =   { faWhatsapp } 
+                            color           =   "white"
+                            backgroundColor =   "transparent"
+                            padding         =   "0px"
+                            borderRadius    =   "25px"
 
-                            />   
-                        </FooterLink>
-                        <FooterLink href="#"> 
-                            <FontAwesomeIconStyled 
-                                icon            =   { faFacebook } 
-                                color           =   "white"
-                                backgroundColor =   "transparent"
-                                padding         =   "0px"
-                                borderRadius    =   "25px"
-                            />   
-                        </FooterLink>
-                        <FooterLink href="#"> 
-                            <FontAwesomeIconStyled 
-                                icon    = { faInstagram }  
-                                color           =   "white"
-                                backgroundColor =   "transparent"
-                                padding         =   "0px"
-                                borderRadius    =   "25px"
-                            />
-                        </FooterLink>
-                    {/* </div> */}
+                        />   
+                    </FooterLink>
+                    <FooterLink href="#"> 
+                        <FontAwesomeIconStyled 
+                            icon            =   { faFacebook } 
+                            color           =   "white"
+                            backgroundColor =   "transparent"
+                            padding         =   "0px"
+                            borderRadius    =   "25px"
+                        />   
+                    </FooterLink>
+                    <FooterLink href="#"> 
+                        <FontAwesomeIconStyled 
+                            icon    = { faInstagram }  
+                            color           =   "white"
+                            backgroundColor =   "transparent"
+                            padding         =   "0px"
+                            borderRadius    =   "25px"
+                        />
+                    </FooterLink>
+                    <FooterLink href="#" className="extra-mobile-icons"> 
+                        <FontAwesomeIconStyled 
+                            icon    = { faComment }  
+                            color           =   "white"
+                            backgroundColor =   "transparent"
+                            padding         =   "0px"
+                            borderRadius    =   "25px"
+                        />
+                    </FooterLink>
                 </FooterColumn>
             </div>
         </FooterStyled>
