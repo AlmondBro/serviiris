@@ -13,6 +13,13 @@ const FooterStyled = styled('footer')`
 
     font-size: 0.8em;
     background-color: #2F2E2E;
+
+    @media only screen and (max-width: 768px) {
+        && > div.row div#footer-col-2 {
+            margin-bottom: 48px;
+        }
+    }
+   
 `;
 
 let FooterIrisWings = styled(IrisLogoWings)`
