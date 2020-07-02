@@ -90,13 +90,6 @@ const FooterColumn = styled('div')`
         margin-top: 5px;
     }
 
-    & #footer-col1-row-col1 {
-        position: absolute;
-        top: 110%;
-        right: 27.75%;
-        opacity: 0.5;
-    }
-
     @media only screen and (max-width: 765px) {
         position: ${props => props.socialMediaColumn ? "fixed" : "relative"};
 
@@ -111,6 +104,13 @@ const FooterColumn = styled('div')`
 
         & h4#copyright-text {
             margin-top: 10px;
+        }
+
+        & #footer-col1-row-col1 {
+            position: absolute;
+            top: 110%;
+            right: 27.75%;
+            opacity: 0.5;
         }
     }
 `;
