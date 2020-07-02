@@ -52,6 +52,7 @@ let FooterIrisWings = styled(IrisLogoWings)`
     width: ${ props => props.width ? props.width : "500px"};
     height: ${ props => props.height ? props.height : "500px"};
     color: ${ props => props.color ? props.color : "#7A40DB"};
+   
 `;
 
 const FontAwesomeIconStyled = styled(FontAwesomeIcon).attrs({ 
@@ -92,7 +93,7 @@ const FooterColumn = styled('div')`
     & #footer-col1-row-col1 {
         position: absolute;
         top: 110%;
-        right: 37.5%;
+        right: 27.75%;
         opacity: 0.5;
     }
 

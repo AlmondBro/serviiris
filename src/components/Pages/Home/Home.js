@@ -11,14 +11,14 @@ import { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeI
 const Home = (props) => {
     return (
         <HomePageContainer className="row home-page-container">
-                <LeftColumn className="col-md-6 left-column">
+                <LeftColumn className="col-md-6 left-column" id="home-column-left">
                     <HomeIrisLogo 
                         color   =   "#7A40DB"
                         width   =   "400px"
                         height  =   "400px"  
                     />
                 </LeftColumn>
-                <RightColumn className="col-md-6 right-column">
+                <RightColumn className="col-md-6 right-column" id="home-column-right">
                     <RightColumnContainer id="right-column-container">
                         <WelcomeText id="welcome-text">Bienvenido a Iris</WelcomeText>
                             <IrisHomeDescription title="iris-home-description">
