@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import IrisLogo from './../../IrisLogo.js';
+import { IrisLogo } from './../../IrisLogo.js';
 
 /* 
     .bg-iris-yellow {
@@ -19,25 +19,39 @@ import IrisLogo from './../../IrisLogo.js';
 
 const HomePageContainer = styled('section')`
     /* margin: 0; */
-    height: 100%;
+    /* height: auto; */
+    min-height: 100%;
+    min-width: 100%;
 `;
 
 const LeftColumn = styled("div")`
-    display: inline-flex;
+    /* min-height: 81vh; */
+    display: flex;
     justify-content: center;
     align-items: center;
+
     background-color: #FFF308;
-    /* width: 50%; */
-    height: 100%;
+
+       /* #home-column-left { */
+        @media only screen and (max-width: 768px) {
+            margin-top: 25px;
+            margin-bottom: -80px;
+        }
+       /* } */
+  
 `;
 
 const RightColumn = styled(LeftColumn)`
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    margin: auto;
+    /* height: 100%; */
+    /* margin: auto; */
     background-color: #5425BA;
+
+    @media only screen and (max-width: 768px) {
+        margin: 0;
+    }
 `;
 
 const RightColumnContainer = styled('div')`
@@ -57,6 +71,11 @@ const WelcomeText = styled('h3')`
     color: #FFF308;
     font-size: 2.5em;
     font-weight: bold;
+
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+        margin-top: 25px;
+    }
 `;
 
 const IrisHomeDescription = styled('p')`
@@ -64,12 +83,20 @@ const IrisHomeDescription = styled('p')`
     font-weight: bolder;
 
     margin-top: 30px;
+
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 const ContactInfoContainer = styled('address')`
     color: white;
 
     margin-top: 30px;
+
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 const ContactInfoEmail = styled('a')`
@@ -90,6 +117,10 @@ const PromotionesContainerAddress = styled('address')`
     width: 60%;
 
     margin-top: 25px;
+
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 const PromotionsTitle = styled('h4')`
@@ -115,7 +146,7 @@ const EmailSubscribeContainer = styled('p')`
 
 const EmailSubscribeInput = styled('input')`
     background-color: rgba(255, 249, 132, 1);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 0.9em;
     padding: 12px;
 

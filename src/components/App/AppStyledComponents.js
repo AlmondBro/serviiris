@@ -2,53 +2,28 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import Container from 'react-bootstrap/Container';
-
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
-let AppContainerStyled = styled(Container)`
-   /* Use ampserands for this to acquire precedence over the bootstrap components */
-   &&& {
+const PageContainerStyled = styled('main')`
     display: flex;
-    flex-direction: column;
-    flex: 1;
-    /* padding-left: 0px;
-    padding-right: 0px; */
-   }
-`;
+    flex-direction: row;
+    justify-content: center;
 
-let AppContainerRow = styled(Row)`
-   /* Use ampserands for this to acquire precedence over the bootstrap components */
-   &&& {
-    flex: 1;
-   }
-`;
+    background-color: #FFF308;
 
-let AppContainerCol = styled(Col)`
-    /* Use ampserands for this to acquire precedence over the bootstrap components */
-    &&& {    
-        display: flex;
-        flex-direction: column;
+    @media only screen and (max-width: 765px) {
+        margin-top: 45px;
     }
 `;
 
-const AppContainer = (props) => {
+const PageContainer = (props) => {
     return (
-        <AppContainerStyled 
+        <PageContainerStyled 
             fluid       =   { props.fluid } 
-            className   =   "app-container"
+            id          = "app-container-styled"
+            className   = "container-fluid"
         >
-            <AppContainerRow>
-                <AppContainerCol 
-                    // className="p-0"
-                >
-                    { props.children } 
-                </AppContainerCol>
-            </AppContainerRow>
-            {/* { props.children } */}
-        </AppContainerStyled>
+            { props.children } 
+        </PageContainerStyled>
     ); //end return statement
 }; //end AppContainer
  
-export { AppContainer };
+export { PageContainer };
