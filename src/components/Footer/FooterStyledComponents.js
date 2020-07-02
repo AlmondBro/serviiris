@@ -97,7 +97,7 @@ const FooterColumn = styled('div')`
 
         border-top: ${props => props.socialMediaColumn ? "0px solid gray" : "0px solid transparent"};
 
-        top: ${props => props.socialMediaColumn ? "92%" : "0%"};
+        bottom: ${props => props.socialMediaColumn ? "0%" : "0%"};
         background-color:  ${props => props.socialMediaColumn ? "#2F2E2E" : "none"};
 
         z-index:  ${props => props.socialMediaColumn ? "1" : "0"};
