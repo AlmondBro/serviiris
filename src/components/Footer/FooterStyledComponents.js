@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IrisLogoWings } from './../IrisLogo.js';
 
-
 const FooterStyled = styled('footer')`
     position: relative;
     z-index: 1;
@@ -25,7 +24,6 @@ const FooterStyled = styled('footer')`
     }
 
     @media only screen and (max-width: 768px) {
-
         & a#footer-link-whatsapp {
             display: none;
         }
@@ -83,7 +81,11 @@ const FooterColumn = styled('div')`
 
     height: auto;
 
-    border-right: ${props => props.borderRight ? "2px solid grey" : null};
+    border-right: ${props => props.borderRight ? "1px solid grey" : null};
+
+    & h4#copyright-text {
+        margin-top: 5px;
+    }
 
     @media only screen and (max-width: 768px) {
         position: ${props => props.socialMediaColumn ? "fixed" : "relative"};
@@ -92,7 +94,7 @@ const FooterColumn = styled('div')`
 
         border-top: ${props => props.socialMediaColumn ? "0px solid gray" : "0px solid transparent"};
 
-        top: ${props => props.socialMediaColumn ? "93%" : "0%"};
+        top: ${props => props.socialMediaColumn ? "92%" : "0%"};
         background-color:  ${props => props.socialMediaColumn ? "#2F2E2E" : "none"};
 
         z-index:  ${props => props.socialMediaColumn ? "1" : "0"};
@@ -106,7 +108,6 @@ const FooterColumnAddress = styled('address')`
     justify-content: space-evenly;
     align-items: center;
     margin: 10px 0px;
-
 
     color: white; 
 
@@ -146,4 +147,41 @@ const FooterLink = styled('a')`
         padding-left: 5px; 
     }
 `;
-export { FooterStyled, FooterIrisWings, FontAwesomeIconStyled, FooterColumn, FooterColumnAddress, FooterLink };
+
+const CopyRightSection = styled('section')`
+    color: white;
+    text-align: center;
+
+    /* border-top: 1px solid grey; */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+
+    & div.column-separators {
+        border-right: 1px solid grey;
+    }
+/* 
+    @media only screen and (max-width: 768px) { 
+        position: fixed;
+        top: 93%;
+        width: 100%;
+        z-index: 1;
+    } */
+`;
+
+const CopyRightText = styled('h4')`
+    font-size: 1em;
+    font-weight: bold;
+
+    padding: 5px;
+    margin: 0px;
+
+`;
+
+const SocialMediaLinksContainer = styled('div')`
+    display: flex;
+    flex-direction: column;
+`;
+
+export { FooterStyled, FooterIrisWings, FontAwesomeIconStyled, FooterColumn, FooterColumnAddress, FooterLink, CopyRightSection, CopyRightText, SocialMediaLinksContainer };
