@@ -62,6 +62,7 @@ const WelcomeText = styled('h3')`
 
     @media only screen and (max-width: 768px) {
         text-align: center;
+        margin-top: 25px;
     }
 `;
 
