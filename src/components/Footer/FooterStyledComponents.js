@@ -14,9 +14,27 @@ const FooterStyled = styled('footer')`
     font-size: 0.8em;
     background-color: #2F2E2E;
 
+    & div.row div a.extra-mobile-icons {
+        position: absolute;
+        visibility: hidden;
+
+        left: -99999px;
+        bottom: -99999px;
+
+        transition: visibility 500ms ease-in-out, position 500ms ease-in-out, left 500ms ease-in-out, bottom 500ms ease-in-out;
+    }
+
     @media only screen and (max-width: 768px) {
-        && > div.row div#footer-col-2 {
+        & > div.row div#footer-col-2 {
             margin-bottom: 48px;
+        }
+
+        & div.row div a.extra-mobile-icons {
+            position: relative;
+            visibility: visible;
+
+            left: 0px;
+            bottom: 0px;
         }
     }
    
