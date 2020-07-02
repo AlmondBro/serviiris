@@ -21,6 +21,7 @@ const Footer = (props) => {
                             <FooterIrisWings
                                 width   =   "178px"
                                 height  =   "178px"
+                                id      =   "footer-iris-wings"
                             />
                         </div>
 

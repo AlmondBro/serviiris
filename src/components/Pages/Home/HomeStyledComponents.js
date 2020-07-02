@@ -31,6 +31,14 @@ const LeftColumn = styled("div")`
     align-items: center;
 
     background-color: #FFF308;
+
+       /* #home-column-left { */
+        @media only screen and (max-width: 768px) {
+            margin-top: 25px;
+            margin-bottom: -80px;
+        }
+       /* } */
+  
 `;
 
 const RightColumn = styled(LeftColumn)`
@@ -40,6 +48,10 @@ const RightColumn = styled(LeftColumn)`
     /* height: 100%; */
     /* margin: auto; */
     background-color: #5425BA;
+
+    @media only screen and (max-width: 768px) {
+        margin: 0;
+    }
 `;
 
 const RightColumnContainer = styled('div')`
