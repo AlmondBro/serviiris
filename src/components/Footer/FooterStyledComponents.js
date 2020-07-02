@@ -54,7 +54,9 @@ let FooterIrisWings = styled(IrisLogoWings)`
     color: ${ props => props.color ? props.color : "#7A40DB"};
 `;
 
-const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
+const FontAwesomeIconStyled = styled(FontAwesomeIcon).attrs({ 
+    flip: props => props.flip
+  })`
     color: ${props => props.color ? props.color : "white"};
     background-color: ${props => props.backgroundColor ? props.backgroundColor : "none"};
 
@@ -99,6 +101,9 @@ const FooterColumn = styled('div')`
 
         z-index:  ${props => props.socialMediaColumn ? "1" : "0"};
 
+        & h4#copyright-text {
+            margin-top: 10px;
+        }
     }
 `;
 

@@ -74,16 +74,18 @@ const Footer = (props) => {
                     socialMediaColumn
                 > 
                     {/* <SocialMediaLinksContainer> */}
-                    <FooterLink href="#" className="extra-mobile-icons"> 
+                    <FooterLink href="https://wa.link/aloo0e" className="extra-mobile-icons" id="footer-link-phone"> 
                         <FontAwesomeIconStyled 
                             icon    = { faPhone }  
                             color           =   "white"
                             backgroundColor =   "transparent"
                             padding         =   "0px"
                             borderRadius    =   "25px"
+
+                            flip            =   "horizontal"
                         />
                     </FooterLink>
-                    <FooterLink href="#" className="extra-mobile-icons"> 
+                    <FooterLink href="mailto:iristeamco@gmail.com" className="extra-mobile-icons" id="footer-link-mail"> 
                         <FontAwesomeIconStyled 
                             icon    = { faEnvelope }  
                             color           =   "white"
@@ -92,17 +94,16 @@ const Footer = (props) => {
                             borderRadius    =   "25px"
                         />
                     </FooterLink>
-                    <FooterLink href="#" id="footer-link-whatsapp"> 
+                    <FooterLink href="https://wa.link/aloo0e" id="footer-link-whatsapp"> 
                         <FontAwesomeIconStyled 
                             icon            =   { faWhatsapp } 
                             color           =   "white"
                             backgroundColor =   "transparent"
                             padding         =   "0px"
                             borderRadius    =   "25px"
-
                         />   
                     </FooterLink>
-                    <FooterLink href="#"> 
+                    <FooterLink href="https://www.facebook.com/Iris-Team-103434521342003/" id="footer-link-facebook"> 
                         <FontAwesomeIconStyled 
                             icon            =   { faFacebook } 
                             color           =   "white"
@@ -111,7 +112,7 @@ const Footer = (props) => {
                             borderRadius    =   "25px"
                         />   
                     </FooterLink>
-                    <FooterLink href="#"> 
+                    <FooterLink href="https://www.instagram.com/iristeam.co/?hl=es-la" id="footer-link-instagram"> 
                         <FontAwesomeIconStyled 
                             icon    = { faInstagram }  
                             color           =   "white"
