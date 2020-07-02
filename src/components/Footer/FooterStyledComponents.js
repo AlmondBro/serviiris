@@ -23,7 +23,7 @@ const FooterStyled = styled('footer')`
         transition: visibility 500ms ease-in-out, position 500ms ease-in-out, left 500ms ease-in-out, bottom 500ms ease-in-out;
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 765px) {
         & a#footer-link-whatsapp {
             display: none;
         }
@@ -97,14 +97,14 @@ const FooterColumn = styled('div')`
         opacity: 0.5;
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 765px) {
         position: ${props => props.socialMediaColumn ? "fixed" : "relative"};
 
         /* margin-top: ${props => props.socialMediaColumn ? "150px" : "0px"};  */
 
         border-top: ${props => props.socialMediaColumn ? "0px solid gray" : "0px solid transparent"};
 
-        top: ${props => props.socialMediaColumn ? "93.5%" : "0%"};
+        top: ${props => props.socialMediaColumn ? "92%" : "0%"};
         background-color:  ${props => props.socialMediaColumn ? "#2F2E2E" : "none"};
 
         z-index:  ${props => props.socialMediaColumn ? "1" : "0"};
@@ -175,7 +175,7 @@ const CopyRightSection = styled('section')`
         border-right: 1px solid grey;
     }
 /* 
-    @media only screen and (max-width: 768px) { 
+    @media only screen and (max-width: 765px) { 
         position: fixed;
         top: 93%;
         width: 100%;

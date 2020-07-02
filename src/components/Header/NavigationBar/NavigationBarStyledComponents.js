@@ -29,12 +29,12 @@ const NavBar = styled('section')`
     font-size: 1em;
 
     /* Have the NavBar be sticky in responsive widths  */
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 768px) {
         position: fixed; 
     }
 
     @media only screen and (min-width: 765px) and (max-width: 874px) {
-        font-size: 0.87em;
+        font-size: 0.82em;
     }
 `; //end NavBar
 

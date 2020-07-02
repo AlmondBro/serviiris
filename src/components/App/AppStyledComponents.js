@@ -9,7 +9,7 @@ const PageContainerStyled = styled('main')`
 
     background-color: #FFF308;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 765px) {
         margin-top: 45px;
     }
 `;
