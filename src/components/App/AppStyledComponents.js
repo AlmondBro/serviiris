@@ -13,7 +13,9 @@ let AppContainerStyled = styled('main')`
     flex-direction: column;
     flex: 1; */
     
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
     background-color: #FFF308;
 `;

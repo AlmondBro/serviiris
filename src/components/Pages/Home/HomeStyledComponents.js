@@ -19,24 +19,26 @@ import { IrisLogo } from './../../IrisLogo.js';
 
 const HomePageContainer = styled('section')`
     /* margin: 0; */
-    height: auto;
+    /* height: auto; */
+    min-height: 100%;
+    min-width: 100%;
 `;
 
 const LeftColumn = styled("div")`
-    min-height: 81vh;
+    /* min-height: 81vh; */
     display: flex;
     justify-content: center;
     align-items: center;
+
     background-color: #FFF308;
-    /* width: 50%; */
 `;
 
 const RightColumn = styled(LeftColumn)`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
-    margin: auto;
+    /* height: 100%; */
+    /* margin: auto; */
     background-color: #5425BA;
 `;
 
