@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Import styled components
-import { FooterStyled, FooterIrisWings, FontAwesomeIconStyled, FooterColumn, FooterColumnAddress, FooterLink } from './FooterStyledComponents.js';
+import { FooterStyled, FooterIrisWings, FontAwesomeIconStyled, FooterColumn, FooterColumnAddress, FooterLink, CopyRightSection, CopyRightText, SocialMediaLinksContainer } from './FooterStyledComponents.js';
 
 //Import FontAwesome icon library
 import { faEnvelope, faPhone, faComment, faMapMarked   } from '@fortawesome/free-solid-svg-icons';
@@ -61,7 +61,11 @@ const Footer = (props) => {
                     <FooterLink href="/Contactanos">
                         Contáctanos
                     </FooterLink>
+                    <CopyRightText id="copyright-text">
+                        &copy; 2020 Iris
+                    </CopyRightText>
                 </FooterColumn>
+
                 <FooterColumn 
                     className   =   "col-md-4 footer-col" 
                     id          =   "footer-col-3" 
@@ -69,6 +73,7 @@ const Footer = (props) => {
                     flexRow    
                     socialMediaColumn
                 > 
+                    {/* <SocialMediaLinksContainer> */}
                     <FooterLink href="#" className="extra-mobile-icons"> 
                         <FontAwesomeIconStyled 
                             icon    = { faPhone }  
@@ -124,8 +129,19 @@ const Footer = (props) => {
                             borderRadius    =   "25px"
                         />
                     </FooterLink>
+                    {/* </SocialMediaLinksContainer> */}
                 </FooterColumn>
             </div>
+            {/* <CopyRightSection className="row" id="copyright-section">
+                <div className="col-md-4 column-separators"></div>
+                <div className="col-md-4 column-separators">
+                    <CopyRightText id="copyright-text">
+                        &copy; 2020 Iris
+                    </CopyRightText>
+                </div>
+                <div className="col-md-4 column-separators"></div>
+                
+            </CopyRightSection> */}
         </FooterStyled>
     ); //end return statement
 
