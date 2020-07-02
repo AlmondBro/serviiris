@@ -118,7 +118,7 @@ const NavigationBar = (props) => {
                                                 id      =   "search-input-checkbox-hack" 
                                                 name    =   "search-input-checkbox-hack"
                                             />
-                                            <input type="text" id="search-input"/>
+                                            <input type="text" id="search-input" placeholder="Buscar..."/>
                                         </div>
                                     </p>
                                 </SearchForm>

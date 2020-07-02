@@ -429,6 +429,14 @@ const SearchForm = styled('form')`
         }
     } /* end media query */
 
+    @media only screen and (max-width: 765px) {
+        label#search-input-label:after {
+            content: "Buscar...";
+            color:  white;
+            padding-left: 5px;
+        }
+    }
+
 `; //end Search Form
 
 const InputCheckboxHack = styled('input')`
