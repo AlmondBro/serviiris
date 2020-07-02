@@ -72,7 +72,7 @@ const Footer = (props) => {
                     id          =   "footer-col-3" 
                     fontSize    =   "2.5em"
                     flexRow    
-                    socialMediaColumn
+                    socialMediaColumn 
                 > 
                     {/* <SocialMediaLinksContainer> */}
                     <FooterLink href="https://wa.link/aloo0e" className="extra-mobile-icons" id="footer-link-phone"> 

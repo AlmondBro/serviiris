@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 //Import FontAwesomeIcon to style
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -90,6 +90,9 @@ const FooterColumn = styled('div')`
         margin-top: 5px;
     }
 
+
+  
+
     @media only screen and (max-width: 765px) {
         position: ${props => props.socialMediaColumn ? "fixed" : "relative"};
 
@@ -111,6 +114,19 @@ const FooterColumn = styled('div')`
             top: 110%;
             right: 27.75%;
             opacity: 0.5;
+        }
+
+        
+        ${ 
+            props => props.socialMediaColumn && 
+            css`
+                    & a:nth-child(1) { order: 5; }
+                    & a:nth-child(2) { order: 2; }
+                    & a:nth-child(3) { order: 1; }
+                    & a:nth-child(4) { order: 4; }
+                    & a:nth-child(5) { order: 5; }
+                    & a:nth-child(6) { order: 6; }
+                ` 
         }
     }
 `;
