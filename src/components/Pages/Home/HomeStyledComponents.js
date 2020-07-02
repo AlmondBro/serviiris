@@ -133,7 +133,7 @@ const EmailSubscribeContainer = styled('p')`
 
 const EmailSubscribeInput = styled('input')`
     background-color: rgba(255, 249, 132, 1);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 0.9em;
     padding: 12px;
 
