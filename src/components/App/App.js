@@ -11,6 +11,7 @@ import Footer from './../Footer/Footer.js';
 
 //Import Pages
 import Home from './../Pages/Home/Home.js';
+import AboutUs  from '../Pages/AboutUs/AboutUs.js';
 
 class App extends Component {
   constructor(props) {
@@ -39,13 +40,22 @@ class App extends Component {
                                 
             />
             <Route   
-                    path={`${publicURL}/home`}
-                                  render={ () => {
+                    path    = { `${publicURL}/home` } 
+                    render  = { () => {
                                           return (
                                             <Home/>
                                           );
                                       }
-                                  } 
+                              } 
+            />
+              <Route   
+                      path    = { [`${publicURL}/about-us`, `${publicURL}/conocenos`] }
+                      render  = { () => {
+                                    return (
+                                      <AboutUs/>
+                                    );
+                                  }
+                                } 
             />
           </Switch>
         </PageContainer>
