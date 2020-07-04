@@ -7,7 +7,9 @@ const PageContainerStyled = styled('main')`
     flex-direction: row;
     justify-content: center;
 
-    background-color: #FFF308;
+    background-color: #FFF308; 
+    /* transparent;  */
+    /* #FFF308; */
 
     @media only screen and (max-width: 765px) {
         margin-top: 45px;

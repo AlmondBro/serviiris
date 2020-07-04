@@ -53,7 +53,7 @@ const NavigationBar = (props) => {
                         <NavUl className="nav-ul">
                             <NavLi className="nav-li">
                                 <NavLink 
-                                    href="#!" 
+                                    to="/home" 
                                     activeClassName =   "navLink-current" 
                                     className="nav-li"
                                 >
@@ -62,7 +62,7 @@ const NavigationBar = (props) => {
                                 </NavLink>
                             </NavLi>
                             <NavLi>
-                                <NavLink href="#!">
+                                <NavLink to="/conocenos">
                                     <FontAwesomeIconStyled icon={faBook} />
                                     Conócenos
                                 </NavLink>
@@ -70,15 +70,15 @@ const NavigationBar = (props) => {
                                 {/* <NavLink href="#!">Services</NavLink> */}
                                 <ul class="nav-dropdown">
                                     <NavLi>
-                                        <NavLink href="#!">Visión</NavLink>
+                                        <NavLink to="#!">Visión</NavLink>
                                     </NavLi>
                                     <NavLi>
-                                        <NavLink href="#!">Misión</NavLink>
+                                        <NavLink to="#!">Misión</NavLink>
                                     </NavLi>
                                 </ul>
                             </NavLi>
                             <NavLi>
-                                <NavLink href="#!">
+                                <NavLink to="#!">
                                     <FontAwesomeIconStyled icon={faMotorcycle} />
                                     Servicios
                                 </NavLink>
@@ -89,14 +89,14 @@ const NavigationBar = (props) => {
                                 </ul>
                             </NavLi>
                             <NavLi>
-                                <NavLink href="#!">
+                                <NavLink to="#!">
                                     <FontAwesomeIconStyled icon={faPaperPlane} />
                                     Contáctanos
                                 </NavLink>
                             </NavLi>
                             <NavLi>
                                 
-                                <NavLink href="#!">
+                                <NavLink to="#!">
                                     <FontAwesomeIconStyled icon={faBriefcase} />
                                     Trabaja Con Nosotros
                                 </NavLink>
