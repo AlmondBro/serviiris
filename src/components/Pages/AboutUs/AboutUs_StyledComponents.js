@@ -13,6 +13,17 @@ import styled from 'styled-components';
 const AboutUsPageContainer = styled('section')`
     min-height: 100%;
     min-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        flex-grow: 1;
+    }
+
+    @media only screen and (min-width: 765px) and (max-width: 768px) {
+        margin-top: 30px;
+    }
 `; //end homepagecontainer
 
 const OurHistorySection = styled('section')`
@@ -113,6 +124,74 @@ const AboutUSMoreButton = styled('button')`
 `;
 
 // TODO: Add a chat bubble animation above the IrisWorkerFemaleSVG saying "Vamos iris!"
+const IrisWorkerChatBubble = styled('figcaption')`
+    position: absolute;
+    background: white;
+    border-radius: .4em;
+    color: #5425BA;
+    padding: 15px;
+    z-index: 1;
+    top: 6%;
+    left: 8%;
+    transform: rotate(5deg);
+
+    max-width: 0px;
+    max-height: 0px;
+    visibility: hidden;
+    
+    transition-delay: 100ms;
+    :after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: white;
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: -10px;
+        margin-bottom: -20px;
+    }
+
+    @media only screen and (min-width: 836px) and (max-width: 942px) {
+        left: 2%;
+    }
+
+    @media only screen and (min-width: 200px) and (max-width: 376px) {
+        top: 14%;
+    }
+
+    @media only screen and (min-width: 200px) and (max-width: 835px) {
+        left: -30%;
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 835px) {
+        top: 10%;
+    }
+
+    @media only screen and (min-width: 377px) and (max-width: 599px) {
+        top: 12%;
+    }
+
+  
+`;
+
+const IrisWorkerFigure = styled('figure')`
+    display: block;
+
+    &:hover > ${IrisWorkerChatBubble} {
+        visibility: visible;
+        max-width: 110px;
+        max-height:  63px;
+    }
+
+    @media only screen and (max-width: 337px) {
+        display: none;
+    }
+`;
+
 const IrisWorkerFemaleSVG = styled('img')`
     position: absolute;
     top: 18%;
@@ -120,6 +199,14 @@ const IrisWorkerFemaleSVG = styled('img')`
     /* 10%; */
 
     max-width: 100px;
+
+    @media only screen and (min-width: 836px) and (max-width: 942px) {
+        left: 2%;
+    }
+
+    @media only screen and (min-width: 200px) and (max-width: 835px) {
+        left: -30%;
+    }
 `;
 
 const WhoWeAreSection = styled(OurHistorySection)`
@@ -131,7 +218,6 @@ const WhoWeAreSection = styled(OurHistorySection)`
 `;
 
 const WhoWeAreArticle = styled(OurHistoryArticle)`
-
     background-color: white;
     h3 {
         color: #5425BA;
@@ -143,4 +229,4 @@ const WhoWeAreArticle = styled(OurHistoryArticle)`
 `;
 
 
-export { AboutUsPageContainer, OurHistorySection, OurHistoryArticle, IrisWorkerFemaleSVG, WhoWeAreSection, WhoWeAreArticle, AboutUSMoreButton };
+export { AboutUsPageContainer, OurHistorySection, OurHistoryArticle, IrisWorkerFigure, IrisWorkerFemaleSVG, WhoWeAreSection, WhoWeAreArticle, AboutUSMoreButton, IrisWorkerChatBubble };

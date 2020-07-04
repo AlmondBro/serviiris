@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AboutUsPageContainer, OurHistorySection, IrisWorkerFemaleSVG, OurHistoryArticle, WhoWeAreSection, WhoWeAreArticle, AboutUSMoreButton  } from './AboutUs_StyledComponents.js';
+import { AboutUsPageContainer, OurHistorySection, IrisWorkerFigure, IrisWorkerFemaleSVG, OurHistoryArticle, WhoWeAreSection, WhoWeAreArticle, AboutUSMoreButton, IrisWorkerChatBubble  } from './AboutUs_StyledComponents.js';
 
 const AboutUs = (props) => {
     return (
@@ -21,7 +21,12 @@ const AboutUs = (props) => {
                          las encargadas de entregarles los mensajes de los dioses a los humanos 
                          y viceversa. De allí nuestro nombre.
                     </p>
-                    <IrisWorkerFemaleSVG src="./assets/img/iris-worker-female.svg" id="iris-worker-female-svg" />
+                    <IrisWorkerFigure  className="iris-worker-female">
+                        <IrisWorkerChatBubble id="iris-worker-female-speech-bubble">
+                            Vamos Iris!
+                        </IrisWorkerChatBubble>
+                        <IrisWorkerFemaleSVG src="./assets/img/iris-worker-female.svg" id="iris-worker-female-svg" />
+                    </IrisWorkerFigure>
                 </OurHistoryArticle>
             </OurHistorySection>
             
