@@ -16,6 +16,8 @@ const AboutUsPageContainer = styled('section')`
 `; //end homepagecontainer
 
 const OurHistorySection = styled('section')`
+    position: relative;
+    z-index: 0;
     background: #FFF308;
 
     ::after {
@@ -24,8 +26,8 @@ const OurHistorySection = styled('section')`
         position: absolute;
         top: 0px;
         bottom: 0px;
-        left: 0;
-        right: 0;
+        left: 0px;
+        right: 0px;
         z-index: 0;
   
         background-image: url("./assets/img/nyc-grey.webp");
@@ -73,6 +75,40 @@ const OurHistoryArticle = styled('article')`
     p {
         font-size: 1.1em;
         padding: 0% 20%;
+    }        
+`;
+
+const AboutUSMoreButton = styled('button')`
+    /* color: white; */
+    background-color: #5425BA;
+    border: 0;
+    border-radius: 12px;
+
+    max-width: 150px;
+
+    padding: 5px 15px;
+    margin: 0 auto;
+
+    border: 1px solid #5425BA;
+
+    transition: color 500ms, background-color 500ms, border-color 500ms;
+
+    :hover, :active, :visited {
+        /* color: #5425BA; */
+        background-color: white;
+
+        border: 1px solid #5425BA;
+    } 
+    a {
+        color: white;
+        text-decoration: none;
+
+        transition: color 500ms, background-color 500ms, border-color 500ms;
+
+    }
+
+    a:hover {
+        color: #5425BA;
     }
 `;
 
@@ -87,7 +123,11 @@ const IrisWorkerFemaleSVG = styled('img')`
 `;
 
 const WhoWeAreSection = styled(OurHistorySection)`
-    background-color: white;
+    background-color: #5425BA;
+    
+    :after {
+        background-image: url("./assets/img/green-scooter.webp");
+    }
 `;
 
 const WhoWeAreArticle = styled(OurHistoryArticle)`
@@ -103,4 +143,4 @@ const WhoWeAreArticle = styled(OurHistoryArticle)`
 `;
 
 
-export { AboutUsPageContainer, OurHistorySection, OurHistoryArticle, IrisWorkerFemaleSVG, WhoWeAreSection, WhoWeAreArticle };
+export { AboutUsPageContainer, OurHistorySection, OurHistoryArticle, IrisWorkerFemaleSVG, WhoWeAreSection, WhoWeAreArticle, AboutUSMoreButton };
