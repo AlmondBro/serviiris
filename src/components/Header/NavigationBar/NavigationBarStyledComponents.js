@@ -127,6 +127,8 @@ const Nav = styled('nav')`
 
 const NavUl = styled('ul')`
     position: relative;
+    z-index: 1;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
