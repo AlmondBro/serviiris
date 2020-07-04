@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { NavLink as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { IrisLogo} from './../../IrisLogo.js';
 
@@ -127,6 +127,8 @@ const Nav = styled('nav')`
 
 const NavUl = styled('ul')`
     position: relative;
+    z-index: 1;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -270,7 +272,7 @@ const NavLi = styled('li')`
     } /* End media query */
 `;
 
-let NavLink = styled('a')`
+let NavigationLink = styled(Link)`
     display: block;
     padding: 0 5px;
     line-height: 2;
@@ -451,7 +453,7 @@ const InputCheckboxHack = styled('input')`
 `;
 
 export {    NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm,
+            Nav, NavUl, NavLi, NavigationLink as NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm,
             InputCheckboxHack
         };
 
