@@ -213,7 +213,8 @@ const SpecialtiesArticleColumn = (props) => {
             <SpecialtiesArticleImageContainerFigure className="specialties-article-image-container-figure">
                 <SpecialtiesArticleImageContainerFigureImage 
                     className   =   "specialties-article-image-container-figure-image"
-                    src         =   "./assets/img/phone-computer-paper-work.webp" 
+                    alt         =   { props.imageAlt }
+                    src         =   {`./assets/img/${props.image || "phone-computer-paper-work.webp"}`}
                 />
                 <SpecialtiesArticleButton className="specialties-article-button">
                     {props.buttonTitle || "Mensajería Empresarial"}
