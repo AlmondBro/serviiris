@@ -8,8 +8,8 @@ import NavBarToggle from './NavBarToggle/NavBarToggle.js';
 
 //Import styled components
 import  {   NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm,
-            InputCheckboxHack
+            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, HomeUserIconButton, 
+            UserIconButton, HomeIconBootstrap, SearchForm, InputCheckboxHack
         } from './NavigationBarStyledComponents.js';
 /*
     <Link 
@@ -57,7 +57,8 @@ const NavigationBar = (props) => {
                                     activeClassName =   "navLink-current" 
                                     className="nav-li"
                                 >
-                                    <FontAwesomeIconStyled icon={faHome} />
+                                    {/* <FontAwesomeIconStyled icon={faHome} /> */}
+                                    <HomeIconBootstrap/>
                                     Inicio
                                 </NavLink>
                             </NavLi>
