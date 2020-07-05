@@ -5,9 +5,9 @@ import { SpecialtiesPageContainer, SpecialitesSection, SpecialitesSectionRow, Sp
 const Specialties = (props) => {
     return (
         <SpecialtiesPageContainer id="row no-gutters specialties-page-container">
-            <SpecialitesSection className="col-md-12 specialties-section" id="specialties-section">
+            <SpecialitesSection className="col-12 specialties-section" id="specialties-section">
                 <SpecialitesSectionRow className="row no-gutters">
-                <SpecialtiesArticle className="col" id="specialties-article">
+                <SpecialtiesArticle className="col-xs-12 col-sm-12 col-md-5 col-lg" id="specialties-article">
                     <SpecialtiesArticleButton>
                         Mensajería Empresarial
                     </SpecialtiesArticleButton>
@@ -17,7 +17,7 @@ const Specialties = (props) => {
                         entregas de paquetes y más.
                     </p>
                 </SpecialtiesArticle>
-                <SpecialtiesArticle className="col" id="specialties-article">
+                <SpecialtiesArticle className="col-xs-12 col-sm-12 col-md-5 col-lg" id="specialties-article">
                     <SpecialtiesArticleButton>
                         Mensajería Empresarial
                     </SpecialtiesArticleButton>
@@ -27,7 +27,7 @@ const Specialties = (props) => {
                         entregas de paquetes y más.
                     </p>
                 </SpecialtiesArticle>
-                <SpecialtiesArticle className="col" id="specialties-article">
+                <SpecialtiesArticle className="col-xs-12 col-sm-12 col-md-5 col-lg" id="specialties-article">
                     <SpecialtiesArticleButton>
                         Mensajería Empresarial
                     </SpecialtiesArticleButton>
@@ -37,7 +37,7 @@ const Specialties = (props) => {
                         entregas de paquetes y más.
                     </p>
                 </SpecialtiesArticle>
-                <SpecialtiesArticle className="col" id="specialties-article">
+                <SpecialtiesArticle className="col-xs-12 col-sm-12 col-md-5 col-lg" id="specialties-article">
                     <SpecialtiesArticleButton>
                         Mensajería Empresarial
                     </SpecialtiesArticleButton>

@@ -69,10 +69,17 @@ const SpecialitesSectionRow = styled('div')`
     position: auto;
     min-width: 100%;
 
+    margin: auto;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
 `;
 const SpecialtiesArticle = styled('article')`
     position:  relative;
     z-index: 1;
+    
 
     margin: 1% 0.4%;
     margin-bottom: 5px;
