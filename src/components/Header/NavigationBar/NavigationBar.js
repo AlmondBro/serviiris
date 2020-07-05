@@ -78,13 +78,13 @@ const NavigationBar = (props) => {
                                 </ul>
                             </NavLi>
                             <NavLi>
-                                <NavLink to="#!">
+                                <NavLink to="#">
                                     <FontAwesomeIconStyled icon={faMotorcycle} />
                                     Servicios
                                 </NavLink>
                                 <ul class="nav-dropdown">
                                     <NavLi>
-                                        <NavLink href="#!">Especialidades</NavLink>
+                                        <NavLink to="/especialidades">Especialidades</NavLink>
                                     </NavLi>
                                 </ul>
                             </NavLi>
