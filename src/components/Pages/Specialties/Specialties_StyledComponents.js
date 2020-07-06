@@ -237,7 +237,6 @@ const SpecialtiesArticleColumn = (props) => {
                         entregas de paquetes y más.
                     `
                 }
-               
             </p>
             <SpecialtiesArticleIrisWings/>
         </SpecialtiesArticle>
