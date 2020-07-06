@@ -8,6 +8,9 @@ import { IrisLogo} from './../../IrisLogo.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+//Import Bootstrap Icons
+import { HouseFill } from 'react-bootstrap-icons';
+
 /* 
     .bg-iris-yellow {
         background-color: #FFF308;
@@ -310,6 +313,19 @@ const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
     }
 `; //end FontAwesomeIconStyled
 
+const HomeIconBootstrap = styled(HouseFill)`
+    position: relative;
+    bottom: 2px;
+    
+    color: white;
+
+    margin-right: 5px;
+
+    :hover {
+        color: #FFF308;
+    }
+`;
+
 const UserIconButton = styled('button')`
     cursor: pointer;
 
@@ -453,8 +469,8 @@ const InputCheckboxHack = styled('input')`
 `;
 
 export {    NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavigationLink as NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm,
-            InputCheckboxHack
+            Nav, NavUl, NavLi, NavigationLink as NavLink, FontAwesomeIconStyled, 
+            HomeIconBootstrap, UserIconButton, SearchForm,InputCheckboxHack
         };
 
 

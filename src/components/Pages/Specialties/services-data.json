@@ -1,0 +1,36 @@
+{
+    "serviceColumns"    :   [
+                                {
+                                    "id"            :   "service-business-transmits",
+                                    "imageAlt"      :   "computer-and-phone-work.webp",
+                                    "image"         :   "phone-computer-paper-work.webp",
+                                    "buttonTitle"   :   "Mensajería Empresarial",
+                                    "title"         :   "Trámites empresariales",
+                                    "description"   :   "Consignaciones bancarias, radicación de facturas, comprobantes, entregas de paquetes y más."
+                                },
+                                {
+                                    "id"            :   "service-business-deliveries",
+                                    "imageAlt"      :   "Gourmet Food",
+                                    "image"         :   "gourmet-food.webp",
+                                    "buttonTitle"   :   "Domicilios",
+                                    "title"         :   "Trámites empresariales",
+                                    "description"   :   "Hazlo tuyo. Agrega imágenes, texto y enlaces, o conecta datos de tu colección."
+                                },
+                                {
+                                    "id"            :   "service-online-business",
+                                    "imageAlt"      :   "American Express Card Keyboard",
+                                    "image"         :   "american-express-card-keyboard.webp",
+                                    "buttonTitle"   :   "Comercio Virtual",
+                                    "title"         :   "Compras en línea",
+                                    "description"   :   "Para que empresas virtuales puedan entregar de forma segura sus productos a sus clientes."
+                                },
+                                {
+                                    "id"            :   "service-personal",
+                                    "imageAlt"      :   "wellbeing-products",
+                                    "image"         :   "wellbeing-products.webp",
+                                    "buttonTitle"   :   "Personal",
+                                    "title"         :   "Domicilios y Trámites",
+                                    "description"   :   "Hazlo tuyo. Agrega imágenes, texto y enlaces, o conecta datos de tu colección."
+                                }
+                            ]
+}
