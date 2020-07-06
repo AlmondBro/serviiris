@@ -5,9 +5,11 @@ import { SpecialtiesPageContainer, SpecialitesSection, SpecialitesSectionRow, Sp
 import serviceColumnsJSON from './services-data.json';
 
 const Specialties = (props) => {
+
     const generateSpecialtiesColumns  = (jsonFile) => {
-        const serviceColumnsObjectArray = JSON.parse(serviceColumnsJSON);
-        serviceColumnsObjectArray["serviceColumns"].forEach( (serviceColumn, index) => {
+        const serviceColumnsObjectArray = jsonFile;
+        
+        return serviceColumnsObjectArray["serviceColumns"].map( (serviceColumn, index) => {
             return  (   
                         <SpecialtiesArticleColumn
                             id          =   { serviceColumn.id }
@@ -26,11 +28,8 @@ const Specialties = (props) => {
         <SpecialtiesPageContainer id="row no-gutters specialties-page-container">
             <SpecialitesSection className="col-12 specialties-section" id="specialties-section">
                 <SpecialitesSectionRow className="row no-gutters">
-                    {/* <SpecialtiesArticleColumn/>
-                    <SpecialtiesArticleColumn/>
-                    <SpecialtiesArticleColumn/>
-                    <SpecialtiesArticleColumn/> */}
                     {
+                        // Generate the service columns
                         generateSpecialtiesColumns(serviceColumnsJSON)
                     }
                 </SpecialitesSectionRow>

@@ -69,7 +69,7 @@ const NavigationBar = (props) => {
                                 </NavLink>
                                 {/* TODO: Fix this not lining up in width */}
                                 {/* <NavLink href="#!">Services</NavLink> */}
-                                <ul class="nav-dropdown">
+                                <ul className="nav-dropdown">
                                     <NavLi>
                                         <NavLink to="#!">Visión</NavLink>
                                     </NavLi>
@@ -106,7 +106,7 @@ const NavigationBar = (props) => {
                             <NavLi>
                                 <SearchForm>
                                     <p id="search-input-container">
-                                        <label id="search-input-label" for="search-input-checkbox-hack">
+                                        <label id="search-input-label" htmlFor="search-input-checkbox-hack">
                                             <FontAwesomeIconStyled 
                                                 id="search-input-icon" 
                                                 icon={faSearch} 
