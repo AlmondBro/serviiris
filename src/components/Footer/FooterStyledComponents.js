@@ -52,7 +52,6 @@ let FooterIrisWings = styled(IrisLogoWings)`
     width: ${ props => props.width ? props.width : "500px"};
     height: ${ props => props.height ? props.height : "500px"};
     color: ${ props => props.color ? props.color : "#7A40DB"};
-   
 `;
 
 const FontAwesomeIconStyled = styled(FontAwesomeIcon).attrs({ 
