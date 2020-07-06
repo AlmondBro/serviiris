@@ -211,7 +211,7 @@ let SpecialtiesArticleIrisWings = styled(IrisLogoWings)`
 const SpecialtiesArticleColumn = (props) => {
     return (
         <SpecialtiesArticle 
-            className   =   "col-xs-12 col-sm-12 col-md-5 col-lg specialties-article" 
+            className   =   "col-xs-12 col-sm-5 col-md-5 col-lg specialties-article" 
             id          =   {props.id}
         >
             <SpecialtiesArticleImageContainerFigure className="specialties-article-image-container-figure">
