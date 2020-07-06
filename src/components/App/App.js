@@ -13,6 +13,8 @@ import Footer from './../Footer/Footer.js';
 import Home from './../Pages/Home/Home.js';
 import AboutUs  from '../Pages/AboutUs/AboutUs.js';
 
+import Specialties from './../Pages/Specialties/Specialties.js';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -48,11 +50,20 @@ class App extends Component {
                                       }
                               } 
             />
-              <Route   
+            <Route   
                       path    = { [`${publicURL}/about-us`, `${publicURL}/conocenos`] }
                       render  = { () => {
                                     return (
                                       <AboutUs/>
+                                    );
+                                  }
+                                } 
+            />
+               <Route   
+                      path    = { [`${publicURL}/specialties`, `${publicURL}/especialidades`] }
+                      render  = { () => {
+                                    return (
+                                      <Specialties/>
                                     );
                                   }
                                 } 
