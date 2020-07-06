@@ -93,6 +93,8 @@ const SpecialtiesArticle = styled('article')`
 
     color: white;
 
+    overflow-y:  hidden;
+    
     p {
         color: #5425BA;
         text-align: center;
@@ -100,6 +102,8 @@ const SpecialtiesArticle = styled('article')`
         font-size: 1.1em;
         padding: 0% 10%;
     }        
+
+
 `;
 
 const SpecialtiesArticleImageContainerFigure = styled('figure')`
