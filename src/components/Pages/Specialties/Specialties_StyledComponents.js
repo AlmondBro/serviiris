@@ -49,7 +49,7 @@ const SpecialitesSection = styled('section')`
         right: 0px;
         z-index: 0;
   
-        background-image: url("./assets/img/nyc-grey.webp");
+        background-image: url("./assets/img/couple-opening-package.webp");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -94,7 +94,7 @@ const SpecialtiesArticle = styled('article')`
     color: white;
 
     overflow-y:  hidden;
-    
+
     p {
         color: #5425BA;
         text-align: center;
