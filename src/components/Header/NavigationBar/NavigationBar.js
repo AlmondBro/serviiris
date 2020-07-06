@@ -8,8 +8,8 @@ import NavBarToggle from './NavBarToggle/NavBarToggle.js';
 
 //Import styled components
 import  {   NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContainerLink,
-            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, UserIconButton, SearchForm,
-            InputCheckboxHack
+            Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, HomeUserIconButton, 
+            UserIconButton, HomeIconBootstrap, SearchForm, InputCheckboxHack
         } from './NavigationBarStyledComponents.js';
 /*
     <Link 
@@ -57,7 +57,8 @@ const NavigationBar = (props) => {
                                     activeClassName =   "navLink-current" 
                                     className="nav-li"
                                 >
-                                    <FontAwesomeIconStyled icon={faHome} />
+                                    {/* <FontAwesomeIconStyled icon={faHome} /> */}
+                                    <HomeIconBootstrap/>
                                     Inicio
                                 </NavLink>
                             </NavLi>
@@ -68,7 +69,7 @@ const NavigationBar = (props) => {
                                 </NavLink>
                                 {/* TODO: Fix this not lining up in width */}
                                 {/* <NavLink href="#!">Services</NavLink> */}
-                                <ul class="nav-dropdown">
+                                <ul className="nav-dropdown">
                                     <NavLi>
                                         <NavLink to="#!">Visión</NavLink>
                                     </NavLi>
@@ -78,13 +79,13 @@ const NavigationBar = (props) => {
                                 </ul>
                             </NavLi>
                             <NavLi>
-                                <NavLink to="#!">
+                                <NavLink to="#">
                                     <FontAwesomeIconStyled icon={faMotorcycle} />
                                     Servicios
                                 </NavLink>
                                 <ul class="nav-dropdown">
                                     <NavLi>
-                                        <NavLink href="#!">Especialidades</NavLink>
+                                        <NavLink to="/especialidades">Especialidades</NavLink>
                                     </NavLi>
                                 </ul>
                             </NavLi>
@@ -105,7 +106,7 @@ const NavigationBar = (props) => {
                             <NavLi>
                                 <SearchForm>
                                     <p id="search-input-container">
-                                        <label id="search-input-label" for="search-input-checkbox-hack">
+                                        <label id="search-input-label" htmlFor="search-input-checkbox-hack">
                                             <FontAwesomeIconStyled 
                                                 id="search-input-icon" 
                                                 icon={faSearch} 
