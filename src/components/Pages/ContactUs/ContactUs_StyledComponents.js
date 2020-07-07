@@ -1,5 +1,7 @@
 import React from 'react';
+
 import styled from 'styled-components';
+
 import { IrisLogoWings } from './../../IrisLogo.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,6 +20,9 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 
 const ContactUsPageContainer = styled('section')`
+    position: relative;
+    z-index: 1;
+    
     min-height: 100%;
     min-width: 100%;
 
@@ -60,11 +65,10 @@ const ContactUsPageContainer = styled('section')`
 `; //end homepagecontainer
 
 const ContactUsSection = styled('section')`
-    position: relative;
-    z-index: 0;
-    background: #FFF308;
+    background-color: #FFF308;
 
-    margin-bottom: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 `;
 
 const ContactUsSectionHeader = styled('header')`
@@ -86,6 +90,9 @@ const ContactUsSectionHeader = styled('header')`
 const ContactUsSectionRow = styled('div')`
     position: auto;
     min-width: 100%;
+
+    position: relative;
+    z-index: 0;
 
     margin: auto;
 
@@ -121,8 +128,6 @@ const ContactUsArticle = styled('article')`
         font-size: 1.1em;
         padding: 0% 10%;
     }        
-
-
 `;
 
 const ContactUsArticleImageContainerFigure = styled('figure')`
@@ -229,20 +234,34 @@ let ContactUsArticleIrisWings = styled(IrisLogoWings)`
 
 const ContactUsSectionColContainer  = styled('section')`
     position: relative;
-    z-index: 5;
+    z-index: 0;
     
     background-color: ${props => props.bgColor || "red"};
 
-    margin: 0% 1%;
+    margin: 1% 1%;
     border-radius: 12px;
 
     text-align: center;
 `;
 
 const ContactUsSectionColumnArticle = styled('article')`
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+
+    padding: 15%;
+
+    font-style: italic;
+
+    a, svg {
+        margin-top: 15%;
+    }
+    a {
+        color: black;
+        text-decoration: underline;
+    }
 `;
 
 const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
@@ -250,18 +269,22 @@ const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
     
     text-align: center;
     margin: 0 auto;
+
     :hover {
         color: #5425BA;
     }
 `; //end FontAwesomeIconStyled
 
-const ContactUsSectionCol = ( { title, faIcon, description } ) => {
+const ContactUsSectionCol = ( { title, faIcon, description, bgColor, link } ) => {
     return (
-        <ContactUsSectionColContainer className="col-sm" bgColor="white">
+        <ContactUsSectionColContainer 
+            className   =   "col-sm" 
+            bgColor     =   { bgColor || "white" }
+        >
             <ContactUsSectionColumnArticle>
                 <h5>{ title || "Centro de soluciones"}</h5>
                 <FontAwesomeIconStyled icon={ faIcon || faPaperPlane }/>
-                <p>{ description || "iristeamco@gmail.com"}</p>
+                <a href={ link }>{ description || "iristeamco@gmail.com"}</a>
             </ContactUsSectionColumnArticle>
         </ContactUsSectionColContainer>
     ); //end return statement
