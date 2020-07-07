@@ -53,7 +53,7 @@ const NavigationBar = (props) => {
                         <NavUl className="nav-ul">
                             <NavLi className="nav-li">
                                 <NavLink 
-                                    to="/home" 
+                                    to={["/home", "/inicio"] } 
                                     activeClassName =   "navLink-current" 
                                     className="nav-li"
                                 >
@@ -85,12 +85,12 @@ const NavigationBar = (props) => {
                                 </NavLink>
                                 <ul class="nav-dropdown">
                                     <NavLi>
-                                        <NavLink to="/especialidades">Especialidades</NavLink>
+                                        <NavLink to={["/especialidades", "/specialties"]}>Especialidades</NavLink>
                                     </NavLi>
                                 </ul>
                             </NavLi>
                             <NavLi>
-                                <NavLink to="#!">
+                                <NavLink to={ ["/contactanos", "/contact-us"] }>
                                     <FontAwesomeIconStyled icon={faPaperPlane} />
                                     Contáctanos
                                 </NavLink>
