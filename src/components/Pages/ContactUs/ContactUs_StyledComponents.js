@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { IrisLogoWings } from './../../IrisLogo.js';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+
+
 /* 
     .bg-iris-yellow {
         background-color: #FFF308;
@@ -60,6 +65,22 @@ const ContactUsSection = styled('section')`
     background: #FFF308;
 
     margin-bottom: 3px;
+`;
+
+const ContactUsSectionHeader = styled('header')`
+    text-align: center;
+    color: #5425BA;
+
+    margin-bottom: 25px;
+
+    h3 {
+        font-weight: bolder;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+        font-style: italic;
+    }
 `;
 
 const ContactUsSectionRow = styled('div')`
@@ -206,7 +227,7 @@ let ContactUsArticleIrisWings = styled(IrisLogoWings)`
     color: ${ props => props.color ? props.color : "#7A40DB"};
 `;
 
-const ContactUsSectionCol  = styled('section')`
+const ContactUsSectionColContainer  = styled('section')`
     position: relative;
     z-index: 5;
     
@@ -216,8 +237,34 @@ const ContactUsSectionCol  = styled('section')`
     border-radius: 12px;
 
     text-align: center;
-
-
 `;
+
+const ContactUsSectionColumnArticle = styled('article')`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`;
+
+const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
+    color: black;
+    
+    text-align: center;
+    margin: 0 auto;
+    :hover {
+        color: #5425BA;
+    }
+`; //end FontAwesomeIconStyled
+
+const ContactUsSectionCol = ( { title, faIcon, description } ) => {
+    return (
+        <ContactUsSectionColContainer className="col-sm" bgColor="white">
+            <ContactUsSectionColumnArticle>
+                <h5>{ title || "Centro de soluciones"}</h5>
+                <FontAwesomeIconStyled icon={ faIcon || faPaperPlane }/>
+                <p>{ description || "iristeamco@gmail.com"}</p>
+            </ContactUsSectionColumnArticle>
+        </ContactUsSectionColContainer>
+    ); //end return statement
+};
  
-export { ContactUsPageContainer, ContactUsSection, ContactUsSectionRow, ContactUsSectionCol };
+export { ContactUsPageContainer, ContactUsSection, ContactUsSectionHeader, ContactUsSectionRow, ContactUsSectionCol, FontAwesomeIconStyled };
