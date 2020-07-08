@@ -12,6 +12,28 @@ import { IrisLogo } from './../../IrisLogo.js';
     }
 */
 
+/*
+        .curve-inverted::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	z-index: 4;
+	display: block;
+	padding-top: 2.2222222222%;
+	width: 100%;
+	background-color: inherit;
+	-webkit-mask-size: 100% 100%;
+	mask-size: 100% 100%;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 91' preserveAspectRatio='none'%3E%3Cpath fill='%23FC5959' fill-rule='evenodd' d='M1440 90v1H0v-1C385.36 35.271 772.02 5.388 1157.758 0h254.653c9.197.129 18.394.27 27.589.427V90z'/%3E%3C/svg%3E");
+	mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 91' preserveAspectRatio='none'%3E%3Cpath fill='%23FC5959' fill-rule='evenodd' d='M1440 90v1H0v-1C385.36 35.271 772.02 5.388 1157.758 0h254.653c9.197.129 18.394.27 27.589.427V90z'/%3E%3C/svg%3E");
+	bottom: 100%;
+	transform: translateY(1px);
+	background-color: red;
+}
+*/
+
 const WorkWithUsPageContainer = styled('section')`
     /* margin: 0; */
     /* height: auto; */
