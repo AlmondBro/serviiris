@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 
-import { ContactUsPageContainer, ContactUsSection, ContactUsSectionHeader, ContactUsSectionRow, ContactUsSectionCol, FontAwesomeIconStyled } from './ContactUs_StyledComponents.js';
+import { ContactUsPageContainer, ContactUsSection, ContactUsSectionHeader, ContactUsSectionRow, ContactUsSectionCol, ContactUsArticleTitleBorderHR } from './ContactUs_StyledComponents.js';
 
 // red: rgb(226, 28, 33)
 
@@ -14,6 +15,7 @@ const ContactUs = (props) => {
                 <ContactUsSectionHeader>
                     <h3>Contáctanos</h3>
                     <h4>Queremos saber de ti</h4>
+                    <ContactUsArticleTitleBorderHR/>
                 </ContactUsSectionHeader>
 
                 <ContactUsSectionRow className="row no-gutters">
@@ -35,21 +37,21 @@ const ContactUs = (props) => {
                        <ContactUsSectionCol 
                         bgColor     =   "rgba(255, 192, 203, 0.7)"
                         title       =   { "Siguenos en Instagram" }
-                        faIcon      =   {  faPaperPlane }
+                        faIcon      =   {  faInstagram }
                         description =   { "@iristeam.co"}
                         link        =   { "https://www.instagram.com/iristeam.co/?hl=es-la"}
                     />
                        <ContactUsSectionCol 
                         bgColor     =   "rgba(24, 119, 224, 0.7)"
                         title       =   { "Encuentranos en Facebook" }
-                        faIcon      =   {  faPaperPlane }
+                        faIcon      =   {  faFacebook }
                         description =   { "Iris-Team"}
                         link        =   { "https://www.facebook.com/Iris-Team-103434521342003/"}
                     />
-                       <ContactUsSectionCol 
+                    <ContactUsSectionCol 
                         bgColor     =   "rgba(1, 230, 117, 0.7)"
                         title       =   { "Escribenos en Whatsapp" }
-                        faIcon      =   {  faPaperPlane }
+                        faIcon      =   {  faWhatsapp }
                         description =   { "iristeamco@gmail.com"}
                         link        =   { "mailto:iristeamco@gmail.com"}
                     />
