@@ -1,6 +1,11 @@
 import React from 'react';
+
 import styled from 'styled-components';
+
 import { IrisLogoWings } from './../../IrisLogo.js';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 /* 
     .bg-iris-yellow {
         background-color: #FFF308;
@@ -13,6 +18,9 @@ import { IrisLogoWings } from './../../IrisLogo.js';
 
 
 const ContactUsPageContainer = styled('section')`
+    position: relative;
+    z-index: 1;
+    
     min-height: 100%;
     min-width: 100%;
 
@@ -21,7 +29,8 @@ const ContactUsPageContainer = styled('section')`
     justify-content: center;
     align-items: center;
 
-    margin: auto; /* Align everything in the center */
+    /* margin: auto;  */
+    /* Align everything in the center */
     
     & > * {
         flex-grow: 1;
@@ -37,7 +46,7 @@ const ContactUsPageContainer = styled('section')`
         right: 0px;
         z-index: 0;
   
-        background-image: url("./assets/img/couple-opening-package.webp");
+        background-image: url("./assets/img/woman-talking-cellphone.webp");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -52,22 +61,48 @@ const ContactUsPageContainer = styled('section')`
         margin: 0 auto;
       
     }
+
+    @media only screen and (min-width: 766px) and (max-width: 768px) {
+        margin-top:  15px;
+    }
 `; //end homepagecontainer
 
 const ContactUsSection = styled('section')`
-    position: relative;
-    z-index: 0;
-    background: #FFF308;
+    background-color: #FFF308;
 
-    margin-bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`;
+
+const ContactUsSectionHeader = styled('header')`
+    text-align: center;
+    color: #5425BA;
+
+    margin-bottom: 25px;
+
+    h3 {
+        font-weight: bolder;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+        font-style: italic;
+    }
+
+    @media only screen and (max-width: 992px) {
+        h3 {
+            margin-top:  15px;
+        } 
+    }
 `;
 
 const ContactUsSectionRow = styled('div')`
-    position: auto;
     min-width: 100%;
 
-    margin: auto;
-
+    position: relative;
+    z-index: 1;
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -100,8 +135,6 @@ const ContactUsArticle = styled('article')`
         font-size: 1.1em;
         padding: 0% 10%;
     }        
-
-
 `;
 
 const ContactUsArticleImageContainerFigure = styled('figure')`
@@ -185,39 +218,82 @@ const ContactUsArticleTitle = styled('h3')`
 const ContactUsArticleTitleBorderHR = styled('hr')`
     color: black;
     background-color: #5425BA;
-    width: 50%;
+    width: 75%;
 
-    margin-top: 0.35rem;
+    margin-top: 30px;
     margin-bottom: 0.35rem;
 `;
 
 
-let ContactUsArticleIrisWings = styled(IrisLogoWings)`
-    position: absolute;
-    top: 91%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    color: #7A40DB;
-    transform: translateX(-50%);
 
-    width: ${ props => props.width ? props.width : "200px"};
-    height: ${ props => props.height ? props.height : "200px"};
-    color: ${ props => props.color ? props.color : "#7A40DB"};
-`;
-
-const ContactUsSectionCol  = styled('section')`
+const ContactUsSectionColContainer  = styled('a')`
     position: relative;
-    z-index: 5;
+    z-index: 1;
     
     background-color: ${props => props.bgColor || "red"};
 
-    margin: 0% 1%;
+    margin: 1% 1%;
+
     border-radius: 12px;
+    /* border: 2px solid rgba(84, 37, 186, 0.7); */
 
     text-align: center;
 
+    transform: scale(1.0);
+    box-shadow: 0px; 
 
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+
+    :hover, :active, :visited {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 5px 0px rgba(84,37,186,1);
+    }
 `;
+
+const ContactUsSectionColumnArticle = styled('article')`
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    color: black;
+
+    padding: 15%;
+
+    font-style: italic;
+
+    a, svg {
+        margin-top: 15%;
+    }
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+`;
+
+const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
+    color: black;
+    font-size: 2.5em; 
+    text-align: center;
+    margin: 0 auto;
+`; //end FontAwesomeIconStyled
+
+const ContactUsSectionCol = ( { title, faIcon, description, bgColor, link } ) => {
+    return (
+        <ContactUsSectionColContainer 
+            className   =   "col-sm-5 col-md-5 col-lg" 
+            bgColor     =   { bgColor || "white" }
+            href        =   { link }
+        >
+            <ContactUsSectionColumnArticle>
+                <h5>{ title || "Centro de soluciones"}</h5>
+                <FontAwesomeIconStyled icon={ faIcon }/>
+                <a href={ link }>{ description || "iristeamco@gmail.com"}</a>
+            </ContactUsSectionColumnArticle>
+        </ContactUsSectionColContainer>
+    ); //end return statement
+};
  
-export { ContactUsPageContainer, ContactUsSection, ContactUsSectionRow, ContactUsSectionCol };
+export { ContactUsPageContainer, ContactUsSection, ContactUsSectionHeader, ContactUsSectionRow, ContactUsSectionCol, FontAwesomeIconStyled, ContactUsArticleTitleBorderHR };

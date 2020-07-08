@@ -35,7 +35,7 @@ const NavigationBar = (props) => {
             <NavBar className="navigation-bar">
                 <NavContainer className="nav-container">
                     <NavLogoContainer className="nav-logo-container">
-                        <NavLogoContainerLink href="#!">
+                        <NavLogoContainerLink href="#">
                             <NavIrisLogo
                                 height  =   "35px"
                                 width   =   "35px"
@@ -53,7 +53,7 @@ const NavigationBar = (props) => {
                         <NavUl className="nav-ul">
                             <NavLi className="nav-li">
                                 <NavLink 
-                                    to={["/home", "/inicio"] } 
+                                    to="/home"
                                     activeClassName =   "navLink-current" 
                                     className="nav-li"
                                 >
@@ -85,19 +85,20 @@ const NavigationBar = (props) => {
                                 </NavLink>
                                 <ul class="nav-dropdown">
                                     <NavLi>
-                                        <NavLink to={["/especialidades", "/specialties"]}>Especialidades</NavLink>
+                                        <NavLink to="/especialidades">
+                                            Especialidades
+                                        </NavLink>
                                     </NavLi>
                                 </ul>
                             </NavLi>
                             <NavLi>
-                                <NavLink to={ ["/contactanos", "/contact-us"] }>
+                                <NavLink to="/contactanos">
                                     <FontAwesomeIconStyled icon={faPaperPlane} />
                                     Contáctanos
                                 </NavLink>
                             </NavLi>
-                            <NavLi>
-                                
-                                <NavLink to="#!">
+                            <NavLi>  
+                                <NavLink to="#">
                                     <FontAwesomeIconStyled icon={faBriefcase} />
                                     Trabaja Con Nosotros
                                 </NavLink>
@@ -108,8 +109,8 @@ const NavigationBar = (props) => {
                                     <p id="search-input-container">
                                         <label id="search-input-label" htmlFor="search-input-checkbox-hack">
                                             <FontAwesomeIconStyled 
-                                                id="search-input-icon" 
-                                                icon={faSearch} 
+                                                id      =   "search-input-icon" 
+                                                icon    =   { faSearch  } 
                                             />
                                         </label>
                                         <div id="search-input-field-container">
