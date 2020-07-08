@@ -12,8 +12,8 @@ import Footer from './../Footer/Footer.js';
 //Import Pages
 import Home from './../Pages/Home/Home.js';
 import AboutUs  from '../Pages/AboutUs/AboutUs.js';
-
 import Specialties from './../Pages/Specialties/Specialties.js';
+import ContactUs from './../Pages/ContactUs/ContactUs.js';
 
 class App extends Component {
   constructor(props) {
@@ -64,6 +64,15 @@ class App extends Component {
                       render  = { () => {
                                     return (
                                       <Specialties/>
+                                    );
+                                  }
+                                } 
+            />
+            <Route   
+                      path    = { [`${publicURL}/contact-us`, `${publicURL}/contactanos`] }
+                      render  = { () => {
+                                    return (
+                                      <ContactUs/>
                                     );
                                   }
                                 } 
