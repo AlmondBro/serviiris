@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
-
 
 import { ContactUsPageContainer, ContactUsSection, ContactUsSectionHeader, ContactUsSectionRow, ContactUsSectionCol, ContactUsArticleTitleBorderHR } from './ContactUs_StyledComponents.js';
 
@@ -30,7 +29,7 @@ const ContactUs = (props) => {
                       <ContactUsSectionCol 
                         bgColor     =   "rgba(255, 0, 0, 0.7)"
                         title       =   { "Comunícate al" }
-                        faIcon      =   {  faPaperPlane }
+                        faIcon      =   {  faPhoneVolume }
                         description =   { "+57 (311) 718-4447"}
                         link        =   { "tel:+57 (315) 453-9422"}
                     />

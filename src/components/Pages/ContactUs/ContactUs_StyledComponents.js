@@ -85,6 +85,12 @@ const ContactUsSectionHeader = styled('header')`
         font-size: 1.1rem;
         font-style: italic;
     }
+
+    @media only screen and (max-width: 992px) {
+        h3 {
+            margin-top:  15px;
+        } 
+    }
 `;
 
 const ContactUsSectionRow = styled('div')`
@@ -267,7 +273,7 @@ const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
 const ContactUsSectionCol = ( { title, faIcon, description, bgColor, link } ) => {
     return (
         <ContactUsSectionColContainer 
-            className   =   "col-sm" 
+            className   =   "col-sm-5 col-md-5 col-lg" 
             bgColor     =   { bgColor || "white" }
         >
             <ContactUsSectionColumnArticle>
