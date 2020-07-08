@@ -5,8 +5,6 @@ import styled from 'styled-components';
 import { IrisLogoWings } from './../../IrisLogo.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-
 
 /* 
     .bg-iris-yellow {
@@ -210,26 +208,13 @@ const ContactUsArticleTitle = styled('h3')`
 const ContactUsArticleTitleBorderHR = styled('hr')`
     color: black;
     background-color: #5425BA;
-    width: 50%;
+    width: 75%;
 
-    margin-top: 0.35rem;
+    margin-top: 30px;
     margin-bottom: 0.35rem;
 `;
 
 
-let ContactUsArticleIrisWings = styled(IrisLogoWings)`
-    position: absolute;
-    top: 91%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    color: #7A40DB;
-    transform: translateX(-50%);
-
-    width: ${ props => props.width ? props.width : "200px"};
-    height: ${ props => props.height ? props.height : "200px"};
-    color: ${ props => props.color ? props.color : "#7A40DB"};
-`;
 
 const ContactUsSectionColContainer  = styled('section')`
     position: relative;
@@ -238,7 +223,9 @@ const ContactUsSectionColContainer  = styled('section')`
     background-color: ${props => props.bgColor || "red"};
 
     margin: 1% 1%;
+
     border-radius: 12px;
+    /* border: 2px solid rgba(84, 37, 186, 0.7); */
 
     text-align: center;
 `;
@@ -246,9 +233,12 @@ const ContactUsSectionColContainer  = styled('section')`
 const ContactUsSectionColumnArticle = styled('article')`
     position: relative;
     z-index: 2;
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    color: black;
 
     padding: 15%;
 
@@ -265,7 +255,7 @@ const ContactUsSectionColumnArticle = styled('article')`
 
 const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
     color: black;
-    
+    font-size: 2.5em; 
     text-align: center;
     margin: 0 auto;
 
@@ -282,11 +272,11 @@ const ContactUsSectionCol = ( { title, faIcon, description, bgColor, link } ) =>
         >
             <ContactUsSectionColumnArticle>
                 <h5>{ title || "Centro de soluciones"}</h5>
-                <FontAwesomeIconStyled icon={ faIcon || faPaperPlane }/>
+                <FontAwesomeIconStyled icon={ faIcon }/>
                 <a href={ link }>{ description || "iristeamco@gmail.com"}</a>
             </ContactUsSectionColumnArticle>
         </ContactUsSectionColContainer>
     ); //end return statement
 };
  
-export { ContactUsPageContainer, ContactUsSection, ContactUsSectionHeader, ContactUsSectionRow, ContactUsSectionCol, FontAwesomeIconStyled };
+export { ContactUsPageContainer, ContactUsSection, ContactUsSectionHeader, ContactUsSectionRow, ContactUsSectionCol, FontAwesomeIconStyled, ContactUsArticleTitleBorderHR };
