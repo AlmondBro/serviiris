@@ -61,6 +61,10 @@ const ContactUsPageContainer = styled('section')`
         margin: 0 auto;
       
     }
+
+    @media only screen and (min-width: 766px) and (max-width: 768px) {
+        margin-top:  15px;
+    }
 `; //end homepagecontainer
 
 const ContactUsSection = styled('section')`
@@ -222,9 +226,9 @@ const ContactUsArticleTitleBorderHR = styled('hr')`
 
 
 
-const ContactUsSectionColContainer  = styled('section')`
+const ContactUsSectionColContainer  = styled('a')`
     position: relative;
-    z-index: 0;
+    z-index: 1;
     
     background-color: ${props => props.bgColor || "red"};
 
@@ -234,6 +238,16 @@ const ContactUsSectionColContainer  = styled('section')`
     /* border: 2px solid rgba(84, 37, 186, 0.7); */
 
     text-align: center;
+
+    transform: scale(1.0);
+    box-shadow: 0px; 
+
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+
+    :hover, :active, :visited {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 5px 0px rgba(84,37,186,1);
+    }
 `;
 
 const ContactUsSectionColumnArticle = styled('article')`
@@ -264,10 +278,6 @@ const FontAwesomeIconStyled = styled(FontAwesomeIcon)`
     font-size: 2.5em; 
     text-align: center;
     margin: 0 auto;
-
-    :hover {
-        color: #5425BA;
-    }
 `; //end FontAwesomeIconStyled
 
 const ContactUsSectionCol = ( { title, faIcon, description, bgColor, link } ) => {
@@ -275,6 +285,7 @@ const ContactUsSectionCol = ( { title, faIcon, description, bgColor, link } ) =>
         <ContactUsSectionColContainer 
             className   =   "col-sm-5 col-md-5 col-lg" 
             bgColor     =   { bgColor || "white" }
+            href        =   { link }
         >
             <ContactUsSectionColumnArticle>
                 <h5>{ title || "Centro de soluciones"}</h5>
