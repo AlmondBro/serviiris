@@ -31,7 +31,8 @@ const ContactUsPageContainer = styled('section')`
     justify-content: center;
     align-items: center;
 
-    margin: auto; /* Align everything in the center */
+    /* margin: auto;  */
+    /* Align everything in the center */
     
     & > * {
         flex-grow: 1;
@@ -47,7 +48,7 @@ const ContactUsPageContainer = styled('section')`
         right: 0px;
         z-index: 0;
   
-        background-image: url("./assets/img/couple-opening-package.webp");
+        background-image: url("./assets/img/woman-talking-cellphone.webp");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -67,8 +68,9 @@ const ContactUsPageContainer = styled('section')`
 const ContactUsSection = styled('section')`
     background-color: #FFF308;
 
-    margin-top: 15px;
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
 
 const ContactUsSectionHeader = styled('header')`
@@ -88,14 +90,11 @@ const ContactUsSectionHeader = styled('header')`
 `;
 
 const ContactUsSectionRow = styled('div')`
-    position: auto;
     min-width: 100%;
 
     position: relative;
     z-index: 0;
-
-    margin: auto;
-
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
