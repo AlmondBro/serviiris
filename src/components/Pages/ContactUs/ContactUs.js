@@ -19,35 +19,35 @@ const ContactUs = (props) => {
                 <ContactUsSectionRow className="row no-gutters">
                     {/* bgColor, title, faIcon, description, link,  */}
                     <ContactUsSectionCol 
-                        bgColor     =   "white"
+                        bgColor     =   "rgba(255, 255, 255, 0.7)"
                         title       =   { "Centro de soluciones" }
                         faIcon      =   {  faPaperPlane }
                         description =   { "iristeamco@gmail.com"}
                         link        =   { "mailto:iristeamco@gmail.com"}
                     />
                       <ContactUsSectionCol 
-                        bgColor     =   "red"
+                        bgColor     =   "rgba(255, 0, 0, 0.7)"
                         title       =   { "Comunícate al" }
                         faIcon      =   {  faPaperPlane }
                         description =   { "+57 (311) 718-4447"}
                         link        =   { "tel:+57 (315) 453-9422"}
                     />
                        <ContactUsSectionCol 
-                        bgColor     =   "pink"
+                        bgColor     =   "rgba(255, 192, 203, 0.7)"
                         title       =   { "Siguenos en Instagram" }
                         faIcon      =   {  faPaperPlane }
                         description =   { "@iristeam.co"}
                         link        =   { "https://www.instagram.com/iristeam.co/?hl=es-la"}
                     />
                        <ContactUsSectionCol 
-                        bgColor     =   "blue"
+                        bgColor     =   "rgba(24, 119, 224, 0.7)"
                         title       =   { "Encuentranos en Facebook" }
                         faIcon      =   {  faPaperPlane }
                         description =   { "Iris-Team"}
                         link        =   { "https://www.facebook.com/Iris-Team-103434521342003/"}
                     />
                        <ContactUsSectionCol 
-                        bgColor     =   "green"
+                        bgColor     =   "rgba(1, 230, 117, 0.7)"
                         title       =   { "Escribenos en Whatsapp" }
                         faIcon      =   {  faPaperPlane }
                         description =   { "iristeamco@gmail.com"}
