@@ -72,6 +72,7 @@ const LeftColumn = styled("div")`
     z-index: 0;
     /* min-height: 81vh; */
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
@@ -87,11 +88,14 @@ const LeftColumn = styled("div")`
 `;
 
 const RightColumn = styled(LeftColumn)`
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
+
     /* height: 100%; */
     /* margin: auto; */
+
+    flex-direction: column;
     background-color: #5425BA;
 
     @media only screen and (max-width: 768px) {
