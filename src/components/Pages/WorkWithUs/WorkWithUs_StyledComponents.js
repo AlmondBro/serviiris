@@ -35,12 +35,30 @@ import { IrisLogo } from './../../IrisLogo.js';
 */
 
 const WorkWithUsPageContainer = styled('section')`
-    /* margin: 0; */
-    /* height: auto; */
+    position: relative;
+    z-index: 1;
     min-height: 100%;
     min-width: 100%;
 
-    ::after {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        flex-grow: 1;
+    }
+
+    @media only screen and (min-width: 765px) and (max-width: 768px) {
+        margin-top: 30px;
+    }
+`;
+
+
+const WorkWithUsSection = styled('section')`
+    position: relative;
+    z-index: 1;
+    background: #FFF308;
+
+    /* ::after {
         content: "";
 
         position: absolute;
@@ -64,12 +82,12 @@ const WorkWithUsPageContainer = styled('section')`
         width: 100%;
 
         margin: 0 auto;
-    }
+    } */
 `;
 
-const LeftColumn = styled("div")`
+const LeftColumn = styled('div')`
     position: relative;
-    z-index: 0;
+    z-index: 1;
     /* min-height: 81vh; */
     display: flex;
     flex-direction: row;
@@ -84,7 +102,14 @@ const LeftColumn = styled("div")`
             margin-bottom: -80px;
         }
        /* } */
-  
+`;
+
+const LeftColumnHeader = styled('h3')`
+    position: relative;
+    z-index: 1;
+    color: #5425BA;
+    font-size: 3em;
+    font-weight: bold;
 `;
 
 const RightColumn = styled(LeftColumn)`
@@ -98,17 +123,47 @@ const RightColumn = styled(LeftColumn)`
     flex-direction: column;
     background-color: #5425BA;
 
+    ::after {
+        content: "";
+
+        position: absolute;
+        z-index: 0;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 0;
+  
+        background-image: url("./assets/img/iris-girl-with-box.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -110px 0px;
+        background-repeat: no-repeat;
+
+        opacity: 0.1;
+        max-width: 100%;
+        min-height: 100%;
+        overflow-y: hidden;
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+
     @media only screen and (max-width: 768px) {
         margin: 0;
     }
 `;
 
 const RightColumnContainer = styled('div')`
-    width: 55%;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 80%;
+    height: 100%;
     margin: 0 auto;
 `;
-
 
 const WorkWithUsIrisLogo = styled(IrisLogo)`
     width: ${ props => props.width ? props.width : "500px"};
@@ -117,9 +172,15 @@ const WorkWithUsIrisLogo = styled(IrisLogo)`
 `;
 
 const WelcomeText = styled('h3')`
+    position: relative;
+    z-index: 1;
+
     color: #FFF308;
+
     font-size: 2.5em;
     font-weight: bold;
+
+    margin-bottom: 30px;
 
     @media only screen and (max-width: 768px) {
         text-align: center;
@@ -128,20 +189,34 @@ const WelcomeText = styled('h3')`
 `;
 
 const IrisWorkWithUsDescription = styled('p')`
+    position: relative;
+    z-index: 1;
+
     color: white;
     font-weight: bolder;
 
-    margin-top: 30px;
+    margin-top: 2px;
+    margin-bottom: 0.5rem;
 
     @media only screen and (max-width: 768px) {
         text-align: center;
     }
 `;
 
+const IrisWorkWithUsDescriptionEmoji = styled('span')`
+    position: relative;
+    z-index: 1;
+
+    margin-right: 5px;
+`;
+
 const ContactInfoContainer = styled('address')`
+    position: relative;
+    z-index: 1;
+
     color: white;
 
-    margin-top: 30px;
+    margin-top: 0px;
 
     @media only screen and (max-width: 768px) {
         text-align: center;
@@ -149,6 +224,9 @@ const ContactInfoContainer = styled('address')`
 `;
 
 const ContactInfoEmail = styled('a')`
+    position: relative;
+    z-index: 1;
+
     display: block;
     color: white;
     text-decoration: none;
@@ -160,9 +238,14 @@ const ContactInfoEmail = styled('a')`
 `; //end ContactInfoEmail
 
 const ContactInfoPhone = styled(ContactInfoEmail)`
+    position: relative;
+    z-index: 1;
 `;
 
 const PromotionesContainerAddress = styled('address')`
+    position: relative;
+    z-index: 1;
+
     width: 60%;
 
     margin-top: 25px;
@@ -173,6 +256,9 @@ const PromotionesContainerAddress = styled('address')`
 `;
 
 const PromotionsTitle = styled('h4')`
+    position: relative;
+    z-index: 1;
+
     font-size: 0.8em;
     color: white;
     text-transform: uppercase;
@@ -182,6 +268,9 @@ const PromotionsTitle = styled('h4')`
     }
 `;
 const EmailSubscribeContainer = styled('p')`
+    position: relative;
+    z-index: 1;
+
     @media only screen and (max-width: 311px) {
         display: flex;
         flex-direction: column;
@@ -194,6 +283,9 @@ const EmailSubscribeContainer = styled('p')`
 `;
 
 const EmailSubscribeInput = styled('input')`
+    position: relative;
+    z-index: 1;
+
     background-color: rgba(255, 249, 132, 1);
     /* text-transform: uppercase; */
     font-size: 0.9em;
@@ -220,6 +312,9 @@ const EmailSubscribeInput = styled('input')`
 `;
 
 const EmailSubscribeButton = styled('button')`
+    position: relative;
+    z-index: 1;
+
     color: white;
     background-color: rgb(82, 38, 98);
 
@@ -239,4 +334,4 @@ const EmailSubscribeButton = styled('button')`
     }
 `;
 
-export { WorkWithUsPageContainer, LeftColumn, RightColumn, RightColumnContainer, WorkWithUsIrisLogo, WelcomeText, IrisWorkWithUsDescription, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton };
+export { WorkWithUsPageContainer, WorkWithUsSection, LeftColumn, LeftColumnHeader, RightColumn, RightColumnContainer, WorkWithUsIrisLogo, WelcomeText, IrisWorkWithUsDescription, IrisWorkWithUsDescriptionEmoji,ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton };

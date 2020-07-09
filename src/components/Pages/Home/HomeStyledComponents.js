@@ -42,12 +42,41 @@ const LeftColumn = styled("div")`
 `;
 
 const RightColumn = styled(LeftColumn)`
+    position: relative;
+    z-index: 1;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* height: 100%; */
     /* margin: auto; */
     background-color: #5425BA;
+
+    ::after {
+        content: "";
+
+        position: absolute;
+        z-index: 0;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 0;
+  
+        background-image: url("./assets/img/iris-girl-with-box.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -110px 0px;
+        background-repeat: no-repeat;
+
+        opacity: 0.1;
+        max-width: 100%;
+        min-height: 100%;
+        overflow-y: hidden;
+        width: 100%;
+
+        margin: 0 auto;
+    }
 
     @media only screen and (max-width: 768px) {
         margin: 0;
@@ -68,6 +97,9 @@ const HomeIrisLogo = styled(IrisLogo)`
 `;
 
 const WelcomeText = styled('h3')`
+   position: relative;
+    z-index: 1;
+
     color: #FFF308;
     font-size: 2.5em;
     font-weight: bold;
@@ -79,6 +111,9 @@ const WelcomeText = styled('h3')`
 `;
 
 const IrisHomeDescription = styled('p')`
+    position: relative;
+    z-index: 1;
+
     color: white;
     font-weight: bolder;
 
@@ -90,6 +125,9 @@ const IrisHomeDescription = styled('p')`
 `;
 
 const ContactInfoContainer = styled('address')`
+    position: relative;
+    z-index: 1;
+
     color: white;
 
     margin-top: 30px;
@@ -100,6 +138,9 @@ const ContactInfoContainer = styled('address')`
 `;
 
 const ContactInfoEmail = styled('a')`
+    position: relative;
+    z-index: 1;
+
     display: block;
     color: white;
     text-decoration: none;
@@ -111,9 +152,14 @@ const ContactInfoEmail = styled('a')`
 `; //end ContactInfoEmail
 
 const ContactInfoPhone = styled(ContactInfoEmail)`
+    position: relative;
+    z-index: 1;
 `;
 
 const PromotionesContainerAddress = styled('address')`
+    position: relative;
+    z-index: 1;
+
     width: 60%;
 
     margin-top: 25px;
