@@ -13,7 +13,7 @@ import { IrisLogo } from './../../IrisLogo.js';
 */
 
 /*
-        .curve-inverted::before {
+.curve-inverted::before {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -39,9 +39,37 @@ const WorkWithUsPageContainer = styled('section')`
     /* height: auto; */
     min-height: 100%;
     min-width: 100%;
+
+    ::after {
+        content: "";
+
+        position: absolute;
+        z-index: 0;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 0;
+  
+        background-image: url("./assets/img/people-group-socializing-table.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        opacity: 0.1;
+        max-width: 100%;
+        min-height: 100%;
+        overflow-y: hidden;
+        width: 100%;
+
+        margin: 0 auto;
+    }
 `;
 
 const LeftColumn = styled("div")`
+    position: relative;
+    z-index: 0;
     /* min-height: 81vh; */
     display: flex;
     justify-content: center;

@@ -7,11 +7,14 @@ const WorkWithUs = (props) => {
     return (
         <WorkWithUsPageContainer className="row WorkWithUs-page-container">
                 <LeftColumn className="col-md-6 left-column" id="WorkWithUs-column-left">
-                    <WorkWithUsIrisLogo 
+                    {/* <WorkWithUsIrisLogo 
                         color   =   "#7A40DB"
                         width   =   "400px"
                         height  =   "400px"  
-                    />
+                    /> */}
+                    <h3>
+                    SÉ UNA IRIS
+                    </h3>
                 </LeftColumn>
                 <RightColumn className="col-md-6 right-column" id="WorkWithUs-column-right">
                     <RightColumnContainer id="right-column-container">
