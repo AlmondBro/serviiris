@@ -7,17 +7,17 @@ const WorkWithUs = (props) => {
     return (
         <WorkWithUsPageContainer className="WorkWithUs-page-container">
             <WorkWithUsSection className="row work-with-us-section" id="work-with-us-section">
-                <LeftColumn className="col-md-6 left-column" id="WorkWithUs-column-left">
+                <LeftColumn className="col-xs-12 col-sm-6 col-md-6 left-column" id="WorkWithUs-column-left">
                     {/* <WorkWithUsIrisLogo 
                         color   =   "#7A40DB"
                         width   =   "400px"
                         height  =   "400px"  
                     /> */}
-                    <LeftColumnHeader id="left-column-header">
-                        SÉ UNA IRIS
-                    </LeftColumnHeader>
+                    {/* <LeftColumnHeader id="left-column-header">
+                        Únete a Iris
+                    </LeftColumnHeader> */}
                 </LeftColumn>
-                <RightColumn className="col-md-6 right-column" id="WorkWithUs-column-right">
+                <RightColumn className="col-xs-12 col-sm-6 col-md-6 right-column" id="WorkWithUs-column-right">
                     <RightColumnContainer id="right-column-container">
                         <WelcomeText id="welcome-text">Trabaja Con Nosotros</WelcomeText>
                             <IrisWorkWithUsDescription className="iris-WorkWithUs-description">

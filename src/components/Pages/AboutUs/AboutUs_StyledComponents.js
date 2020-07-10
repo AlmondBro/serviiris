@@ -54,7 +54,7 @@ const OurHistorySection = styled('section')`
         width: 100%;
 
         margin: 0 auto;
-      
+
     }
 `;
 
