@@ -5,9 +5,8 @@ import { WorkWithUsPageContainer, WorkWithUsSection, LeftColumn, LeftColumnHeade
 
 const WorkWithUs = (props) => {
     return (
-        <WorkWithUsPageContainer className="WorkWithUs-page-container">
-            <WorkWithUsSection className="row work-with-us-section" id="work-with-us-section">
-                <LeftColumn className="col-xs-12 col-sm-6 col-md-6 left-column" id="WorkWithUs-column-left">
+        <WorkWithUsPageContainer className="row WorkWithUs-page-container">
+            <LeftColumn className="col-xs-12 col-sm-6 col-md-6 left-column" id="WorkWithUs-column-left">
                     {/* <WorkWithUsIrisLogo 
                         color   =   "#7A40DB"
                         width   =   "400px"
@@ -66,7 +65,9 @@ const WorkWithUs = (props) => {
                     </PromotionesContainerAddress> */}
    
                 </RightColumn>
-            </WorkWithUsSection>
+            {/* <WorkWithUsSection className="row work-with-us-section" id="work-with-us-section">
+                
+            </WorkWithUsSection> */}
         </WorkWithUsPageContainer>
      
     ); //end return

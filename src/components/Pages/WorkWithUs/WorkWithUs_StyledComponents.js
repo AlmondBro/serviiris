@@ -41,7 +41,7 @@ const WorkWithUsPageContainer = styled('section')`
     min-width: 100%;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     & > * {
         flex-grow: 1;
@@ -107,13 +107,13 @@ const LeftColumn = styled('div')`
         right: 0px;
         z-index: 0;
   
-        background-image: url("./assets/img/iris-girl-with-box.png");
+        background-image: url("./assets/img/iris-girl-with-box-2.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: -110px 0px;
         background-repeat: no-repeat;
 
-        opacity: 0.7;
+        opacity: 0.5;
         max-width: 100%;
         min-height: 100%;
         overflow-y: hidden;
