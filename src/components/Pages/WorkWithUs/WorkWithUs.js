@@ -5,7 +5,7 @@ import { WorkWithUsPageContainer, WorkWithUsSection, LeftColumn, LeftColumnHeade
 
 const WorkWithUs = (props) => {
     return (
-        <WorkWithUsPageContainer className="row WorkWithUs-page-container">
+        <WorkWithUsPageContainer className="row no-gutters WorkWithUs-page-container">
             <LeftColumn className="col-xs-12 col-sm-6 col-md-6 left-column" id="WorkWithUs-column-left">
                     {/* <WorkWithUsIrisLogo 
                         color   =   "#7A40DB"

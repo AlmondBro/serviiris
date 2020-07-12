@@ -5,7 +5,7 @@ import { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeI
 
 const Home = (props) => {
     return (
-        <HomePageContainer className="row home-page-container">
+        <HomePageContainer className="row no-gutters home-page-container">
                 <LeftColumn className="col-md-6 left-column" id="home-column-left">
                     <HomeIrisLogo 
                         color   =   "#7A40DB"

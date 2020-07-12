@@ -110,7 +110,7 @@ const LeftColumn = styled('div')`
         background-image: url("./assets/img/iris-girl-with-box-2.png");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: -110px 0px;
+        background-position: -155px 0px;
         background-repeat: no-repeat;
 
         opacity: 0.5;
