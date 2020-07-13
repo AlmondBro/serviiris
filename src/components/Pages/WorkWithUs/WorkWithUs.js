@@ -1,22 +1,43 @@
 import React from 'react';
 
 //Import page styled components
-import { WorkWithUsPageContainer, WorkWithUsSection, LeftColumn, LeftColumnHeader, RightColumn, RightColumnContainer, WorkWithUsIrisLogo, WelcomeText, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, IrisWorkWithUsDescription, IrisWorkWithUsDescriptionEmoji, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton } from './WorkWithUs_StyledComponents.js';
+import { WorkWithUsPageContainer, LeftColumn, LeftColumnHeader, WorkWithUsLink, WorkWithUsLinkButton, IrisIntroVideo, RightColumn, RightColumnContainer, WorkWithUsIrisLogoWings, WelcomeText, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, IrisWorkWithUsDescription, IrisWorkWithUsDescriptionEmoji, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton } from './WorkWithUs_StyledComponents.js';
 
 const WorkWithUs = (props) => {
+    // col-xs-12 col-sm-6 col-md-6 left-column
     return (
         <WorkWithUsPageContainer className="row no-gutters WorkWithUs-page-container">
-            <LeftColumn className="col-xs-12 col-sm-6 col-md-6 left-column" id="WorkWithUs-column-left">
-                    {/* <WorkWithUsIrisLogo 
-                        color   =   "#7A40DB"
+            <LeftColumn className="col-xs-12 col-sm-6 col-md-6" id="WorkWithUs-column-left">
+                    {/* <WorkWithUsIrisLogoWings 
+                        color   =   "#FFF308"
                         width   =   "400px"
                         height  =   "400px"  
                     /> */}
                     {/* <LeftColumnHeader id="left-column-header">
                         Únete a Iris
                     </LeftColumnHeader> */}
+
+                    <IrisIntroVideo 
+                        width="320" 
+                        height="240" 
+                        controls
+                    > 
+                        <source 
+                            type    =   "video/mp4"
+                            src     =   "./assets/video/iris-intro-video.mp4" 
+                        />
+                    </IrisIntroVideo>
+
+                    <img src="./assets/img/gourmet-food.webp"/>
+
+                    <WorkWithUsLink 
+                        id      =   "work-with-us-link"
+                        href    =   "#"
+                    >
+                        <WorkWithUsLinkButton id="work-with-us-button">Aplicar</WorkWithUsLinkButton>
+                    </WorkWithUsLink>
                 </LeftColumn>
-                <RightColumn className="col-xs-12 col-sm-6 col-md-6 right-column" id="WorkWithUs-column-right">
+                <RightColumn className="col-xs-12 col-sm-6 col-md-6" id="WorkWithUs-column-right">
                     <RightColumnContainer id="right-column-container">
                         <WelcomeText id="welcome-text">Trabaja Con Nosotros</WelcomeText>
                             <IrisWorkWithUsDescription className="iris-WorkWithUs-description">

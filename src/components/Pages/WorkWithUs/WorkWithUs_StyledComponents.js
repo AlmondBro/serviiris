@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { IrisLogo } from './../../IrisLogo.js';
+import { IrisLogo, IrisLogoWings } from './../../IrisLogo.js';
 
 /* 
     .bg-iris-yellow {
@@ -35,6 +35,9 @@ import { IrisLogo } from './../../IrisLogo.js';
 */
 
 const WorkWithUsPageContainer = styled('section')`
+    /* min-height: 100%;
+    min-width: 100%; */
+
     position: relative;
     z-index: 1;
     min-height: 100%;
@@ -49,7 +52,7 @@ const WorkWithUsPageContainer = styled('section')`
 
     @media only screen and (min-width: 765px) and (max-width: 768px) {
         margin-top: 30px;
-    }
+    } 
 `;
 
 
@@ -94,7 +97,8 @@ const LeftColumn = styled('div')`
     justify-content: center;
     align-items: flex-start;
 
-    background-color: #5425BA;
+    background-color: #542595;
+    /* #5425BA; */
 
     ::after {
         content: "";
@@ -110,10 +114,10 @@ const LeftColumn = styled('div')`
         background-image: url("./assets/img/iris-girl-with-box-2.png");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: -155px 0px;
+        background-position: -75px 0px;
         background-repeat: no-repeat;
 
-        opacity: 0.5;
+        opacity: 0.8;
         max-width: 100%;
         min-height: 100%;
         overflow-y: hidden;
@@ -122,9 +126,12 @@ const LeftColumn = styled('div')`
         margin: 0 auto;
     }
 
-    @media only screen and (max-width: 768px) {
-        margin-top: 25px;
-        margin-bottom: -80px;
+    @media only screen and (max-width: 575px) {
+        order: 2;
+
+        ::after {
+            background-position: 0px 0px;
+        }
     }
 `;
 
@@ -141,6 +148,44 @@ const LeftColumnHeader = styled('h3')`
     font-weight: bold;
 `;
 
+const WorkWithUsLink = styled('a')`
+    position: relative;
+    z-index: 1;
+    top: 73%;
+    transform: translate(-50%, -50%);
+    left: 18%;
+
+    font-size: 1.5em;
+`;
+
+const WorkWithUsLinkButton = styled('button')`
+    position: relative;
+    z-index: 1;
+
+    border: 1px solid #5425BA;
+    border-radius: 12px;
+
+    padding: 12px;
+
+    color: white;
+    background-color: #5425BA;
+
+    box-shadow: 0px;
+
+    transition: color 500ms ease-in-out, background-color 500ms ease-in-out, box-shadow 500ms ease-in-out;
+    
+    :hover, :active, :visited {
+        color: #5425BA;
+        background-color: white;
+    }
+`;
+
+const IrisIntroVideo = styled('video')`
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    max-height: 500px;
+`;
 const RightColumn = styled(LeftColumn)`
     /* display: flex;
     flex-direction: column;
@@ -150,14 +195,19 @@ const RightColumn = styled(LeftColumn)`
     /* margin: auto; */
 
     flex-direction: column;
-    background-color: #54259D;
+    background-color: #542595;
+    /* #54259D; */
 
     ::after {
         display: none;
     }
 
-    @media only screen and (max-width: 768px) {
-        margin: 0;
+    @media only screen and (max-width: 575px) {
+        order: 1;
+
+        ::after {
+            background-position: 0px 0px;
+        }
     }
 `;
 
@@ -171,10 +221,27 @@ const RightColumnContainer = styled('div')`
     margin: 0 auto;
 `;
 
-const WorkWithUsIrisLogo = styled(IrisLogo)`
+const WorkWithUsIrisLogoWings = styled(IrisLogoWings)`
+    position: relative;
+    z-index: 1;
+    
+    top: 32.5%;
+    left: 25%;
+    transform: translateX(-50%);
+
     width: ${ props => props.width ? props.width : "500px"};
     height: ${ props => props.height ? props.height : "500px"};
     color: ${ props => props.color ? props.color : "#7A40DB"};
+
+    @media only screen and (max-width: 575px) {
+     
+
+        order: 2;
+
+        ::after {
+            background-position: 0px 0px;
+        }
+    }
 `;
 
 const WelcomeText = styled('h3')`
@@ -340,4 +407,4 @@ const EmailSubscribeButton = styled('button')`
     }
 `;
 
-export { WorkWithUsPageContainer, WorkWithUsSection, LeftColumn, LeftColumnHeader, RightColumn, RightColumnContainer, WorkWithUsIrisLogo, WelcomeText, IrisWorkWithUsDescription, IrisWorkWithUsDescriptionEmoji,ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton };
+export { WorkWithUsPageContainer, WorkWithUsSection, LeftColumn, LeftColumnHeader, WorkWithUsLink, WorkWithUsLinkButton, IrisIntroVideo, RightColumn, RightColumnContainer, WorkWithUsIrisLogoWings, WelcomeText, IrisWorkWithUsDescription, IrisWorkWithUsDescriptionEmoji,ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton };
