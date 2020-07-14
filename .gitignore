@@ -25,3 +25,5 @@ yarn-error.log*
 #Ignore auto generated yarn and NPM files
 package-lock.json
 yarn.lock
+
+iris-girl-with-box.psd
