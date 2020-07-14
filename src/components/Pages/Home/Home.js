@@ -1,16 +1,11 @@
 import React from 'react';
 
-
-//Import FontAwesome icon libraries
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faSearch, faBriefcase, faPaperPlane, faMotorcycle, faBook, faUserCircle } from '@fortawesome/free-solid-svg-icons';
-
 //Import page styled components
 import { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeIrisLogo, WelcomeText, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, IrisHomeDescription, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton } from './HomeStyledComponents.js';
 
 const Home = (props) => {
     return (
-        <HomePageContainer className="row home-page-container">
+        <HomePageContainer className="row no-gutters home-page-container">
                 <LeftColumn className="col-md-6 left-column" id="home-column-left">
                     <HomeIrisLogo 
                         color   =   "#7A40DB"
