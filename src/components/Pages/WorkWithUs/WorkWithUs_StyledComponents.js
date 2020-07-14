@@ -102,6 +102,8 @@ const LeftColumn = styled('div')`
 
     ::after {
         content: "";
+        visibility: visible;
+
         display: block;
         position: absolute;
         z-index: 0;
@@ -110,7 +112,7 @@ const LeftColumn = styled('div')`
         left: 0px;
         right: 0px;
         z-index: 0;
-  
+        
         background-image: url("./assets/img/iris-girl-with-box-2.png");
         background-repeat: no-repeat;
         background-size: cover;
@@ -130,6 +132,7 @@ const LeftColumn = styled('div')`
         order: 2;
 
         ::after {
+            visibility: hidden;
             background-position: 0px 0px;
         }
     }
@@ -149,6 +152,8 @@ const LeftColumnHeader = styled('h3')`
 `;
 
 const WorkWithUsLink = styled('a')`
+    cursor: pointer; 
+    
     position: relative;
     z-index: 1;
     /* top: 73%;
@@ -211,14 +216,22 @@ const IrisIntroVideo = styled('video')`
 	max-width: 380px;
 	max-height: 240px;
 
-    @media only screen and (max-width: 639px) {
-        left: 50%;
+    transition: all 500ms ease-in-out;
+
+    @media only screen and (max-width: 575px) {
+        position: relative;
+
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
 
         max-width: 85%;
 	    max-height: 240px;
+
+        margin: 15px 0px;
     }
 
-    @media only screen and (min-width: 640px) and (max-width: 761px) {
+    @media only screen and (min-width: 576px) and (max-width: 761px) {
         left: 50%;
 
         max-width: 90%;
@@ -244,17 +257,18 @@ const RightColumn = styled(LeftColumn)`
     background-color: #542595;
     /* #54259D; */
 
-
-
     ::after {
-        display: none;
+        visibility: hidden;
     }
 
     @media only screen and (max-width: 575px) {
         order: 1;
 
         ::after {
-            background-position: 0px 0px;
+            visibility: visible;
+            background-position: -162px 0px;
+
+            opacity: 0.2;
         }
     }
 `;
