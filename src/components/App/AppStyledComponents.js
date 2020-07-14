@@ -11,6 +11,9 @@ const PageContainerStyled = styled('main')`
     /* transparent;  */
     /* #FFF308; */
 
+    padding-left: 0; /* equivalent to the use of p-0 for bootstrap */
+    padding-right: 0; /* equivalent to the use of p-0 for bootstrap */
+
     @media only screen and (max-width: 765px) {
         margin-top: 45px;
     }
@@ -20,7 +23,7 @@ const PageContainer = (props) => {
     return (
         <PageContainerStyled 
             fluid       =   { props.fluid } 
-            id          = "app-container-styled"
+            id          = "page-container-styled"
             className   = "container-fluid"
         >
             { props.children } 
