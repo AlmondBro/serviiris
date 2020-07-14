@@ -25,17 +25,18 @@ const Specialties = (props) => {
     }; //end generateSpecialtiesColumns()
 
     return (
-        <SpecialtiesPageContainer id="row no-gutters specialties-page-container">
-            <SpecialitesSection className="col-12 specialties-section" id="specialties-section">
-                <SpecialitesSectionRow className="row no-gutters">
-                    {
-                        // Generate the service columns
-                        generateSpecialtiesColumns(serviceColumnsJSON)
-                    }
-                </SpecialitesSectionRow>
-            </SpecialitesSection>
+        // <SpecialtiesPageContainer id="row no-gutters specialties-page-container">
+        //     <SpecialitesSection className="col-12 specialties-section" id="specialties-section">
+               
+        //     </SpecialitesSection>
             
-        </SpecialtiesPageContainer>
+        // </SpecialtiesPageContainer>
+        <SpecialitesSectionRow className="row no-gutters">
+        {
+            // Generate the service columns
+            generateSpecialtiesColumns(serviceColumnsJSON)
+        }
+    </SpecialitesSectionRow>
     );  //end return statement
 }; //end Conocenos() component
 
