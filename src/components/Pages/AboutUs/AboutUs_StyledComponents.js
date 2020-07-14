@@ -54,7 +54,11 @@ const OurHistorySection = styled('section')`
         width: 100%;
 
         margin: 0 auto;
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> work-with-us-page
     }
 `;
 
