@@ -151,11 +151,13 @@ const LeftColumnHeader = styled('h3')`
 const WorkWithUsLink = styled('a')`
     position: relative;
     z-index: 1;
-    top: 73%;
+    /* top: 73%;
     transform: translate(-50%, -50%);
-    left: 18%;
+    left: 18%; */
 
     font-size: 1.5em;
+
+    text-align: center;
 `;
 
 const WorkWithUsLinkButton = styled('button')`
@@ -166,26 +168,68 @@ const WorkWithUsLinkButton = styled('button')`
     border-radius: 12px;
 
     padding: 12px;
+    margin-bottom: 10px;
+    color: #5425BA;
+    background-color: white;
 
-    color: white;
-    background-color: #5425BA;
+    /* color: white;
+    background-color: #5425BA; */
 
     box-shadow: 0px;
 
-    transition: color 500ms ease-in-out, background-color 500ms ease-in-out, box-shadow 500ms ease-in-out;
+    transition: color 500ms ease-in-out, background-color 500ms ease-in-out, box-shadow 500ms ease-in-out, transform 500ms ease-in-out;
     
+    transform: scale(1.0);
+
     :hover, :active, :visited {
+        /* color: #5425BA;
+        background-color: white; */
+        transform: scale(1.1);
+
         color: #5425BA;
-        background-color: white;
+        background-color: #FFF308;
     }
+
 `;
 
 const IrisIntroVideo = styled('video')`
-    position: relative;
+    /* position: relative;
     z-index: 1;
+    top: 23%;
+    left: 24%;
+  
     max-width: 500px;
-    max-height: 500px;
+    max-height: 500px; */
+
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 67%;
+	transform: translate(-50%, -50%);    
+
+
+	max-width: 380px;
+	max-height: 240px;
+
+    @media only screen and (max-width: 639px) {
+        left: 50%;
+
+        max-width: 85%;
+	    max-height: 240px;
+    }
+
+    @media only screen and (min-width: 640px) and (max-width: 761px) {
+        left: 50%;
+
+        max-width: 90%;
+	    max-height: 240px;
+    }
+
+    @media only screen and (min-width: 762px) and (max-width: 1153px) {
+        left: 50%;
+    }
 `;
+
 const RightColumn = styled(LeftColumn)`
     /* display: flex;
     flex-direction: column;
@@ -195,8 +239,12 @@ const RightColumn = styled(LeftColumn)`
     /* margin: auto; */
 
     flex-direction: column;
+    align-items: center;
+
     background-color: #542595;
     /* #54259D; */
+
+
 
     ::after {
         display: none;

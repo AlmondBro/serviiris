@@ -18,24 +18,16 @@ const WorkWithUs = (props) => {
                     </LeftColumnHeader> */}
 
                     <IrisIntroVideo 
-                        width="320" 
-                        height="240" 
                         controls
                     > 
                         <source 
                             type    =   "video/mp4"
-                            src     =   "./assets/video/iris-intro-video.mp4" 
+                            src     =   "./assets/video/iris-intro-video-1080p.mp4" 
                         />
                     </IrisIntroVideo>
 
-                    <img src="./assets/img/gourmet-food.webp"/>
-
-                    <WorkWithUsLink 
-                        id      =   "work-with-us-link"
-                        href    =   "#"
-                    >
-                        <WorkWithUsLinkButton id="work-with-us-button">Aplicar</WorkWithUsLinkButton>
-                    </WorkWithUsLink>
+                {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/uIHi3wIHr38?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+                    {/* <img src="./assets/img/gourmet-food.webp"/> */}
                 </LeftColumn>
                 <RightColumn className="col-xs-12 col-sm-6 col-md-6" id="WorkWithUs-column-right">
                     <RightColumnContainer id="right-column-container">
@@ -67,6 +59,8 @@ const WorkWithUs = (props) => {
                                     +57 (311) 718-4447
                                 </ContactInfoPhone>
                             </ContactInfoContainer>
+
+                           
                     </RightColumnContainer>
 
                     {/* <PromotionesContainerAddress id="promotions-container-address">
@@ -84,7 +78,12 @@ const WorkWithUs = (props) => {
                             </label>
                         </EmailSubscribeContainer>
                     </PromotionesContainerAddress> */}
-   
+                 <WorkWithUsLink 
+                                id      =   "work-with-us-link"
+                                href    =   "#"
+                            >
+                                <WorkWithUsLinkButton id="work-with-us-button">Aplicar</WorkWithUsLinkButton>
+                            </WorkWithUsLink>
                 </RightColumn>
             {/* <WorkWithUsSection className="row work-with-us-section" id="work-with-us-section">
                 
