@@ -11,33 +11,15 @@ import { IrisLogoWings } from './../../IrisLogo.js';
     }
 */
 
-
-const SpecialtiesPageContainer = styled('section')`
-    min-height: 100%;
+const SpecialtiesPageContainer = styled('div')`
+    position: auto;
     min-width: 100%;
 
+    margin: auto;
+
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-
-    margin: auto; /* Align everything in the center */
-
-    & > * {
-        flex-grow: 1;
-    }
-
-    @media only screen and (min-width: 765px) and (max-width: 768px) {
-        margin-top: 30px;
-    }
-`; //end homepagecontainer
-
-const SpecialitesSection = styled('section')`
-    position: relative;
-    z-index: 0;
-    background: #FFF308;
-
-    margin-bottom: 3px;
 
     ::after {
         content: "";
@@ -64,24 +46,14 @@ const SpecialitesSection = styled('section')`
         margin: 0 auto;
       
     }
-`;
-
-const SpecialitesSectionRow = styled('div')`
-    position: auto;
-    min-width: 100%;
-
-    margin: auto;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 
 `;
+
 const SpecialtiesArticle = styled('article')`
     position:  relative;
     z-index: 1;
     
-    margin: 1% 0.4%;
+    margin: 5% 0.4%;
     margin-bottom: 5px;
     padding: 3% 1%;
     padding-top: 0%;
@@ -103,6 +75,9 @@ const SpecialtiesArticle = styled('article')`
         padding: 0% 10%;
     }        
 
+    @media only screen and (max-width: 575px) {
+        margin: 5% 10%;
+    }
 
 `;
 
@@ -243,4 +218,4 @@ const SpecialtiesArticleColumn = (props) => {
     ); //end return statement
 };
  
-export { SpecialtiesPageContainer, SpecialitesSection, SpecialitesSectionRow, SpecialtiesArticleColumn };
+export { SpecialtiesPageContainer, SpecialtiesArticleColumn };
