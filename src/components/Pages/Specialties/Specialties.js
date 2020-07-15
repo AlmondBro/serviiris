@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SpecialtiesPageContainer, SpecialitesSection, SpecialitesSectionRow, SpecialtiesArticleColumn, } from './Specialties_StyledComponents.js';
+import { SpecialtiesPageContainer, SpecialtiesArticleColumn } from './Specialties_StyledComponents.js';
 
 import serviceColumnsJSON from './services-data.json';
 
@@ -25,16 +25,11 @@ const Specialties = (props) => {
     }; //end generateSpecialtiesColumns()
 
     return (
-        <SpecialtiesPageContainer id="row no-gutters specialties-page-container">
-            <SpecialitesSection className="col-12 specialties-section" id="specialties-section">
-                <SpecialitesSectionRow className="row no-gutters">
-                    {
-                        // Generate the service columns
-                        generateSpecialtiesColumns(serviceColumnsJSON)
-                    }
-                </SpecialitesSectionRow>
-            </SpecialitesSection>
-            
+        <SpecialtiesPageContainer className="row no-gutters">
+        {
+            // Generate the service columns
+            generateSpecialtiesColumns(serviceColumnsJSON)
+        }
         </SpecialtiesPageContainer>
     );  //end return statement
 }; //end Conocenos() component
