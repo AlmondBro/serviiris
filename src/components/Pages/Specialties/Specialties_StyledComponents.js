@@ -53,7 +53,7 @@ const SpecialtiesArticle = styled('article')`
     position:  relative;
     z-index: 1;
     
-    margin: 1% 0.4%;
+    margin: 5% 0.4%;
     margin-bottom: 5px;
     padding: 3% 1%;
     padding-top: 0%;
@@ -75,6 +75,9 @@ const SpecialtiesArticle = styled('article')`
         padding: 0% 10%;
     }        
 
+    @media only screen and (max-width: 575px) {
+        margin: 5% 10%;
+    }
 
 `;
 
