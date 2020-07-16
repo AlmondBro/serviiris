@@ -54,7 +54,7 @@ const RightColumn = styled(LeftColumn)`
 
     ::after {
         content: "";
-
+        display: none;
         position: absolute;
         z-index: 0;
         top: 0px;
@@ -83,12 +83,62 @@ const RightColumn = styled(LeftColumn)`
     }
 `;
 
+const BackgroundVideoOverlay = styled('div')`
+    display: block;
+
+    position:  fixed;
+    z-index: -1;
+/* 
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
+
+    min-width: 50%;
+    min-height: 100%;
+    width: 50%;
+    height: auto;
+
+    object-fit: fill;
+    
+    background-color: #5425BA;
+    opacity: 0.7;
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+`;
+
+const BackgroundVideo = styled('video').attrs(props => ({
+    autoplay    :   props.autoplay,
+    muted       :   props.muted,
+    loop        :   props.loop
+}))`
+    display: block;
+
+    position:  fixed;
+    z-index: -2;
+/* 
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
+
+    min-width: 50%;
+    min-height: 100%;
+    width: 50%;
+    height: auto;
+
+    object-fit: fill;
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+`;
+
 const RightColumnContainer = styled('div')`
     width: 55%;
     height: auto;
     margin: 0 auto;
 `;
-
 
 const HomeIrisLogo = styled(IrisLogo)`
     width: ${ props => props.width ? props.width : "500px"};
@@ -236,4 +286,4 @@ const EmailSubscribeButton = styled('button')`
     }
 `;
 
-export { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeIrisLogo, WelcomeText, IrisHomeDescription, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton };
+export { HomePageContainer, LeftColumn, RightColumn, BackgroundVideoOverlay, BackgroundVideo, RightColumnContainer, HomeIrisLogo, WelcomeText, IrisHomeDescription, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton };
