@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Import page styled components
-import { HomePageContainer, LeftColumn, RightColumn, RightColumnContainer, HomeIrisLogo, WelcomeText, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, IrisHomeDescription, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton } from './HomeStyledComponents.js';
+import { HomePageContainer, LeftColumn, RightColumn, BackgroundVideoOverlay, BackgroundVideo, RightColumnContainer, HomeIrisLogo, WelcomeText, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, IrisHomeDescription, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton } from './HomeStyledComponents.js';
 
 const Home = (props) => {
     return (
@@ -14,6 +14,18 @@ const Home = (props) => {
                     />
                 </LeftColumn>
                 <RightColumn className="col-md-6 right-column" id="home-column-right">
+                    <BackgroundVideoOverlay/>
+                    <BackgroundVideo 
+                        autoPlay
+                        muted
+                        loop
+                        height="100%"
+                    > 
+                        <source 
+                            type    =   "video/mp4"
+                            src     =   "./assets/video/cristo-rey-cali-timelapse.mp4" 
+                        />
+                    </BackgroundVideo>
                     <RightColumnContainer id="right-column-container">
                         <WelcomeText id="welcome-text">Bienvenido a Iris</WelcomeText>
                             <IrisHomeDescription title="iris-home-description">
