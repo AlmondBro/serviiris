@@ -12,8 +12,8 @@
                                     "id"            :   "service-business-deliveries",
                                     "imageAlt"      :   "Gourmet Food",
                                     "image"         :   "gourmet-food.webp",
-                                    "buttonTitle"   :   "Domicilios",
-                                    "title"         :   "Trámites empresariales",
+                                    "buttonTitle"   :   "Envios para empresa",
+                                    "title"         :   "Domicilios empresariales",
                                     "description"   :   "Hazlo tuyo. Agrega imágenes, texto y enlaces, o conecta datos de tu colección."
                                 },
                                 {
