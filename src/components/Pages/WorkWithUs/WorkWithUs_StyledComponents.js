@@ -212,10 +212,11 @@ const IrisIntroVideo = styled('video')`
 	left: 67%;
 	transform: translate(-50%, -50%);    
 
-
 	max-width: 380px;
 	max-height: 240px;
 
+    box-shadow: 0px 0px 20px 0px rgba(84,37,149,1);
+    
     transition: all 500ms ease-in-out;
 
     @media only screen and (max-width: 575px) {
