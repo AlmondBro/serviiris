@@ -11,7 +11,7 @@ const Footer = (props) => {
     return (
         <FooterStyled className="container-fluid" id="footer-container" >
             <div className="row">
-                <FooterColumn className="col-md-4 footer-col" id="footer-col-1" borderRight>
+                <FooterColumn className="col-6 col-sm-6 col-md-4 footer-col" id="footer-col-1" borderRight>
                     <div className="row" id="footer-col1-row">
                         <div 
                             className="col-md-3" 
@@ -38,11 +38,12 @@ const Footer = (props) => {
                                     <span>Cali, Valle del Cauca Colombia</span>
                             </FooterLink>
                             <FooterLink  
-                                href =   "#"
-                                id  =   "footer-direction"
+                                href            =   "#"
+                                id              =   "footer-email"
+                                spanPaddingLeft =   "8px"
                             >
                                     <FontAwesomeIconStyled icon={faEnvelope}/>
-                                    iristeamco@gmail.com
+                                    <span>iristeamco@gmail.com</span>
                             </FooterLink>
                             <FooterLink  
                                 href    =   "https://wa.link/aloo0e"
@@ -52,7 +53,7 @@ const Footer = (props) => {
                         </FooterColumnAddress>
                     </div>
                 </FooterColumn>
-                <FooterColumn className="col-md-4 footer-col" id="footer-col-2" borderRight>
+                <FooterColumn className="col-6 col-sm-6 col-md-4 footer-col" id="footer-col-2" borderRight>
                     <FooterLink href="/conocenos">
                         Conócenos
                     </FooterLink>
@@ -68,7 +69,7 @@ const Footer = (props) => {
                 </FooterColumn>
 
                 <FooterColumn 
-                    className   =   "col-md-4 footer-col" 
+                    className   =   "col-xs-12 col-md-4 footer-col" 
                     id          =   "footer-col-3" 
                     fontSize    =   "2.5em"
                     flexRow    

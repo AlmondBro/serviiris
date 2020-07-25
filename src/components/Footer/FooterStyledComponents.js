@@ -28,6 +28,7 @@ const FooterStyled = styled('footer')`
             display: none;
         }
 
+        & > div.row div#footer-col-1,
         & > div.row div#footer-col-2 {
             margin-bottom: 48px;
         }
@@ -85,12 +86,11 @@ const FooterColumn = styled('div')`
 
     border-right: ${props => props.borderRight ? "1px solid grey" : null};
 
+    padding-top: 5px;
+
     & h4#copyright-text {
         margin-top: 5px;
     }
-
-
-  
 
     @media only screen and (max-width: 765px) {
         position: ${props => props.socialMediaColumn ? "fixed" : "relative"};
@@ -135,7 +135,7 @@ const FooterColumnAddress = styled('address')`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin: 10px 0px;
+    /* margin: 10px 0px; */
 
     color: white; 
 
@@ -146,10 +146,21 @@ const FooterColumnAddress = styled('address')`
 
     a {
         display: block;
+        width: 189px;
     }
 
     a:last-child {
         margin-bottom: 10px;
+    }
+
+    @media only screen and (max-width: 765px) {
+        margin: 0px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        & a#footer-email {
+            margin-top: 10px;
+        }
     }
 `;
 
@@ -166,8 +177,8 @@ const FooterLink = styled('a')`
     }
 
     span {
-        display: block;
-        padding-left: 25px;
+        display: inline-block;
+        padding-left: ${props => props.spanPaddingLeft ? props.spanPaddingLeft : "25px"};
     }
 
     span#small-padding {
