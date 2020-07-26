@@ -252,6 +252,12 @@ const EmailSubscribeInput = styled('input')`
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 
+    :focus {
+        border:  0;
+        outline: 0;
+    }
+    
+
     @media only screen and (max-width: 1186px) {
         width: 65%;
     }
