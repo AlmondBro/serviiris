@@ -11,7 +11,7 @@ import { IrisLogoWings } from './../../IrisLogo.js';
     }
 */
 
-const SpecialtiesPageContainer = styled('div')`
+const SpecialtiesPageContainer = styled('section')`
     position: auto;
     min-width: 100%;
 
@@ -44,9 +44,7 @@ const SpecialtiesPageContainer = styled('div')`
         width: 100%;
 
         margin: 0 auto;
-      
     }
-
 `;
 
 const SpecialtiesArticle = styled('article')`
