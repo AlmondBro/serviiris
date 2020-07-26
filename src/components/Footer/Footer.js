@@ -36,7 +36,8 @@ const Footer = (props) => {
                             >
                                     <FontAwesomeIconStyled icon={faMapMarked}/>
                                     <span id="small-padding">Carerra 24c #4-54 </span>
-                                    <span>Cali, Valle del Cauca Colombia</span>
+                                    <span>Cali, Valle del Cauca</span>
+                                    <span>Colombia</span>
                             </FooterLink>
                             <FooterLink  
                                 href            =   "#"

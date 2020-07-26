@@ -153,6 +153,13 @@ const FooterColumnAddress = styled('address')`
         margin-bottom: 10px;
     }
 
+    @media only screen and (max-width: 413px) {
+        a {
+            width: auto;
+            max-width: 100%;
+        }
+    }
+
     @media only screen and (max-width: 765px) {
         margin: 0px;
     }
@@ -165,11 +172,14 @@ const FooterColumnAddress = styled('address')`
 `;
 
 const FooterLink = styled('a')`
+    cursor: pointer;
     color: white;
 
+    transition: color 400ms ease-in-out;
+
     :hover {
-        color: white;
-        text-decoration: underline;
+        color: #FFF308;
+        text-decoration: none;
     }
 
     svg {
