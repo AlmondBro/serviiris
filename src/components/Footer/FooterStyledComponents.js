@@ -46,7 +46,7 @@ const FooterStyled = styled('footer')`
 
 let FooterIrisWings = styled(IrisLogoWings)`
     position: absolute; 
-    top: 25%;
+    top: 17%;
     right: 0%;
     /* -63%; */
 

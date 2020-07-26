@@ -22,6 +22,7 @@ const Footer = (props) => {
                                 width   =   "178px"
                                 height  =   "178px"
                                 id      =   "footer-iris-wings"
+                                // color   =   "#FFF308"
                             />
                         </div>
 
