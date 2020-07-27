@@ -11,14 +11,38 @@ import styled from 'styled-components';
 */
 
 const AboutUsPageContainer = styled('section')`
-    min-height: 100%;
+    position: auto;
     min-width: 100%;
 
-    display: flex;
-    flex-direction: column;
+    margin: auto;
 
-    & > * {
-        flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    ::after {
+        content: "";
+
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 0;
+  
+        background-image: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        opacity: 0.1;
+        max-width: 100%;
+        min-height: 100%;
+        overflow-y: hidden;
+        width: 100%;
+
+        margin: 0 auto;
     }
 
     @media only screen and (min-width: 765px) and (max-width: 768px) {
@@ -26,10 +50,13 @@ const AboutUsPageContainer = styled('section')`
     }
 `; //end homepagecontainer
 
-const OurHistorySection = styled('section')`
+const OurHistorySection = styled('div')`
     position: relative;
     z-index: 0;
+
     background: #FFF308;
+
+    padding-bottom: 25px;
 
     ::after {
         content: "";
@@ -54,16 +81,16 @@ const OurHistorySection = styled('section')`
         width: 100%;
 
         margin: 0 auto;
-<<<<<<< HEAD
-      
-=======
-
->>>>>>> work-with-us-page
     }
 `;
 
 const OurHistoryArticle = styled('article')`
     position:  relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
     z-index: 1;
 
     margin: 1% 20%;
@@ -73,28 +100,39 @@ const OurHistoryArticle = styled('article')`
 
     border-radius: 12px;
 
-    color: white;
-
-    h3 {
-        color: #FFF308;
-
-        text-align: center;
-
-        margin: 0;
-        margin-bottom: 15px;
-        padding: 0;
-
-        font-weight:  bold;
-    }
-
-    p {
-        font-size: 1.1em;
-        padding: 0% 20%;
-    }        
+    color: white; 
 `;
 
+const AboutUsSectionTitle = styled('h3')`
+    color: #FFF308;
+
+    text-align: center;
+
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+
+    font-weight:  bold;
+`;
+
+const AboutUsSectionDescription = styled('p')`
+    font-size: 1.1em;
+    padding: 0% 20%;
+`;
+
+const AboutUSMoreLink = styled('a')`
+    margin: 0 auto;
+    color: white;
+    text-decoration: none;
+
+    transition: color 500ms, background-color 500ms, border-color 500ms;
+
+    :hover {
+        color: #5425BA; 
+    }
+`;
 const AboutUSMoreButton = styled('button')`
-    /* color: white; */
+    color: white;
     background-color: #5425BA;
     border: 0;
     border-radius: 12px;
@@ -109,22 +147,11 @@ const AboutUSMoreButton = styled('button')`
     transition: color 500ms, background-color 500ms, border-color 500ms;
 
     :hover, :active, :visited {
-        /* color: #5425BA; */
+        color: #5425BA;
         background-color: white;
 
         border: 1px solid #5425BA;
     } 
-    a {
-        color: white;
-        text-decoration: none;
-
-        transition: color 500ms, background-color 500ms, border-color 500ms;
-
-    }
-
-    a:hover {
-        color: #5425BA;
-    }
 `;
 
 // TODO: Add a chat bubble animation above the IrisWorkerFemaleSVG saying "Vamos iris!"
@@ -233,4 +260,4 @@ const WhoWeAreArticle = styled(OurHistoryArticle)`
 `;
 
 
-export { AboutUsPageContainer, OurHistorySection, OurHistoryArticle, IrisWorkerFigure, IrisWorkerFemaleSVG, WhoWeAreSection, WhoWeAreArticle, AboutUSMoreButton, IrisWorkerChatBubble };
+export { AboutUsPageContainer, OurHistorySection, OurHistoryArticle, AboutUsSectionTitle, AboutUsSectionDescription, IrisWorkerFigure, IrisWorkerFemaleSVG, WhoWeAreSection, WhoWeAreArticle, AboutUSMoreLink, AboutUSMoreButton, IrisWorkerChatBubble };
