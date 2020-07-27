@@ -123,9 +123,12 @@ const AboutUsSectionDescription = styled('p')`
 const AboutUSMoreLink = styled('a')`
     margin: 0 auto;
     color: white;
+    text-decoration: none;
+
+    transition: color 500ms, background-color 500ms, border-color 500ms;
 
     :hover {
-        text-decoration: none;
+        color: #5425BA; 
     }
 `;
 const AboutUSMoreButton = styled('button')`
@@ -149,17 +152,6 @@ const AboutUSMoreButton = styled('button')`
 
         border: 1px solid #5425BA;
     } 
-    a {
-        color: white;
-        text-decoration: none;
-
-        transition: color 500ms, background-color 500ms, border-color 500ms;
-
-    }
-
-    a:hover {
-        color: #5425BA;
-    }
 `;
 
 // TODO: Add a chat bubble animation above the IrisWorkerFemaleSVG saying "Vamos iris!"
