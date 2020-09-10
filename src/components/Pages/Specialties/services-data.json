@@ -6,7 +6,7 @@
                                     "image"         :   "phone-computer-paper-work.webp",
                                     "buttonTitle"   :   "Mensajería Empresarial",
                                     "title"         :   "Trámites empresariales",
-                                    "description"   :   "Consignaciones bancarias, radicación de facturas, comprobantes, entregas de paquetes y más."
+                                    "description"   :   "Consignaciones bancarias, radicación de facturas, recaudo de dinero y más"
                                 },
                                 {
                                     "id"            :   "service-business-deliveries",
@@ -14,7 +14,7 @@
                                     "image"         :   "gourmet-food.webp",
                                     "buttonTitle"   :   "Envios para empresa",
                                     "title"         :   "Domicilios empresariales",
-                                    "description"   :   "Hazlo tuyo. Agrega imágenes, texto y enlaces, o conecta datos de tu colección."
+                                    "description"   :   "Recogida y entrega de paquetes, compra de insumos, entre otros"
                                 },
                                 {
                                     "id"            :   "service-online-business",
@@ -22,7 +22,7 @@
                                     "image"         :   "american-express-card-keyboard.webp",
                                     "buttonTitle"   :   "Comercio Virtual",
                                     "title"         :   "Compras en línea",
-                                    "description"   :   "Para que empresas virtuales puedan entregar de forma segura sus productos a sus clientes."
+                                    "description"   :   "Para que empresas virtuales puedan entregar de forma segura sus productos a sus clientes"
                                 },
                                 {
                                     "id"            :   "service-personal",
@@ -30,7 +30,7 @@
                                     "image"         :   "wellbeing-products.webp",
                                     "buttonTitle"   :   "Personal",
                                     "title"         :   "Domicilios y Trámites",
-                                    "description"   :   "Hazlo tuyo. Agrega imágenes, texto y enlaces, o conecta datos de tu colección."
+                                    "description"   :   "Desde reclamo de medicamentos, citas médicas y consignaciones bancarias, hasta antojos y otras necesidades que tengas"
                                 }
                             ]
 }
