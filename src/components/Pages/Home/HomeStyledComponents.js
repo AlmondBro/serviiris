@@ -218,8 +218,9 @@ const PromotionesContainerAddress = styled('address')`
 
     margin-top: 25px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 767px) {
         text-align: center;
+        width: 100%;
     }
 `;
 

@@ -57,11 +57,12 @@ const Home = (props) => {
 
                         <EmailSubscribeContainer id="email-subscribe-container">
                             <EmailSubscribeInput 
+                                id          =   "email-subscribe-input"
                                 type        =   "text" 
                                 placeholder =   "Ingresa tu e-mail"
                             />
                             <label>
-                                <EmailSubscribeButton>Enviar</EmailSubscribeButton>
+                                <EmailSubscribeButton id="email-subscribe-button">Enviar</EmailSubscribeButton>
                             </label>
                         </EmailSubscribeContainer>
                     </PromotionesContainerAddress>
