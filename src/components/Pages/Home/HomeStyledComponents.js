@@ -138,6 +138,10 @@ const RightColumnContainer = styled('div')`
     width: 55%;
     height: auto;
     margin: 0 auto;
+
+    @media (max-width: 768px) {
+        width:  90%;
+    }
 `;
 
 const HomeIrisLogo = styled(IrisLogo)`
