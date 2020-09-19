@@ -210,7 +210,7 @@ const ContactInfoPhone = styled(ContactInfoEmail)`
     z-index: 1;
 `;
 
-const PromotionesContainerAddress = styled('address')`
+const PromotionsContainerAddress = styled('address')`
     position: relative;
     z-index: 1;
 
@@ -297,4 +297,4 @@ const EmailSubscribeButton = styled('button')`
     }
 `;
 
-export { HomePageContainer, LeftColumn, RightColumn, BackgroundVideoOverlay, BackgroundVideo, RightColumnContainer, HomeIrisLogo, WelcomeText, IrisHomeDescription, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton };
+export { HomePageContainer, LeftColumn, RightColumn, BackgroundVideoOverlay, BackgroundVideo, RightColumnContainer, HomeIrisLogo, WelcomeText, IrisHomeDescription, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, PromotionsContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton };

@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Import page styled components
-import { HomePageContainer, LeftColumn, RightColumn, BackgroundVideoOverlay, BackgroundVideo, RightColumnContainer, HomeIrisLogo, WelcomeText, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, IrisHomeDescription, PromotionesContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton } from './HomeStyledComponents.js';
+import { HomePageContainer, LeftColumn, RightColumn, BackgroundVideoOverlay, BackgroundVideo, RightColumnContainer, HomeIrisLogo, WelcomeText, ContactInfoContainer, ContactInfoEmail, ContactInfoPhone, IrisHomeDescription, PromotionsContainerAddress, PromotionsTitle, EmailSubscribeContainer, EmailSubscribeInput, EmailSubscribeButton } from './HomeStyledComponents.js';
 
 const Home = (props) => {
     return (
@@ -50,7 +50,7 @@ const Home = (props) => {
                             </ContactInfoContainer>
                     </RightColumnContainer>
 
-                    <PromotionesContainerAddress id="promotions-container-address">
+                    <PromotionsContainerAddress id="promotions-container-address">
                         <PromotionsTitle id="promotions-title">
                             Promociones, novedades y más...
                         </PromotionsTitle>
@@ -65,7 +65,7 @@ const Home = (props) => {
                                 <EmailSubscribeButton id="email-subscribe-button">Enviar</EmailSubscribeButton>
                             </label>
                         </EmailSubscribeContainer>
-                    </PromotionesContainerAddress>
+                    </PromotionsContainerAddress>
    
                 </RightColumn>
         </HomePageContainer>
