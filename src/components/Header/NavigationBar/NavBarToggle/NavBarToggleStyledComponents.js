@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import { isiOS } from './../../../../utilities/utility-functions.js';
+
+let isiOSDevice = isiOS();
+
 const InputCheckboxHack = styled('input')`
     visibility: hidden;
     position: absolute;
@@ -37,7 +41,7 @@ const MenuBarToggleButton = styled('div')`
     display: none;
 
     ${
-        (props) =>  props.isiOS ? `-webkit-appearance: button-bevel`: null
+        () =>  isiOSDevice ? `-webkit-appearance: button-bevel`: null
     }
 
     @media only screen and (max-width: 765px) {

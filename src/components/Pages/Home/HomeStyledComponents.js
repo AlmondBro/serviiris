@@ -131,6 +131,10 @@ const BackgroundVideo = styled('video').attrs(props => ({
 
     @media (max-width: 767px) {
         display: none;
+
+        & >  source {
+            display: none;
+        }
     }
 `;
 

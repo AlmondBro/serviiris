@@ -14,16 +14,18 @@ const Home = (props) => {
                     />
                 </LeftColumn>
                 <RightColumn className="col-md-6 right-column" id="home-column-right">
-                    <BackgroundVideoOverlay/>
+                    <BackgroundVideoOverlay id="background-video-overlay"/>
                     <BackgroundVideo 
                         autoPlay
                         muted
                         loop
                         height="100%"
+                        id="background-video"
                     > 
                         <source 
                             type    =   "video/mp4"
                             src     =   "./assets/video/cristo-rey-cali-timelapse.mp4" 
+                            id="background-video-source"
                         />
                     </BackgroundVideo>
                     <RightColumnContainer id="right-column-container">

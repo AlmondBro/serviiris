@@ -1,90 +1,55 @@
-import React, { Component , Fragment } from 'react';
-
-import { isiOS } from './../../../../utilities/utility-functions.js';
+import React, { Fragment, useState } from 'react';
 
 //Import styled components
 import { InputCheckboxHack, MenuBarToggleButtonLabel, MenuBarToggleButton, MenuBarLine, TopMenuBarLine, MiddleMenuBarLine, BottomMenuBarLine } from './NavBarToggleStyledComponents.js';
 
-class NavBarToggle extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            collapsed: true,
-            isiOS: false
-        }; //end this.state
-    }
-    
-    navBarToggleID = this.props.navBarToggleID;
-    navToggle = document.getElementById(this.navBarToggleID);
+const NavBarToggle = ({ navBarToggleID,  ...props } ) =>  {
+    let [ isCollapsed, setIsCollapsed ] = useState(true);
 
-    toggleNavBarButton = () => {
-        const currentState = this.state.collapsed;
-        this.setState({ collapsed: !currentState});
+    const toggleNavBarButton = () => {
+        setIsCollapsed(!isCollapsed);
+    }; //end toggleNavBarButton()
 
-        // let NavBarCollapse = document.getElementById("basic-navbar-nav");
-        //     NavBarCollapse.classList.toggle("show");
-    }; //end toggleClass2
+    return ( 
+        <Fragment>
+            <InputCheckboxHack 
+                type    =   "checkbox" 
+                id      =   "input-checkbox-hack"
+                name    =   "input-checkbox-hack"
+            />
 
-    componentDidMount = () => {
-        const iOS = isiOS();
+            <MenuBarToggleButtonLabel
+                htmlFor = "input-checkbox-hack"
+            >
+                <MenuBarToggleButton 
+                    aria-controls   =   "basic-navbar-nav" 
+                    aris-role       =   "button"
+                    aria-label      =   "Toggle navigation" 
+                    type            =   "button" 
+                    className       =   { "navbar-toggler "  
+                                            + ( isCollapsed ? "collapsed" : "") 
+                                        } 
+                    id              =   { navBarToggleID }
 
-        this.setState({  isiOS  :  iOS});
-    };
-
-    render = () => {
-        return ( 
-            <Fragment>
-                <InputCheckboxHack 
-                    type    =   "checkbox" 
-                    id      =   "input-checkbox-hack"
-                    name    =   "input-checkbox-hack"
-                />
-
-                {/* <MenuBarToggleButtonLabel
-                    htmlFor = "input-checkbox-hack"
+                    onClick         =   { toggleNavBarButton }
                 >
-                    <button 
-                        htmlFor = "input-checkbox-hack"
-
-                    >
-                        Testtt
-                    </button>
-                </MenuBarToggleButtonLabel> */}
-
-                <MenuBarToggleButtonLabel
-                    htmlFor = "input-checkbox-hack"
-                >
-                    <MenuBarToggleButton 
-                        aria-controls   =   "basic-navbar-nav" 
-                        aris-role       =   "button"
-                        aria-label      =   "Toggle navigation" 
-                        type            =   "button" 
-                        className       =   { "navbar-toggler "  
-                                                + ( this.state.collapsed ? "collapsed" : "") 
-                                            } 
-                        id              =   { this.props.navBarToggleID }
-
-                        onClick         =   { this.toggleNavBarButton }
-
-                        isOS            =   { this.state.isiOS }
-                    >
-                        <TopMenuBarLine 
-                            collapsed   =   {   this.state.collapsed}
-                            className   =   "menubar-line top-bar" 
-                        />
-                        <MiddleMenuBarLine 
-                            collapsed   =   {   this.state.collapsed}
-                            className   =   "menubar-line middle-bar" 
-                        />
-                        <BottomMenuBarLine 
-                            collapsed   =   {   this.state.collapsed}
-                            className   =   "menubar-line bottom-bar" 
-                        />			
-                    </MenuBarToggleButton>
-                </MenuBarToggleButtonLabel>
-            </Fragment>
-        ); //end return
-    }; //end render()
+                    <TopMenuBarLine 
+                        collapsed   =   {  isCollapsed }
+                        className   =   "menubar-line top-bar" 
+                    />
+                    <MiddleMenuBarLine 
+                        collapsed   =   {   isCollapsed }
+                        className   =   "menubar-line middle-bar" 
+                    />
+                    <BottomMenuBarLine 
+                        collapsed   =   { isCollapsed }
+                        className   =   "menubar-line bottom-bar" 
+                    />			
+                </MenuBarToggleButton>
+            </MenuBarToggleButtonLabel>
+        </Fragment>
+    ); //end return
 }; //end NavBarToggle
+
 
 export default NavBarToggle;
