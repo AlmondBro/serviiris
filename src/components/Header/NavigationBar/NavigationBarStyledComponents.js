@@ -426,6 +426,10 @@ const SearchForm = styled('form')`
         width: 300px;
     }
 
+    input#search-input:focus {
+        outline: 0px;
+    }
+
     @media only screen and (max-width: 765px) {
         label#search-input-label {
             cursor: pointer;

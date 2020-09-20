@@ -11,25 +11,7 @@ import  {   NavBar, NavIrisLogo, NavContainer, NavLogoContainer, NavLogoContaine
             Nav, NavUl, NavLi, NavLink, FontAwesomeIconStyled, HomeUserIconButton, 
             UserIconButton, HomeIconBootstrap, SearchForm, InputCheckboxHack
         } from './NavigationBarStyledComponents.js';
-/*
-    <Link 
-                            to              =   "/home" 
-                            activeClassName =   "navLink-current"  
-                            className       =   "navLinks nav-link"
-                        >
-                            Inicio
-                        </Link> 
-                        <Link   
-                                to              =   "/about-us" 
-                                activeClassName =   "navLink-current" 
-                                className       =   "navLinks nav-link"
-                        >
-                            Conócenos
-                        </Link> 
-                        <Link to="/products" activeClassName="navLink-current"  className="navLinks nav-link">Servicios</Link> 
-                        <Link to="/location" activeClassName="navLink-current"  className="navLinks nav-link">Contáctanos</Link> 
-                        <Link to="/contact-us" activeClassName="navLink-current" className="navLinks nav-link">Trabaja con Nosotros</Link> 
-*/
+
 const NavigationBar = (props) => {
     return (
             <NavBar className="navigation-bar">
@@ -105,7 +87,7 @@ const NavigationBar = (props) => {
                             </NavLi>
                             
                             <NavLi>
-                                <SearchForm>
+                                <SearchForm  id="search-form">
                                     <p id="search-input-container">
                                         <label id="search-input-label" htmlFor="search-input-checkbox-hack">
                                             <FontAwesomeIconStyled 
