@@ -30,8 +30,9 @@ const Footer = (props) => {
                             className="col-md-9" 
                             id="footer-address"  
                         >  
+                        {/* https://goo.gl/maps/9qHmUKrdbDrU42NJ6 */}
                             <FooterLink  
-                                href =   "#"
+                                href =   "https://www.waze.com/ul?ll=3.43611970%2C-76.54039180&navigate=yes"
                                 id  =   "footer-direction"
                             >
                                     <FontAwesomeIconStyled icon={faMapMarked}/>
@@ -40,7 +41,7 @@ const Footer = (props) => {
                                     <span>Colombia</span>
                             </FooterLink>
                             <FooterLink  
-                                href            =   "#"
+                                href            =   "mailto:iristeamco@gmail.com"
                                 id              =   "footer-email"
                                 spanPaddingLeft =   "8px"
                             >
@@ -78,7 +79,7 @@ const Footer = (props) => {
                     socialMediaColumn 
                 > 
                     {/* <SocialMediaLinksContainer> */}
-                    <FooterLink href="https://wa.link/aloo0e" className="extra-mobile-icons" id="footer-link-phone"> 
+                    <FooterLink target="_blank"  href="https://wa.link/aloo0e" className="extra-mobile-icons" id="footer-link-phone"> 
                         <FontAwesomeIconStyled 
                             icon    = { faPhone }  
                             color           =   "white"
@@ -89,7 +90,7 @@ const Footer = (props) => {
                             flip            =   "horizontal"
                         />
                     </FooterLink>
-                    <FooterLink href="mailto:iristeamco@gmail.com" className="extra-mobile-icons" id="footer-link-mail"> 
+                    <FooterLink target="_blank" href="mailto:iristeamco@gmail.com" className="extra-mobile-icons" id="footer-link-mail"> 
                         <FontAwesomeIconStyled 
                             icon    = { faEnvelope }  
                             color           =   "white"
@@ -98,7 +99,7 @@ const Footer = (props) => {
                             borderRadius    =   "25px"
                         />
                     </FooterLink>
-                    <FooterLink href="https://wa.link/aloo0e" id="footer-link-whatsapp"> 
+                    <FooterLink target="_blank" href="https://wa.link/aloo0e" id="footer-link-whatsapp"> 
                         <FontAwesomeIconStyled 
                             icon            =   { faWhatsapp } 
                             color           =   "white"
@@ -107,7 +108,7 @@ const Footer = (props) => {
                             borderRadius    =   "25px"
                         />   
                     </FooterLink>
-                    <FooterLink href="https://www.facebook.com/Iris-Team-103434521342003/" id="footer-link-facebook"> 
+                    <FooterLink target="_blank" href="https://www.facebook.com/Iris-team-110184504117886/" id="footer-link-facebook"> 
                         <FontAwesomeIconStyled 
                             icon            =   { faFacebook } 
                             color           =   "white"
@@ -116,7 +117,7 @@ const Footer = (props) => {
                             borderRadius    =   "25px"
                         />   
                     </FooterLink>
-                    <FooterLink href="https://www.instagram.com/iristeam.co/?hl=es-la" id="footer-link-instagram"> 
+                    <FooterLink target="_blank" href="https://www.instagram.com/iristeam.co/?hl=es-la" id="footer-link-instagram"> 
                         <FontAwesomeIconStyled 
                             icon    = { faInstagram }  
                             color           =   "white"

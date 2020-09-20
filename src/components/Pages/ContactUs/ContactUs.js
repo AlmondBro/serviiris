@@ -45,7 +45,7 @@ const ContactUs = (props) => {
                         title       =   { "Encuentranos en Facebook" }
                         faIcon      =   {  faFacebook }
                         description =   { "Iris-Team"}
-                        link        =   { "https://www.facebook.com/Iris-Team-103434521342003/"}
+                        link        =   { "https://facebook.com/Iris-team-110184504117886/"}
                     />
                     <ContactUsSectionCol 
                         bgColor     =   "rgba(1, 230, 117, 0.7)"

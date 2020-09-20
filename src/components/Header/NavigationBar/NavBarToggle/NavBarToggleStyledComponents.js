@@ -1,22 +1,5 @@
 import styled from 'styled-components';
 
-/*
-    isOS courtesy of Stack Overflow: 
-    https://stackoverflow.com/questions/9038625/detect-if-device-is-ios
-*/
-const isiOS = () => {
-    return [
-      'iPad Simulator',
-      'iPhone Simulator',
-      'iPod Simulator',
-      'iPad',
-      'iPhone',
-      'iPod'
-    ].includes(navigator.platform)
-    // iPad on iOS 13 detection
-    || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
-}; //end isiOS
-
 const InputCheckboxHack = styled('input')`
     visibility: hidden;
     position: absolute;
@@ -54,7 +37,7 @@ const MenuBarToggleButton = styled('div')`
     display: none;
 
     ${
-        isiOS() ? `-webkit-appearance: button-bevel`: null
+        (props) =>  props.isiOS ? `-webkit-appearance: button-bevel`: null
     }
 
     @media only screen and (max-width: 765px) {

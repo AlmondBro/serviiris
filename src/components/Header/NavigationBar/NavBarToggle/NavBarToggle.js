@@ -1,5 +1,7 @@
 import React, { Component , Fragment } from 'react';
 
+import { isiOS } from './../../../../utilities/utility-functions.js';
+
 //Import styled components
 import { InputCheckboxHack, MenuBarToggleButtonLabel, MenuBarToggleButton, MenuBarLine, TopMenuBarLine, MiddleMenuBarLine, BottomMenuBarLine } from './NavBarToggleStyledComponents.js';
 
@@ -7,7 +9,8 @@ class NavBarToggle extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            collapsed: true
+            collapsed: true,
+            isiOS: false
         }; //end this.state
     }
     
@@ -22,6 +25,11 @@ class NavBarToggle extends Component {
         //     NavBarCollapse.classList.toggle("show");
     }; //end toggleClass2
 
+    componentDidMount = () => {
+        const iOS = isiOS();
+
+        this.setState({  isiOS  :  iOS});
+    };
 
     render = () => {
         return ( 
@@ -55,7 +63,10 @@ class NavBarToggle extends Component {
                                                 + ( this.state.collapsed ? "collapsed" : "") 
                                             } 
                         id              =   { this.props.navBarToggleID }
+
                         onClick         =   { this.toggleNavBarButton }
+
+                        isOS            =   { this.state.isiOS }
                     >
                         <TopMenuBarLine 
                             collapsed   =   {   this.state.collapsed}
