@@ -3,11 +3,18 @@ import React from 'react';
 //Import styled components
 import { FooterStyled, FooterIrisWings, FontAwesomeIconStyled, FooterColumn, FooterColumnAddress, FooterLink, CopyRightSection, CopyRightText, SocialMediaLinksContainer } from './FooterStyledComponents.js';
 
+import { isMobileBrowser } from './../../utilities/utility-functions.js';
+
 //Import FontAwesome icon library
 import { faEnvelope, faPhone, faComment, faMapMarked   } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
+
+
+
 const Footer = (props) => {
+    let mobileBrowser = isMobileBrowser();
+    
     return (
         <FooterStyled className="container-fluid" id="footer-container" >
             <div className="row">
@@ -32,7 +39,13 @@ const Footer = (props) => {
                         >  
                         {/* https://goo.gl/maps/9qHmUKrdbDrU42NJ6 */}
                             <FooterLink  
-                                href =   "https://www.waze.com/ul?ll=3.43611970%2C-76.54039180&navigate=yes"
+                                target="blank_"
+                                href =   {
+
+                                    mobileBrowser ? 
+                                        "https://www.waze.com/ul?ll=3.43611970%2C-76.54039180&navigate=yes"
+                                    :   "https://goo.gl/maps/9qHmUKrdbDrU42NJ6"
+                                }
                                 id  =   "footer-direction"
                             >
                                     <FontAwesomeIconStyled icon={faMapMarked}/>
